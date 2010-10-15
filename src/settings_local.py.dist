@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-PROJECT_ROOT = "/var/www/akademic2"   
+import os.path
+PROJECT_ROOT = os.path.dirname(__file__)
 
 EXCHANGE_DATA_DIR = PROJECT_ROOT + '/private_data'
 EXCHANGE_BUFFER_DIR = PROJECT_ROOT + '/buffer'
@@ -28,12 +29,12 @@ OOTEMPLATES = MEDIA_ROOT + '/plantillas-odt'
 #DATABASE_OPTIONS = {'init_command': 'SET storage_engine=INNODB'}
 
 # Cambio de la ruta a /, cambian dos cosas mas
-#SITE_LOCATION = ''
-#MEDIA_URL = SITE_LOCATION + '/media'
+SITE_LOCATION = ''
+MEDIA_URL = SITE_LOCATION + '/site-media'
 #LOGIN_URL = SITE_LOCATION + '/accounts/login'
 
 # Log en el directorio del sistema
-#LOG_FILENAME = '/var/log/akademic/akademic-pruebas.log'
+LOG_FILENAME = 'akademic-pruebas.log'
 
 # Directorios de importacion
 #EXCHANGE_DATA_DIR = '/opt/galotecnia/akademic/importaciones/private_data'
