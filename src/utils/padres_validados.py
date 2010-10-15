@@ -26,8 +26,8 @@ import settings
 setup_environ(settings)
 
 import sys
-from akademic2.padres.models import Padre
-from akademic2.notificacion.models import Notificacion
+from padres.models import Padre
+from notificacion.models import Notificacion
 
 verificados_con_repeticiones = [15, 16, 17, 18, 21, 22, 24, 25, 26, 28, 30, 34, 46, 47, 60, 61, 64,
      69, 76, 78, 80, 81, 84, 94, 95, 96, 97, 98, 99, 106, 108, 112, 113,

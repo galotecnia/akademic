@@ -20,7 +20,7 @@
 from django.shortcuts import render_to_response 
 from django.contrib.auth.decorators import login_required 
 from django.template import RequestContext
-from akademic2.docencia.models import *
+from docencia.models import *
 from docencia.models import *
 from padres.models import *
 from notificacion.models import TextoNotificacion, Notificacion

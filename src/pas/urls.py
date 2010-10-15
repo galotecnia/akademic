@@ -19,7 +19,7 @@
 from django.conf.urls.defaults import *
 from views import *
 
-urlpatterns = patterns('akademic2.pas.views',
+urlpatterns = patterns('pas.views',
 	url(r'^nuevaCita/$',                    'nuevaCita',        name='pas_nueva_cita'),
 	url(r'^listaCitas/$',	                'listaCitas',       name='pas_lista_citas'),
 	url(r'^reenvioPassword/$',	            'reenvioPassword',  name='pas_reenvio_pass'),

@@ -19,7 +19,7 @@
 """
 
 from django.http import HttpResponse
-from akademic2.utils.icalendar import Calendar, Event, UTC
+from utils.icalendar import Calendar, Event, UTC
 
 import datetime
 

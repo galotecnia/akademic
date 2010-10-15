@@ -27,12 +27,12 @@ admin.autodiscover()
 authority.autodiscover()
 
 if settings.MAINTENANCE:
-    akademic2_patterns = patterns('',
+    akademic_patterns = patterns('',
         (r'^admin/',             include(admin.site.urls)),
         (r'',          'docencia.views.work_in_progress'), 
     )
 else:
-    akademic2_patterns = patterns('',
+    akademic_patterns = patterns('',
         (r'^$',                 'docencia.views.akademicLogin'),
         url(r'^accounts/login/$',  'docencia.views.akademicLogin', name='login'),
         url(r'^accounts/logout/$', 'docencia.views.akademicLogout', name='logout'),
@@ -52,5 +52,5 @@ cleaned_site_location = settings.SITE_LOCATION.lstrip('/')
 if cleaned_site_location != "": cleaned_site_location += "/"
 
 urlpatterns = patterns('',
-    (cleaned_site_location, include(akademic2_patterns)),
+    (cleaned_site_location, include(akademic_patterns)),
 )

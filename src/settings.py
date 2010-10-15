@@ -17,11 +17,11 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
-# Django settings for akademic2 project.
+# Django settings for akademic project.
 
 import os.path
 PROJECT_ROOT = os.path.dirname(__file__)
-SITE_LOCATION = '/akademic'
+SITE_LOCATION = ''
 
 import logging
 DEBUG = False
@@ -94,7 +94,7 @@ MIDDLEWARE_CLASSES = (
     'docencia.customMiddleWare.customMiddleWare',
 )
 
-ROOT_URLCONF = 'akademic2.urls'
+ROOT_URLCONF = 'src.urls'
 
 
 TEMPLATE_DIRS = (
@@ -116,7 +116,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
-    'django_extensions',
+    #'django_extensions',
     'docencia',
     'docencia.faltas',
     'docencia.horarios',
@@ -149,10 +149,13 @@ FIXTURE_DIRS = (
    #'./fixtures/',
 )
 
-# Fechas relevantes
-INICIO_CURSO  = '15-09-2008'
-#EVALUACIONES  = ['10-12-2008', '18-03-2009', '15-06-2009', '03-09-2009']
-#PUBLICACIONES = ['20-12-2008', '30-03-2009', '28-06-2009', '18-09-2009'] 
+# Fechas relevantes. Ejemplos
+# INICIO_CURSO  = '15-09-2008'
+# EVALUACIONES  = ['10-12-2008', '18-03-2009', '15-06-2009', '03-09-2009']
+# PUBLICACIONES = ['20-12-2008', '30-03-2009', '28-06-2009', '18-09-2009'] 
+INICIO_CURSO  = '15-09-2010'
+EVALUACIONES  = ['', '', '', '']
+PUBLICACIONES = ['', '', '', '']
 
 # Permisos especiales
 AUTH_PROFILE_MODULE = 'addressbook.PersonaPerfil'
@@ -218,7 +221,7 @@ LOGO="/imgs/logob_100.png"
 try:
     from settings_local import *
 except ImportError:
-    from akademic2.settings_local import *
+    from settings_local import *
 
 # Configuracion del logger una vez cargado settings_local.py
 log = logging.getLogger('galotecnia')

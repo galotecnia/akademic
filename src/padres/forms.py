@@ -17,7 +17,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 from django import forms
-from akademic2.addressbook.models import PersonaPerfil, Contacto
+from addressbook.models import PersonaPerfil, Contacto
 
 class PadreInfoForm(forms.Form):
 
