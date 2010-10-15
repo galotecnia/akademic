@@ -1,0 +1,14 @@
+{% extends "recursos/richWebBrowser/menu/recursos.html" %}
+
+{% block breadcrumb %}Recursos >> Eliminar Reserva{% endblock %}
+
+{% block body %}
+	<b>¿Esta segro de que quiere eliminar esta reserva?</b>
+	{% include 'recursos/bloque-reserva.html' %}
+	<form action="" method="post">
+		<input type="submit" name="aceptar" value="Si"/>
+		<input type="submit" name="cancelar" value="No"/>
+	</form>
+{% endblock %}
+
+

@@ -1,0 +1,110 @@
+{% load emoticon %}
+<html>
+<head>
+	<title>Boletín {{alumno.nombre}} {{alumno.apellidos}}</title>
+</head>
+<body>
+<h1 align="center">
+	<font size="+6">
+	Boletín de calificaciones<br />
+	{% ifequal evaluacion.evaluacion.nombre "1" %}
+		Primera evaluación
+	{% endifequal %}
+	{% ifequal evaluacion.evaluacion.nombre "2" %}
+		Segunda evaluación
+	{% endifequal %}
+	{% ifequal evaluacion.evaluacion.nombre "J" %}
+		Evaluación Junio
+	{% endifequal %}
+	{% ifequal evaluacion.evaluacion.nombre "O" %}
+		Evaluación Ordinaria
+	{% endifequal %}
+	{% ifequal evaluacion.evaluacion.nombre "U" %}
+		Evaluación Extraordinaria
+	{% endifequal %}
+	{% ifequal evaluacion.evaluacion.nombre "P" %}
+		Primera evaluación
+	{% endifequal %}
+	{% ifequal evaluacion.evaluacion.nombre "R" %}
+		Evaluación Final Ordinaria
+	{% endifequal %}
+	{% ifequal evaluacion.evaluacion.nombre "X" %}
+		Evaluación Final Ciclos
+	{% endifequal %}
+	</font>
+</h1>
+
+<p align="left">Grupo: {{ alumno.getGrupo }}<br/>
+Alumno: {{ alumno.apellidos }}, {{ alumno.nombre }}. CIAL: {{ alumno.cial }}</p>
+
+<table width="100%">
+	<tr>
+		<th width="40%"><b>Materia</b></th>
+		<th width="10%"><b>Nota</b></th>
+		<th width="45%"><b>Observaciones</b></th>
+	</tr>
+</table>
+<table width="100%" border="1"> 
+	<tr><td><table border="0" width="100%">
+{% for cal in evaluacion.calificaciones %}
+	<tr>
+		<td width="40%">{{ cal.asignatura.nombreLargo }}</td>
+		<td width="10%">{{ cal.nota|notaTextual }}</td>
+		<td width="45%">{{ cal.comentario }}</td>
+	</tr>
+{% endfor %}
+</table>
+</td></tr></table>
+<table width="100%" border="1">
+	<tr><td><table border="0" width="100%">
+		<tr>
+			<td width="45%">
+				Días faltados en la evaluación:
+			</td>
+			<td width="45%">
+				Días faltados en el curso:
+			</td>
+	</td></tr></table>
+</table>
+
+<table width="100%" border="1">
+	<tr><td>
+	Leyenda:<br/>
+	Notas:<br/>
+	SB: Sobresaliente NT:Notable BI: Bien SU: Suficiente IN: Insuficiente<br/>
+	N.P.: No Presentado Pte.: Pendiente<br/>
+	CIAL: Código de identificación del Alumno/a<br/>
+
+	</td></tr>
+</table>
+<table width="100%" border="1">
+	<tr><td>
+INFORME PERSONALIZADO:
+{{ evaluacion.informe.informeCompetencias|linebreaks}}
+	</td></tr>
+</table>
+
+<table width="100%" border="1">
+	<tr><td>
+<p align="left">
+	Un sitio, {% now "d \de F \de Y"%}
+</p>
+<p align="right">
+	{% ifequal tutor.profesor.sexo "True" %}
+		El Tutor<br/>
+	{% else %}
+		La Tutora<br/>
+	{% endifequal %}
+	<br/>
+	Fdo.: {{ tutor.profesor.nombre }} {{ tutor.profesor.apellidos }}<br/>
+	<br/>
+
+	{% if tutoria %}
+	Visitas: Semanal, {{ tutoria.diaSemanaTxt }}
+	de {{ tutoria.hora|time:"H:i" }} a {{ tutoria.horaFinalTutoria|time:"H:i" }}
+	{% endif %}
+</p>
+	</td></tr>
+</table>
+</body>
+</html>

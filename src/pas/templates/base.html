@@ -1,0 +1,29 @@
+{% extends "akademic/simplex4/index.html" %}
+{% load i18n %}
+
+{% block mainmenu %}
+	<a href="{% url pas_reenvio_pass %}">Reenvío de Password</a>
+	<a href="{% url pas_lista_citas %}">Citas</a>
+    <a href="{% url lista_recursos %}">Recursos</a>
+	<a href="{% url listar_incidencias %}">Incidencias</a>
+	<a href="{% url logout %}">Salir</a>
+{% endblock %}
+									
+{% block breadcrumb %}
+	Portería
+{% endblock %}
+
+{% block submenu %}
+	<ul>
+	<li><a href="{% url pas_reenvio_pass %}">Reenvío de Password</a></li>
+ 	<li><a href="{% url pas_nueva_cita %}">Asignar Nueva Cita</a></li>
+	<li><a href="{% url pas_lista_citas %}">Listado de citas</a></li>
+	<li><a href="{% url listar_incidencias %}">Incidencias</a></li>
+	<li><a href="{% url logout %}">Salir</a></li>
+	</ul>
+{% endblock %}
+
+{% block body %}
+	{% include task_template %}
+{% endblock %}
+

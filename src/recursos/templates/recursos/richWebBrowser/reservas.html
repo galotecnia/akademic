@@ -1,0 +1,24 @@
+{% extends "recursos/richWebBrowser/menu/recursos.html" %}
+
+{% block breadcrumb %}Recursos >> Lista de recursos{% endblock %}
+
+{% block submenu %}
+	{% for tipo in TIPOS_DE_RECURSO %}
+		<li>- <a href="{% url lista_reservas tipo.0 %}">{{ tipo.1 }}</a></li>
+	{% endfor %}
+	{{ block.super }}
+{% endblock %}
+
+{% block body %}
+    {% if object_list %}
+        <h1>Lista de reservas</h1>
+        {% for reserva in object_list %}
+            <hr/>
+            {% include 'recursos/bloque-reserva.html' %}
+        {% endfor %}
+    {% else %}
+        <h1>Actualmente no existe ninguna reserva</h1>
+    {% endif %}
+{% endblock %}
+
+

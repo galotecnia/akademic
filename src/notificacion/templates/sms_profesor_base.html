@@ -1,0 +1,26 @@
+{% if lista_errores_movil_padres %}		
+	{% include "lista_errores_movil_padres.html" %} 	
+{% endif %}
+
+{% if not lista_errores_movil_padres and not error and not listados and not seleccion_texto %}				
+	{% include "show_form.html" %}
+{% endif %}
+
+{% if listado_alumnos_por_grupo %}
+	<form action="{{ action }}" method="POST">
+		{% for form in listado_alumnos_por_grupo %}		
+			{% include "show_form.html" %}
+		{% endfor %}
+		<input type="submit" value="Enviar"/>
+	</form>	
+{% endif %}
+
+{% if seleccion_texto %}
+	<form action="{{ action }}" method="POST">
+		{% include "seleccionar_notificacion_form.html" %}
+	</form>
+{% endif %}
+
+{% if error %}
+	<FORM><INPUT TYPE="button" VALUE="Volver" onClick="history.go(-1);return true;"> </FORM>
+{% endif %}

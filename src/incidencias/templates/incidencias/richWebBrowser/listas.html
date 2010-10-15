@@ -1,0 +1,7 @@
+{% extends "incidencias/richWebBrowser/menu/incidencias.html" %}
+
+{% block breadcrumb %}Incidencias >> Lista {% endblock %}
+
+{% block submenu %}{{ block.super }}{% include "incidencias/menu_lista.html" %}{% endblock %}
+
+{% block body %}{% include "incidencias/lista_body.html" %}{% endblock %}

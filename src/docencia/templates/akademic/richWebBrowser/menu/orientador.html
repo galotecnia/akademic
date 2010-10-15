@@ -1,0 +1,9 @@
+{% extends "akademic/richWebBrowser/profes-base.html" %}
+{% load i18n %}
+
+{% block submenu %}
+<table>
+    <tr><td><a href="{% url selecciona_grupo %}"><img src="{{ MEDIA_URL }}/imgs/date.gif"/> Selección de grupo</a></td></tr>
+    <tr><td><a href="{% url selecciona_grupo_sms %}"><img src="{{ MEDIA_URL }}/imgs/phone.gif"/>Notificacion sms alumnos</a></td></tr>
+</table>
+{% endblock %}

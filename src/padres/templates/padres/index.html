@@ -1,0 +1,52 @@
+{% extends "padres/base.html" %}
+{% load i18n %}
+
+{% block breadcrumb %}
+	Inicio
+{% endblock %}
+
+{% comment %}
+{% block advertencia %}{% endblock %}
+{% endcomment %}
+
+{% block submenu %}
+<ul>
+	<li>- <a href="{% url padres_faltas 'faltas'%}">Mis hijos</a></li>
+	<li>- <a href="{% url padres_actualiza_info %}">Mis datos</a></li>
+	{% comment %}
+	<li>- <a href="{{ SITE_LOCATION }}/akademic/padres/citas/">Citas</a></li> -->
+	{% endcomment %}
+</ul>
+{% endblock %}
+
+{% block body %}
+	<h1>Bienvenido {{padre.nombre}} {{padre.apellidos}}</h1>
+	<p>
+		Utilice los enlaces que se disponen en la parte superior de
+		este sitio web para acceder a la información de sus hijos.
+	</p>
+
+	<p>
+		En la sección de <a href="{% url padres_actualiza_info %}">"datos personales"</a>
+		podrá actualizar todos sus datos. Es importante que revise esta
+		información ya que es la que se dispone para poder contactar con
+		usted en caso de emergéncia.
+	</p>
+{% comment %}
+	<p>
+		Para concertar una cita con el tutor de alguno de sus hijos
+		puede utilizar la sección de <a
+		href="{{ SITE_LOCATION }}/akademic/padres/citas/">"visitas"</a>. En esta sección podrá
+		usted mismo seleccionar día más oportuno para su entrevista.
+	</p>
+{% endcomment %}
+
+	<P>
+		En la sección <a href="{% url padres_cuenta %}">"Mi cuenta"</a> podrá cambiar su
+		contraseña de acceso a este sistema de gestión. Le recomendamos que una vez haya
+		ingresado por primera vez haga uso de esta funcionalidad para actualizar su contraseña.
+	</P>
+
+{% endblock %}
+
+

@@ -1,0 +1,88 @@
+{% extends "akademic/richWebBrowser/profes-base.html" %}
+{% load i18n %}
+
+{% block submenu %}
+<table>
+	<tr>
+		<td>
+			<a href="{% url profesor_faltas_actual %}">
+				<img src="{{ MEDIA_URL }}/imgs/asistencia.gif"/>
+				Faltas actual
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			{% if semana %}
+				<a href="{% url profesor_horario_faltas %}{{ semana }}">
+				<img src="{{ MEDIA_URL }}/imgs/asistencia.gif"/>
+				Horario de faltas
+			</a>
+			{% else %}
+				<a href="{% url profesor_horario_faltas %}">
+				<img src="{{ MEDIA_URL }}/imgs/asistencia.gif"/>
+				Horario de faltas
+			</a>
+			{% endif %}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url profesor_comportamiento_actual %}">
+				<img src="{{ MEDIA_URL }}/imgs/agent.gif"/>
+				Comportamiento actual
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			{% if semana %}
+			<a href="{% url profesor_horario_comportamiento %}{{ semana }}/">
+				<img src="{{ MEDIA_URL }}/imgs/agent.gif"/>
+				Horario comportamiento
+			</a>
+			{% else %}
+			<a href="{% url profesor_horario_comportamiento %}">
+				<img src="{{ MEDIA_URL }}/imgs/agent.gif"/>
+				Horario comportamiento
+			</a>
+			{% endif %}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url profesor_mostrar_listados %}">
+				<img src="{{ MEDIA_URL }}/imgs/kmultiple.gif"/>
+				Listados profesor
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url resumen_evaluacion_profesor %}">
+				<img src="{{ MEDIA_URL }}/imgs/resumen-evaluacion.gif"/>
+				Resúmenes de tot. por áreas
+			</a>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<a href="{% url notificacion_sms_profesor %}">
+				<img src="{{ MEDIA_URL }}/imgs/phone.gif"/>
+				Notificación sms profesor
+			</a>
+		</td>
+	</tr>
+    <!-- DESCOMENTAR PARA FACILITAR EL ENVIO DE FICHEROS A LOS PADRES
+	<tr>
+		<td>
+			<a href="{% url attach_file %}">
+				<img src="{{ MEDIA_URL }}/imgs/spreadsheet.png"/>
+				Subir ficheros alumno
+			</a>
+		</td>
+	</tr>
+    -->
+</table>
+{% endblock %}

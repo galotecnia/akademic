@@ -1,0 +1,93 @@
+{% extends "recursos/richWebBrowser/menu/recursos.html" %}
+
+{% block breadcrumb %}Recursos >> Nueva Reserva{% endblock %}
+
+{% block body %}
+	{% if errors.colision %}
+	<h1>{{ errors.colision }}</h1>
+	{% for reserva in errors.reservas_previas %}
+		{% include 'recursos/bloque-reserva.html' %}
+	{% endfor %}
+
+	{% endif %}
+<form action="" method="post">
+	<input type="hidden" name="recurso" value="{{ recurso_id }}"/>
+	<fieldset>
+		<legend>Nueva reserva:</legend>
+		<label for="id_motivo">Motivo:</label>{{ form.motivo }}
+			{% if form.motivo.errors %}
+				*** {{ form.motivo.errors|join:", " }}
+			{% endif %}
+			<br/>
+		<label for="fechaidia">Fecha inicial:</label>
+			<select name="fechaidia">
+			{% for i in diasMes %}
+				<option {% ifequal i diaActual %} selected {% endifequal %} label="{{ i }}" value="{{ i }}">{{ i }}</option>
+			{% endfor %}
+			</select>
+			<select name="fechaimes">
+			{% for i in meses %}
+				<option {% ifequal i.0 mesActual %} selected {% endifequal %} label="{{ i.1 }}" value="{{ i.0 }}">{{ i.1 }}</option>
+			{% endfor %}
+			</select>
+			<select name="fechaianyo">
+			{% for i in anyos %}
+				<option {% ifequal i anyoActual %} selected {% endifequal %} label="{{ i }}" value="{{ i }}">{{ i }}</option>
+			{% endfor %}
+			</select>
+			<br/>
+		<label for="inicio_time">Hora de inicio:</label>
+			<select name="inicio_time">
+			{% for h in horas%}
+				<option label="{{ h }}" value="{{ h }}">{{ h }}</option>
+			{% endfor %}
+			</select>
+			{% if form.inicio_date.errors %}
+				*** {{ form.inicio_date.errors|join:", " }}
+			{% endif %}
+			{% if form.inicio_time.errors %}
+				*** {{ form.inicio_time.errors|join:", " }}
+			{% endif %}
+			<br/>
+		<label for="fin_time">Hora de fin:</label>
+			<select name="fin_time">
+			{% for h in horas%}
+				<option label="{{ h }}" value="{{ h }}">{{ h }}</option>
+			{% endfor %}
+			</select>
+			{% if form.fin_date.errors %}
+				*** {{ form.fin_date.errors|join:", " }}
+			{% endif %}
+			{% if form.fin_time.errors %}
+				*** {{ form.fin_time.errors|join:", " }}
+			{% endif %}
+			<br/>
+		<label for="submit"></label><input type="submit" value="reservar"/>
+	</fieldset>
+</form>
+
+	<h1>Lista de reservas sobre este recurso:</h1>
+	{% for reserva in reservas %}
+		<hr/>
+		{% include 'recursos/bloque-reserva.html' %}
+	{% endfor %}
+<h1>Calendario de reservas</h1>
+<div id="menuTiposIncidencia">
+	<a href="?semana={{ semanaAnterior }}">Semana anterior</a> |
+	<a href="?semana={{ semanaSiguiente }}">Semana siguiente</a>
+</div>
+<table id="horarioRecursos" cellpadding="0" cellspacing="0">
+	{% for fila in calendario %}
+	<tr>
+		{% for columna in fila %}
+		<td class="{{ columna.class }}">{{ columna.texto }}</td>
+		{% endfor %}
+	</tr>
+	{% endfor %}
+</table>
+
+
+
+{% endblock %}
+
+

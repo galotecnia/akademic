@@ -1,0 +1,57 @@
+{% extends "akademic/richWebBrowser/profes-base.html" %}
+{% load i18n %}
+
+{% block submenu %}
+    <table><tr><td><a href="{% url verificacion_selecciona_curso %}">Selecciona Curso</a></td></tr></table>
+{% endblock %}
+
+{% block breadcrumb %}Verificador >> Verifica Curso{% endblock %}
+
+{% block body %}
+    {% if datos %}
+	<form method="POST" action=".">
+	{% for dato in datos %}
+        <table class="curso" width="100%" cellpadding="0" cellspacing="0">
+            <tr class="impar"><td colspan="4" ><b>{{ dato.alumno }}</b></td></tr>
+            {% for padre in dato.padres %}
+                <tr class="par"><td width=45%>{{ padre }}</td>
+                   <td> {{ padre.persona.tlf_movil }}</td>
+                   <td>
+                       {% ifequal dato.alumno.padre padre %}
+                            {% if dato.alumno.potestadPadre %}
+                                {% trans "Tiene la patria potestad" %} </td><td align="right">
+                                {% if padre.persona.tlf_movil %}
+                                    {% if not padre.is_blanco %}
+                                        <input type="checkbox" value="{{ padre.id }}" name="verificado" {% if padre.verificado %}checked="1"{% endif %} />(Verificado)
+                                    {% endif %}
+                                    <input type="checkbox" value="{{ padre.id }}" name="is_blanco" {% if padre.is_blanco %}checked="1" {% endif %} />(En blanco)
+                                {% endif %}
+                            {% else %}  
+                                {% trans "No tiene la patria potestad" %} </td><td>
+                            {% endif %}
+                       {% else %}
+                            {% if dato.alumno.potestadMadre %} 
+                                {% trans "Tiene la patria potestad" %} </td><td align="right">
+                                {% if padre.persona.tlf_movil %}
+                                    {% if not padre.is_blanco %}
+                                        <input type="checkbox" value="{{ padre.id }}" name="verificado" {% if padre.verificado %}checked="1"{% endif %} />(Verificado) 
+                                    {% endif %}
+                                    <input type="checkbox" value="{{ padre.id }}" name="is_blanco" {% if padre.is_blanco %}checked="1" {% endif %} />(En blanco)
+                                {% endif %}
+                            {% else %}
+                                {% trans "No tiene la patria potestad" %}</td><td>
+                            {% endif %}
+                        {% endifequal %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+
+	{% endfor %}
+		<input type=submit value={% trans "Enviar" %} />
+	</form>
+    {% else %}
+    No existen datos para este curso.
+    {% endif %}
+
+{% endblock %}

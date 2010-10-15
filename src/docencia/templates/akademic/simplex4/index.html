@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>{% block maintitle %} :: Akademic ::{% endblock %}</title>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="description" content="Description goes here" />
+    <meta name="keywords" content="Keywords go here" />
+    <meta name="author" content="Ganesh Gunasegaran" />
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/default.css" media="screen, tv, projection" title="Default" />
+    <link rel="alternative stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/large.css" media="screen, projection, tv" title="Larger Fonts" />
+    <link rel="alternative stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/print.css" media="screen" title="Print Preview" />
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/print.css" media="print" />
+</head>
+
+<body>
+    <div id="header">
+        <div id="header_bar">
+			{% include "akademic/logo.html" %}
+            <span class="title"><a href="">Akademic</a></span>
+            <span class="top_menu">
+					{% block mainmenu %}
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">Services</a>
+                <a href="#">Support</a>
+                <a href="#">About Us</a>
+					{% endblock %}
+            </span>
+        </div>
+    </div>
+
+    <div id="page">    
+        <div id="wrapper"> 
+            <div id="content">
+                <div id="path">
+                    <div>
+                        {% block username %}
+                        {% endblock %}
+                    </div>
+                    <div>
+                        Está usted en: 
+                        {% block breadcrumb %}
+                        <a href="index.html">Home</a> > <a href="index.html">Introduction</a>
+                        {% endblock %}
+                    </div>
+                </div>    
+            <div id="main">
+                <div id="left">
+						{% block leftcontent %}
+							{% if error %}
+								<p class="block">
+									<span class="center">
+									<span style="color: red; font-weight: bold;">¡Atención!</span>
+									{{ error }}								
+									</span>
+								</p>
+							{% endif %}
+	
+							{% if aviso %}
+								<p class="block">
+									<span class="center">{{ aviso }}</span>
+								</p>
+							{% endif %}
+	
+							{% block advertencia %}{% endblock %}
+	
+							{% block body %}{% endblock %}
+	
+							{% block footer %}{% endblock %}
+						{% endblock %}
+                </div>
+                <div id="right">
+                    <div id="right_menu">
+								{% block submenu %}
+                        <ul>
+                            <li>- <a href="#">sub page one</a></li>
+                            <li>- <a href="#">sub page one</a></li>
+                            <li>- <a href="#">sub page one</a></li>
+                        </ul>
+								{% endblock %}
+                    </div>
+                </div>
+        </div>   
+      </div>
+    
+    <div id="footer">
+        Copyright &copy; {% now "Y" %} <a href="http://www.galotecnia.com">Galotecnia Redes Sistemas y Servicios</a>. Sitio web optimizado para una resolución 1028 x 768.
+    </div>
+    <div id="footerGalotecnia">
+        <a href="http://www.galotecnia.com"><img src="{{ MEDIA_URL }}/imgs/logob_100.png"/></a>
+    </div>
+
+	</div>
+</div>
+
+</body>
+</html>

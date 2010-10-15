@@ -1,0 +1,25 @@
+[
+    {
+        "pk": 1, 
+        "model": "notificacion.textonotificacion", 
+        "fields": {
+            "generico": false, 
+            "texto": "prueba notificacion\r\n"
+        }
+    },  
+    {
+        "pk": 1, 
+        "model": "notificacion.notificacion", 
+        "fields": {
+            "fechaCreacion": "2009-09-15 17:52:34", 
+            "padre": 1, 
+            "confidencial": false, 
+            "plataformaId": null, 
+            "alumno": 128, 
+            "texto": 1, 
+            "profesor": 1, 
+            "estado": 0, 
+            "fechaEnvio": null
+        }
+    }
+]

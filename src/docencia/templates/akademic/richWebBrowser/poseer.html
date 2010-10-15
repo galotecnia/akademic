@@ -1,0 +1,28 @@
+{% extends "akademic/richWebBrowser/menu/director.html" %}
+
+{% block breadcrumb %}Director >> Posesión{% endblock %}
+
+{% block body %}
+
+{% if not error %}
+	<form action="{{ action }}" method="POST">
+	<fieldset>
+		<legend>Escoja un profesor para sustituir</legend>
+	{% if listaProfesores %}
+		<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+		{% for entrada in listaProfesores %}
+			<tr class="{% cycle par,impar %}">
+				<td colspan="5">
+					{{ entrada }}
+				</td>
+				<td>
+					<input type="radio" name="profesor" value="{{ entrada.id }}"/>
+				</td>
+			</tr>
+		{% endfor %}
+		</table>
+		<input type="submit" value="Sustituir"/><br/>
+	{% endif %}
+	</form>
+{% endif %}
+{% endblock %}

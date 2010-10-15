@@ -1,0 +1,97 @@
+{% load i18n %}
+
+{% if not error %}
+	{% include "akademic/richWebBrowser/formularioFechas.html" %}
+	{% if resumen %}
+		{% for alumno in resumen %}
+			<div>
+			<p>
+				Listado de incidencias del alumno: {{ alumno.alumno }} <br/>
+			</p>
+				<table class="informe_tutor">
+					<tr class="header">
+						<td colspan="4">Asignatura</td>
+						<td>Fecha</td>
+						<td>Tipo</td>
+					</tr>
+					{% for i in alumno.resumen.asignaturas %}
+						{% if i.faltas %}
+							{% for j in i.faltas %}
+							<tr class="asistencia">
+								<td colspan="4">{{ i.asignatura.nombreCorto }}</td>
+								<td>{{ j.fecha|date:"d-m-Y" }}</td>
+								<td>Asistencia</td>
+								
+							</tr>
+							{% endfor %}
+						{% endif %}
+					{% endfor %}				
+					<tr class="asistencia">
+						<td colspan="5"><b>Total acumulado asistencia</b></td>
+						<td>{{ alumno.resumen.totalFaltas }}</td>
+					</tr>
+					{% for i in alumno.resumen.asignaturas %}
+						{% if i.retrasos %}
+							{% for j in i.retrasos %}
+							<tr class="retrasos">
+								<td colspan="4">{{ i.asignatura.nombreCorto }}</td>
+								<td>{{ j.fecha|date:"d-m-Y" }}</td>
+								<td>Retraso</td>
+							</tr>
+							{% endfor %}
+						{% endif %}
+					{% endfor %}				
+					<tr class="retrasos">
+						<td colspan="5"><b>Total acumulado retrasos</b></td>
+						<td>{{ alumno.resumen.totalRetrasos }}</td>
+					</tr>
+					{% for i in alumno.resumen.asignaturas %}
+						{% if i.comportamiento %}
+							{% for j in i.comportamiento %}
+							<tr class="comportamiento">
+								<td colspan="4">{{ i.asignatura.nombreCorto }}</td>
+								<td>{{ j.fecha|date:"d-m-Y" }}</td>
+								<td>Comportamiento</td>
+							</tr>
+							{% endfor %}
+						{% endif %}
+					{% endfor %}				
+					<tr class="comportamiento">
+						<td colspan="5"><b>Total acumulado comportamiento</b></td>
+						<td>{{ alumno.resumen.totalComportamiento }}</td>
+					</tr>
+					{% for i in alumno.resumen.asignaturas %}
+						{% if i.tarea %}
+							{% for j in i.tarea %}
+							<tr class="tareas">
+								<td colspan="4">{{ i.asignatura.nombreCorto }}</td>
+								<td>{{ j.fecha|date:"d-m-Y" }}</td>
+								<td>Tareas</td>
+							</tr>
+							{% endfor %}
+						{% endif %}
+					{% endfor %}				
+					<tr class="tareas">
+						<td colspan="5"><b>Total acumulado tarea</b></td>
+						<td>{{ alumno.resumen.totalTarea }}</td>
+					</tr>
+					{% for i in alumno.resumen.asignaturas %}
+						{% if i.material %}
+							{% for j in i.material %}
+							<tr class="material">
+								<td colspan="4">{{ i.asignatura.nombreCorto }}</td>
+								<td>{{ j.fecha|date:"d-m-Y" }}</td>
+								<td>Material</td>
+							</tr>
+							{% endfor %}
+						{% endif %}
+					{% endfor %}				
+					<tr class="material">
+						<td colspan="5"><b>Total acumulado material</b></td>
+						<td>{{ alumno.resumen.totalMaterial }}</td>
+					</tr>
+				</table>
+			</div>
+		{% endfor %}
+	{% endif %}
+{% endif %}

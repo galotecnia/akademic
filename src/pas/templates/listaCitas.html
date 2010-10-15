@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block submenu %}
+    <ul>
+    <li><a href="{% url pas_nueva_cita %}">Asignar Nueva Cita</a></li>
+    <li><a href="{% url pas_lista_citas %}">Listado de citas</a></li>
+    </ul>
+{% endblock %}
+
+{% block body %}
+{% if citas %}
+	<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td colspan="5" align="center"><b>Listado de citas:</b></td>
+		</tr>
+		<tr>
+			<th>Fecha</th>
+			<th>Alumno</th>
+			<th>Tutor</th>
+			<th>Detalles</th>
+			<th>Borrar</th>
+		</tr>
+		{% for c in citas %}
+		<tr class="{% cycle par,impar %}">
+			<td>{{ c.fecha|date:"d-m-Y" }}</td>
+			<td>{{ c.alumno.persona.nombre }} {{ c.alumno.persona.apellidos }}</td>
+			<td>{{ c.tutoria.tutor }} </td>
+			<td><a href="{% url pas_cita_detail c.id %}"><img src="{{ MEDIA_URL }}/imgs/viewmag.gif"/></a></td>
+			<td><a href="{% url pas_cita_delete c.id %}"><img src="{{ MEDIA_URL }}/imgs/editdelete.gif"/></a></td>
+		</tr>
+		{% endfor %}	
+	</table>
+{% else %}
+    <h1>Actualmente no existe ninguna cita.</h1>
+{% endif %}
+
+{% endblock %}

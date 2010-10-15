@@ -1,0 +1,44 @@
+{% extends "akademic/richWebBrowser/menu/tutor.html" %}
+
+{% block breadcrumb %}Tutor >> Resumen {% endblock %}
+
+{% block body %}
+{% if not error %}
+	{% include "akademic/richWebBrowser/formularioFechas.html" %}
+	{% if resumen %}
+		<fieldset>
+		<legend>Listado de incidencias totales por alumno.</legend>
+		<table class="curso" width="100%" cellpadding="0" cellspacing="0" border="1">
+			<tr>
+				<td>Nº</td>
+				<td>Alumno</td>
+				<td width="30px">F</td>
+				<td width="30px">R</td>
+				<td width="30px">C</td>
+				<td width="30px">T</td>
+				<td width="30px">M</td>
+			</tr>
+			{% for alumno in resumen.resumenes %}
+				<tr class={% cycle par,impar %}>
+				<td>{{ forloop.counter }}</td>
+				<td><span class="nombre">{{ alumno.alumno.persona.nombre }}</span><span class="apellido">{{ alumno.alumno.persona.apellidos }}</span></td>
+				<td width="30px">{{ alumno.resumen.totalFaltas }}</td>
+				<td width="30px">{{ alumno.resumen.totalRetrasos }}</td>
+				<td width="30px">{{ alumno.resumen.totalComportamiento }}</td>
+				<td width="30px">{{ alumno.resumen.totalTarea }}</td>
+				<td width="30px">{{ alumno.resumen.totalMaterial }}</td>
+				</tr>
+			{% endfor %}
+			<tr>
+				<td colspan="2" align="right">Totales globales:	</td>
+				<td width="30px">{{ resumen.totales.totalFaltas }}</td>
+				<td width="30px">{{ resumen.totales.totalRetrasos }}</td>
+				<td width="30px">{{ resumen.totales.totalComportamiento }}</td>
+				<td width="30px">{{ resumen.totales.totalTarea }}</td>
+				<td width="30px">{{ resumen.totales.totalMaterial }}</td>
+			</tr>
+		</table>
+		</fieldset>
+	{% endif %}
+{% endif %}
+{% endblock %}

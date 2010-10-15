@@ -1,0 +1,43 @@
+<script type="text/javascript">
+	function elegir_todas_checkboxes(base_item) {
+		var form = base_item.form;
+		for(i=0; i<form.length; i++) {			
+			if(form[i].type == "checkbox") {
+				form[i].checked = true
+			}
+		}			
+	}
+</script>
+{% if form %}
+	{% if not no_form_tag %}
+		<form action="{{ action }}" method="POST">
+	{% endif %}
+		<fieldset>
+			{% if form_legend %}
+				<legend>{{ form_legend }}</legend>
+			{% else %}
+				<legend>{{ form.legend }}</legend>
+			{% endif %}		
+			<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+			<tr class=impar><td></td>
+			    <td><input type="button" name="boton_elegir_todos" onclick="elegir_todas_checkboxes(this)" value="Seleccionar todos">
+			</td></tr>
+			{% for row in form.visible_fields %}
+			    <tr class={% cycle par,impar %}><td>{{ row.label|safe }}</td><td>{{ row }}</td> </tr>
+			{% endfor %}				
+			</table>
+		</fieldset>
+		{% if form.hidden_fields %}
+			{% for row in form.hidden_fields %}
+			    {{ row }}
+			{% endfor %}
+		{% endif %}
+		
+		{% if not no_submit_button %}
+			<input type="submit" value="Enviar"/>
+		{% endif %}
+		
+	{% if not no_form_tag %}
+		</form>
+	{% endif %}
+{% endif %}	

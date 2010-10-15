@@ -1,0 +1,70 @@
+<form action="{{ SITE_LOCATION }}/akademic/inserta{{ tipo }}/" method="POST">
+  
+    {% if hora.id %} 
+	    <input type="hidden" name="hora" value="{{ hora.id }}"/>
+    {% else %}
+        <input type="hidden" name="hora" value="{{ grupos_id }}"/>
+    {% endif %}
+	<input type="hidden" name="asignatura" value="{{ asignatura.id }}"/>
+	<input type="hidden" name="fecha" value="{{ fecha }}"/>
+	<input type="hidden" name="next" value="{{ next }}"/>
+    
+	<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+        <tr><td colspan="{{ colspan }}" align="center"><b>
+        {% ifequal tipo 'faltas' %}
+            Faltas de asistencia
+        {% else %}
+            Faltas de comportamiento
+        {% endifequal %}
+        </b></td></tr>
+        <tr>
+        <td colspan="{{ colspan }}" align="center">
+            Profesor: {{ profesor }} <br/>
+            Asignatura: {{ asignatura.nombreLargo }}<br/>
+            {% for g in grupos %}
+                Grupo: {{ g.clase }}<br/>
+            {% endfor %}
+            Fecha: {{ dia }}, {{ fecha.day }}/{{ fecha.month }} Hora: {{ hora }}<br/>
+            {% ifequal tipo 'faltas'%}
+				{% ifnotequal asignatura.nombreLargo 'Dia Especial'%}
+                {% if parte %}
+                    <div style="font-size: 120%; font-weight: bold">Parte ya validado</div>
+                {% else %}
+                    <div style="color: red; font-size: 120%; font-weight: bold">Aún no se ha validado este parte</div>
+                {% endif %}
+				{% endifnotequal %}
+            {% endifequal %}
+        </td>
+        </tr>
+        {% for item in form %}
+        <tr>
+            <th colspan="{{ colspan }}">{{ item.grupo.clase }}</th>
+        </tr>
+        <tr>
+            <th>Nº</th>
+            <th>Alumno</th>
+            {% ifequal tipo 'faltas' %}
+                <th width="45">F</th><th width="45">R</th><th width="30">JE</th><th width="30">U</th>
+            {% else %}
+                {% ifequal item.grupo.clase.curso.ciclo.nivel.nombre 'INF' %}
+                    <th><img src="{{ MEDIA_URL }}/imgs/sad.gif"/></th><th><img src="{{ MEDIA_URL}}/imgs/korganizer.gif"/></th>
+                    <th><img src="{{ MEDIA_URL }}/imgs/molumen_couvert.gif"/></th>
+                {% else %}
+                    <th width="45">C</th><th width="45">T</th><th width="45">M</th>
+                {% endifequal %}
+            {% endifequal %}
+        </tr>
+            {% for field in item.form.visible_fields %}
+            <tr class="{% cycle par,impar %}">
+                <td>{{ field.label|safe }}</td>
+                {{ field }}
+            </tr>
+            {% endfor %}
+        {% endfor %}
+        <tr>
+        <td colspan="{{ colspan }}" align="right">
+            <input type=submit value="Validar parte"/>
+        </td>
+        </tr>
+    </table>
+</form>

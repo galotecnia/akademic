@@ -1,0 +1,10 @@
+	<tr><td colspan="6"><b>Seleccione el tipo de listado que desea obtener:</b></td></tr>
+	<tr>
+		<td colspan="6">
+			<select name="tipoListado">
+			{% for i in tipoListado %}
+				<option label="{{ i.1 }}" value="{{ i.0 }}">{{ i.1 }}</option>
+			{% endfor %}
+			</select>
+		</td>
+	</tr>

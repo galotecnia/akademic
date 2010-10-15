@@ -1,0 +1,27 @@
+{% extends "padres/base.html" %}
+{% load i18n %}
+
+{% block breadcrumb %}
+	Archivos de profesores
+{% endblock %}
+
+{% block submenu %}
+	Aquí podrá consultar y descargar todos aquellos archivos que los profesores de sus hijos hayan 
+    subido para su conocimiento. Los archivos que requieren de su lectura son aquellos que aparecen
+    en negrita.
+{% endblock %}
+
+{% block body %}
+    {% if urls %}
+        {% for url in urls %}
+            <h1>Archivos de {{ url.hijo }}</h1><br></br>
+            <ul>
+            {% for file in url.files %}
+                <li><a href="{% url padres_send_file file.id %}"><img src="{{ MEDIA_URL }}/imgs/spreadsheet.png"/> {{ file.name|safe }}</a></li>
+            {% endfor %} 
+            </ul><br></br>
+        {% endfor %}
+    {% else %}
+        <h4>No se han encontrado archivos relacionados con alguno de sus hijos.</h4>
+    {% endif %}
+{% endblock %}

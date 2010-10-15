@@ -1,0 +1,13 @@
+{% if tipo_incidencia %}
+    <h1>Estado:</h1>
+    <li>- <a href="{% url listar_incidencias tipo_incidencia 1 %}">Abierta</a></li>
+    <li>- <a href="{% url listar_incidencias tipo_incidencia 2 %}">Resuelta</a></li>
+    <li>- <a href="{% url listar_incidencias tipo_incidencia 3 %}">No válida</a></li>
+    <li>- <a href="{% url listar_incidencias tipo_incidencia 4 %}">En proceso</a></li>
+{% else %}
+    <h1>Estado:</h1>
+    <li>- <a href="{% url listar_incidencias 0 1 %}">Abierta</a></li>
+    <li>- <a href="{% url listar_incidencias 0 2 %}">Resuelta</a></li>
+    <li>- <a href="{% url listar_incidencias 0 3 %}">No válida</a></li>
+    <li>- <a href="{% url listar_incidencias 0 4 %}">En proceso</a></li>
+{% endif %}

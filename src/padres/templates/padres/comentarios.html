@@ -1,0 +1,56 @@
+{% extends "padres/base.html" %}
+
+{% block breadcrumb %}
+	{{ nombre }}
+{% endblock %}
+
+
+{% block body %}
+
+<h1>{{ nombre }}</h1>
+
+{% if comm %}
+	<div class="comm">
+		<div class="resumen">
+			<span class="fecha">{{ comm.fecha|date:"d/m/y" }}</span>
+			{{ comm.resumen }}
+		</div>
+		<div class="texto">{{ comm.texto }}</div>
+	</div>
+{% else %}
+{% if hijos %}
+	{% for h in hijos %}
+		<table width="100%" id="faltas">
+			<tr class="encabezado">
+				<th class="encabezado" align="left" colspan="4">
+					{{ h.hijo }}
+				</th>
+			</tr>
+			{% if h.comentarios %}
+				{% for c in h.comentarios %}
+				<tr class="{% cycle odd,even %}">
+					<td>
+						{% if not c.leido %}<b>{% endif %}
+						<a href="{% url padres_comentario c.id %}">
+							{{ c.fecha|date:"d/m/y" }} {{ c.resumen }}
+						</a>
+						{% if not c.leido %}</b>{% endif %}
+					</td>
+				</tr>
+				{% endfor %}
+			{% else %}
+				<tr>
+					<td>No hay ningún comentario disponible.</td>
+				</tr>
+			{% endif %}
+		</table>
+		<br/>
+	{% endfor %}
+{% endif %}
+{% endif %}
+
+{% endblock %}
+
+{% block submenu %}
+En esta sección puede consultar los comentarios que los tutores de sus hijos han realizado, estando remarcados aquellos comentarios que no han sido leídos.
+{% endblock %}

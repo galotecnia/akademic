@@ -1,0 +1,1 @@
+<span class="logo"><img src="{{ MEDIA_URL }}{{ LOGO }}"></span>

@@ -1,0 +1,24 @@
+{% extends "akademic/richWebBrowser/profes-base.html" %}
+{% load i18n %}
+
+{% block submenu %}
+<table>
+	<tr>
+		<td>
+			<a href="{% url listar_incidencias %}">
+				<img src="{{ MEDIA_URL }}/imgs/tutor.gif"/>
+				Lista de incidencias
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url nueva_incidencia %}">
+				<img src="{{ MEDIA_URL }}/imgs/tutor.gif"/>
+				Nueva incidencia
+			</a>
+		</td>
+	</tr
+    >
+</table>
+{% endblock %}

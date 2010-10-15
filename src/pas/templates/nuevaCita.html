@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block submenu %}
+    <ul>
+    <li><a href="{% url pas_nueva_cita %}">Asignar Nueva Cita</a></li>
+    <li><a href="{% url pas_lista_citas %}">Listado de citas</a></li>
+    </ul>
+{% endblock %}
+
+{% block body %}
+{% if not error %}
+	{% ifequal etapa "grupos" %}
+		<form action="{{ action }}" method="POST">
+		<input type="hidden" name="etapa" value="{{ etapa }}"/>
+		<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td colspan="2">
+			<b>Seleccione un grupo:</b>
+			</td>
+		</tr>
+		{% for i in grupos %}
+			{% if i.hasTutor %}
+			<tr class="{% cycle par,impar %}">
+				<td  align="left">
+					{{ i }}
+				</td>
+				<td>
+					<input type="radio" name="grupo" value="{{ i.id }}"/>
+				</td>
+			</tr>
+			{% endif %}
+		{% endfor %}
+		<tr>
+			<td align="right" colspan="2">
+				<input type="submit" value="Enviar"/>
+			</td>
+		</tr>
+		</table>
+
+		</form>
+	{% endifequal %}
+	{% ifequal etapa "alumno" %}
+		<form action="{{ action }}" method="POST">
+		<input type="hidden" name="etapa" value="{{ etapa }}"/>
+		<input type="hidden" name="tutor" value="{{ tutor.id }}"/>
+		<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+		<input type="hidden" name="gruposel" value="{{ gruposel }}"/>
+		<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td colspan="3" align="center">
+				<b>Tutor:</b> {{ tutor.profesor.persona.nombre }}	{{ tutor.profesor.persona.apellidos }}
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+			<b>Seleccione un alumno:</b>
+			</td>
+		</tr>
+		{% for i in alumnos %}
+			<tr class="{% cycle par,impar %}">
+				<td>
+					{{ forloop.counter }}
+				</td>
+				<td  align="left">
+					{{ i.persona.nombre }} {{ i.persona.apellidos }}
+				</td>
+				<td>
+					<input type="radio" name="alumnosel" value="{{ i.id }}"/>
+				</td>
+			</tr>
+		{% endfor %}
+		<tr>
+			<td align="right" colspan="2">
+				<input type="submit" value="Enviar"/>
+			</td>
+		</tr>
+		</table>
+
+		</form>
+	{% endifequal %}
+
+	{% ifequal etapa "cita" %}
+		<form action="{{ action }}" method="POST">
+		<input type="hidden" name="etapa" value="{{ etapa }}"/>
+		<input type="hidden" name="tutor" value="{{ tutor.id }}"/>
+		<input type="hidden" name="alumno" value="{{ alumno.id }}"/>
+		<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td colspan="4" align="center">
+				<b>Tutor:</b> {{ tutor.profesor.persona.nombre }}	{{ tutor.profesor.persona.apellidos }}<br/>
+				<b>Hora:</b> {{ tutoria.hora }} <br/>
+				<b>Dia:</b> {{ tutoria.diaSemanaTxt }}
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4" align="center">
+				<b>Alumno:</b> {{ alumno.persona.nombre }}	{{ alumno.persona.apellidos }}
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4"><b>Seleccione asistentes a la cita:</b></td>
+		</tr>
+		<tr>
+			<td align="center" colspan="4">
+				Padre: <input type="checkbox" checked="true" name="padre"></input><br/>
+				Madre: <input type="checkbox" checked="true" name="madre"></input><br/>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4"><b>Seleccione una fecha entre las posibles:</b></td>
+		</tr>
+		<tr>
+			<th>Fecha</th>
+			<th>Estado</th>
+			<th>Citas libres</th>
+			<th align='right'>Reservar</th>
+		</tr>
+		{% for i in fechas %}
+			<tr class="{% cycle par,impar %}">
+				<td align="left">{{ i.fecha }}</td>
+				<td align="left"><b>{{ i.disponible }}</b></td>
+				<td align="left">
+					{{ i.numCitas }}
+				</td>
+				<td align="right">
+					{% ifequal i.disponible "Disponible" %}
+						<input type="radio" name="fechasel" value="{{ i.fecha }}"/>
+					{% endifequal %}
+					{% ifequal i.disponible "Reservada" %}
+						Tiene cita reservada a esta hora.
+					{% endifequal %}
+					{% ifequal i.disponible "Lleno" %}
+						Lleno.
+					{% endifequal %}
+				</td>
+			</tr>
+		{% endfor %}
+		<tr>
+			<td align="right" colspan="4">
+				<input type="submit" value="Enviar"/>
+			</td>
+		</tr>
+		</table>
+
+		</form>
+	{% endifequal %}
+	
+{% endif %}
+{% endblock %}

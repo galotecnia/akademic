@@ -1,0 +1,15 @@
+	<tr><td colspan="6"><b>Seleccione mes y año</b></td></tr>
+	<tr>
+		<td colspan="6">
+			<select name="fechames">
+			{% for i in meses %}
+				<option {% ifequal i.0 mesActual %} selected {% endifequal %} label="{{ i.1 }}" value="{{ i.0 }}" >{{ i.1 }}</option>
+			{% endfor %}
+			</select>
+			<select name="fechanyo">
+			{% for i in anyos %}
+				<option {% ifequal i anyoActual %} selected {% endifequal %} label="{{ i }}" value="{{ i }}" >{{ i }}</option>
+			{% endfor %}
+			</select>
+		</td>
+	</tr>

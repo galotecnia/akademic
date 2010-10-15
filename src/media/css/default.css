@@ -1,0 +1,586 @@
+/* page overall: */
+
+html * { 
+    margin: 0; 
+    padding: 0; 
+    border: 0;
+}
+ 
+body {
+    margin: 0;
+
+    font-size: 100%;
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.1em;
+    text-align: center;
+    /*background-color: #017ac1;
+    background-image: url(../imgs/background.png);
+    background-repeat: repeat-x;*/
+    background-color: #D0E7F4;
+}
+ 
+#page { 
+    width: 85%; 
+    text-align: left;  
+    margin-left: auto; 
+    margin-right: auto;  
+} 
+
+
+/* header: */
+
+#header {
+    width: 100%;
+    height: 4.8em;
+	
+/*    color: #fff;*/
+    padding-top: 15px;
+    /*padding-top: -25px;*/
+    /*margin-top: -2.5em;*/
+/*    background: #206293;*/
+		/*background: #fff;*/
+    background-color: #D0E7F4;
+		color: #206293;
+}
+
+.listados {
+	width: 100%;
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: center;
+
+	font-size: 10px;
+}
+
+.listados td {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.listados tr.par {
+	/*background-color: #BFBFBF;*/
+	background-color: white;
+}
+
+.listados tr.impar{
+	background-color: #B5CDE8;
+}
+
+.listados th {
+	/*background-color: #000000;*/
+	background-color: #206293;
+	color: white;
+	font-weight: bold;
+}
+
+.listados .alumno {
+	text-align: left;
+}
+
+div.listados {
+}
+
+#header_bar {
+    width: 85%;
+    padding-left: 10px;
+    text-align: right;  
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.title {
+    font-family: verdana,"Trebuchet MS", Arial, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-style: italic;
+    letter-spacing: 1px;
+		position:relative;
+		top: 2.0em;
+}
+
+.title a:link, .title a:visited {
+    color: #1B4F76;
+    text-decoration: none;
+}
+
+
+.logo {
+	float: left;
+	margin-right: 1.5em;
+}
+
+/* content column: */
+
+#content {
+    float: left; 
+    display: inline; 
+    position: relative; 
+    width: 100%; 
+    font-size: 0.75em;
+    background-color: #fff;
+    border: 0.1em solid #4284B5;
+
+}
+
+#content h1 {
+    clear: both;
+    margin: 0em 0em 0em 0em;
+    padding: 0.5em 0em 0em 0.2em;
+    font-size: 1.1em;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #FF6300;
+}
+
+#content p {
+    margin: 0em 0em 0.5em 0em;
+    padding: 0.35em;
+}
+
+#path {
+    font-family: Verdana, Arial, sans-serif;
+    margin: 0em 0em 0em 0em;
+    padding: 0.4em 0.6em 0.4em 0.6em;
+    font-size: 0.9em;
+		color: #fff;
+    background-color: #1B4F76;
+}
+
+#right {
+    float: left;
+    width: 20%;
+    display: block;
+}
+
+#left {
+    float: left;
+    width: 78%;
+    display: block;
+    border-right: 1px solid #def;
+    min-height: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+	text-align: justify;
+}
+
+#right_menu {
+    font-size: 0.8em;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 5px;
+    text-align: left;
+}
+
+#right_menu li{
+    display: block;
+    line-height: 2em;
+}
+
+.block {
+    background: #FFFFC1;
+    display: block;
+    border: 1px solid #FFFFa7;
+    text-indent: 10px;
+    text-align: justify;
+}
+
+.error {
+    background: #FFFFC1;
+    display: block;
+    border: 1px solid #FFFFa7;
+    text-indent: 10px;
+    text-align: justify;
+		font-size: 1.5em;
+		font-weight: bold;
+		color: red;
+		top: 1.5em;
+		position: relative;
+}
+
+.top_menu {
+    font-family: Verdana, Arial, sans-serif;
+    margin: 0em;
+    margin-top: 3.2em;
+    padding: 0em 0.3em 0em 0em;
+    font-size: 0.8em;
+    text-transform: lowercase;
+    color: #fff;
+    text-align: right;
+    display: block;
+}
+
+.top_menu a:link,.top_menu a:visited  {
+    color: #fff;
+    text-decoration: none;
+    padding-left: 10px;  
+    padding-right: 10px;  
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background: #1B4F76;
+}
+    
+.top_menu a:hover, top_menu a:active {
+    color: #eef;
+    background: #18486B;
+}
+
+#content a:link, #content a:visited {
+    color: #224966;
+    text-decoration: none;
+    border-bottom: 1px dotted #B1CDE2;
+}
+ 
+#content a:hover, #content a:active {
+    color: #2E668B;
+}
+
+#right_menu a:link, #right_menu a:visited {
+    color: #224966;
+    text-decoration: none;
+    border-bottom: 1px dotted #B1CDE2;
+}
+
+#right_menu a:hover, #content a:active {
+    color: #2E668B;
+}
+
+#content acronym {
+    border-bottom: 1px dotted #4284B5;
+    cursor: help;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    padding: 0.0em 0.0em 1.5em 1.5em;
+}
+
+
+/*input {
+    border: 1px solid #B0D7EC;
+}*/
+
+div.img_left {
+    float: left; 
+    margin: 0.5em 0.8em 0em 0em;
+}
+
+div.img_right {
+    float: right; 
+    margin: 0.5em 0em 0em 0.8em;
+}
+
+div.img_left img, div.img_right img {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* this clears floating (e.g images) */
+br.clear {
+    clear: both;
+    display: none;
+}
+
+
+/* footer: */
+
+#footer { 
+    margin: 0em;
+    padding: 0em;
+    font-size: 0.65em;
+    clear: both;
+    color: #FFFFFF;
+    background: #206293;
+    text-align: center;
+} 
+
+#footerGalotecnia { 
+    margin-top: 1em;
+    padding: 0em;
+    font-size: 0.65em;
+    clear: both;
+    text-align: center;
+} 
+
+#footer a:link, #footer a:visited { 
+    color: #fff;
+    text-decoration: none;
+} 
+
+#footer a:hover, #footer a:active { 
+    color: #fff;
+} 
+
+.center {
+    text-align: center;
+    display: block;
+	padding: 5px;
+}
+
+.center_italic {
+    text-align: center;
+    display: block;
+    font-style: italic;
+    padding: 5px;
+}
+
+#tablaLogin {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid #D0E7F4;
+	float: center;
+}
+
+#tablaLogin td {
+	padding-top: 15px;
+	padding-left: 6px;
+}
+
+#tablaLogin label {
+	font-weight: bold;
+	text-align: left;
+}
+
+#faltas {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 1em;
+	border: 1px solid #2570A6;
+}
+
+#faltas td {
+	padding-left: 10px;
+}
+#faltas th {
+	padding-left: 10px;
+	background-color: #18486B;
+	color: #fff;
+}
+
+#faltas tr.odd {
+	background-color: #D0E7F4;
+}
+
+#faltas th.encabezado {
+	font-size: 120%;
+   font-family: Arial;
+	background-color: #FFFFC1;
+	padding-left: 1em;
+	color: #000;
+}
+
+#encabezado {
+	padding-top: 50px;
+	margin-top: 15px;
+	margin-bottom: 1em;
+}
+
+#horarioRecursos {
+	border-collapse: collapse;
+}
+
+.libre {
+	background-color: #B9FF9B;
+	border: 1px solid #78AD71;
+}
+
+.ocupado {
+	background-color: #FFC9B6;
+	border-left: 1px solid #C17575;
+	border-right: 1px solid #C17575;
+	text-align: center;
+   font-weight: bold;
+	color: #C11212;
+}
+
+.header {
+   font-weight: bold;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.curso {
+	width: 100%;
+	border: 0px;
+	border-spacing: 0px;
+	border: 1px solid white;
+}
+.curso tr.par:hover {
+	background: #ffa115;
+}
+.curso tr.impar:hover {
+  background: #ffa115;
+}
+
+.curso th, tr.par {
+	background: white;
+/*	padding-left: 1em;*/
+}
+
+.curso tr.impar {
+	background: #B5CDE8;
+/*	padding-left: 1em;*/
+}
+
+#left form input, form select, form textarea {
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+	border: 1px solid #206293;
+}
+
+#left form label { 
+	display: block;  /* block float the labels to left column, set a width */
+	float: left; 
+	width: 150px; 
+	padding: 0; 
+	margin: 4px 0 0; /* set top margin same as form input - textarea etc. elements */
+	text-align: right; 
+    font-weight: bold;
+}
+#left form {  /* set width in form, not fieldset (still takes up more room w/ fieldset width */
+  font:100% verdana,arial,sans-serif;
+  margin: 0;
+  padding: 0;
+  min-width: 500px;
+  /*max-width: 600px;*/
+/*  width: 560px; */
+}
+#left form br {
+	clear:left;
+}
+
+#left form fieldset {
+  /* clear: both; note that this clear causes inputs to break to left in ie5.x mac, commented out */
+  border-color: #206293;
+  border-width: 0px;
+  border-style: solid;
+  padding: 10px;        /* padding in fieldset support spotty in IE */
+  margin-top: 0.8em;
+  background-color: #B5CDE8;
+}
+#left form fieldset legend {
+   margin-left: 0.4em;
+/*   margin-bottom: 1.1em;*/
+	background-color: #206293;
+   padding-bottom: 0.0em;
+   padding-left: 0.3em;
+   padding-right: 0.3em;
+    font-size: 1.3em;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    /*color: #FF6300;*/
+    color: #e7eef4;
+    font-weight: bold;
+
+}
+
+#left hr {
+	border: 1px solid #206293;
+	width: 40%;
+	margin-top: 0.5em;
+}
+
+.calendario {
+	border-spacing: 0px;
+}
+.calendario a {
+	border-spacing: 0px;
+	text-decoration: none;
+}
+
+.calendario .ocupado {
+	background-color: #b5cde8;
+	border: 0px;
+	border: 1px solid #1b4e76;
+}
+.lunes, .martes, .miercoles, .jueves, .viernes {
+	background-color: white;
+	border: 1px solid  #1b4e76;
+}
+
+.horas {
+	/*background-color: #66A7C5;*/
+	background-color: #ffffc1;
+	border: 1px solid #1b4e76;
+	text-align: center;
+	padding: 0.5em;
+}
+
+
+table.informe_tutor {
+   width: 100%;
+   margin: auto;
+   border: 1px solid black;
+   border-collapse: collapse;
+	 font-family: Arial;
+	 font-style: normal;
+}
+
+table.informe_tutor td {
+   border: 1px solid black;
+}
+
+table.informe_tutor tr.header {
+   background: #CCCCCC;
+}
+
+table.informe_tutor tr.asistencia {
+   background: #FFFFCC;
+}
+
+table.informe_tutor tr.comportamiento {
+   background: #CCFF66;
+}
+
+table.informe_tutor tr.tareas {
+   background: #B5CDE8;
+}
+
+table.informe_tutor tr.material {
+   background: #FF6666;
+}
+
+table.informe_tutor tr.retrasos {
+   background: #9999CC;
+}
+
+#horarioRecursos {
+	border-collapse: collapse;
+}
+
+.libre {
+	background-color: #B9FF9B;
+	border: 1px solid #78AD71;
+   font-weight: bold;
+	/*color: #00FF00;*/
+}
+
+.ocupado {
+	background-color: #FFC9B6;
+	border-left: 1px solid #C17575;
+	border-right: 1px solid #C17575;
+	text-align: center;
+   font-weight: bold;
+	color: #C11212;
+}
+
+.vacio {
+	background-color: #DDDDDD;
+	border: 1px solid #78AD71;
+}
+
+#horarioRecursos .header {
+	border-left: 1px solid #999999; 
+	border-right: 1px solid #999999; 
+  font-weight: bold;
+	padding: 1px 1px 1px 1px;
+	background-color: #C9C9C9;
+}
+
+.nombre {
+    width:50%;
+    display: inline-table;
+}

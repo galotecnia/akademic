@@ -1,0 +1,20 @@
+{% extends "akademic/richWebBrowser/menu/profesor.html" %}
+
+
+{% block breadcrumb %}
+    Profesor >> 
+    {% ifequal tipo 'faltas' %}
+        Faltas actual
+    {% else %}
+        Comportamiento actual
+    {% endifequal %}
+{% endblock %}
+
+
+{% block body %}
+
+{% if not error %}
+	{% include "akademic/formularioFaltas.html" %}
+{% endif %}
+
+{% endblock %}

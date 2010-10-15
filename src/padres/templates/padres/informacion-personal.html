@@ -1,0 +1,31 @@
+{% extends "padres/base.html" %}
+{% load i18n %}
+
+{% block breadcrumb %}
+	Información personal
+{% endblock %}
+
+{% block submenu %}
+	Esta información es la que dispone el colegio para contactar con usted. Por
+	favor, compruebe que es correcta. Si no lo fuera, por favor contacte con el colegio
+    para actualizar sus datos.
+{% endblock %}
+
+{% comment %}
+{% block advertencia %}
+	{% if form.has_errors %}
+	<p class="block">
+		<font color="red"><b>¡Atención!</b></font>
+			Se han detectado algunos errores en sus datos, por favor, corríjalos. Gracias.</h2>
+	</p>
+	{% endif %}
+{% endblock %}
+{% endcomment %}
+
+{% block body %}
+	    <form action="" method="post" align="left">
+            <fieldset>
+		        {{ form.as_p }}
+            </fieldset>
+	    </form>
+{% endblock %}

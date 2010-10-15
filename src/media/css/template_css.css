@@ -1,0 +1,671 @@
+/*  "Corporate" by Absalom Media
+    Release: 12th October 2004
+    Build compatibility: Mambo 4.5.1a
+
+    This design, code and CSS is licensed under the 
+    Creative Commons Attribution-NonCommercial-ShareAlike License. 
+    To view a copy of this license, visit 
+    http://creativecommons.org/licenses/by-nc-sa/2.0/ 
+    or send a letter to Creative Commons, 
+    559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+    Under no circumstances remove this licence.
+
+*/
+
+/* CSS Document */
+body {
+	width: 100%;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 70%;
+	color: #899636;
+	background: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0em;
+	color: #000;
+}
+
+#header {
+	width: 100%;
+	padding: 0em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#head
+	{
+	/*background: url(../images/logo.jpg) no-repeat top left;*/
+	
+	color: #fff;	
+   	font-size: 2cm;
+	/*width: 299px;*/
+	height: 0px;
+	/*margin: 10px;*/
+	margin-left: 20px;
+	text-indent: -5000px;
+}
+
+/* Menu area*/
+
+
+
+.core
+	{
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0em;
+	color: #fff;	
+	margin-bottom: 10px;
+	}
+
+#lhs {
+  margin-right: 220px;        /* left side of window */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 7px 7px 0px 0px;
+  height: 100%;
+  vertical-align: top;
+  border: 1px solid rgb(228, 228, 228);
+  background:#fff;
+  color: #000;
+}
+
+
+#rightnav {
+  width: 210px;
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+
+
+#picwiz
+	{
+	float: left;
+	width: 200px;
+	height: 200px;
+	line-height: 0;
+    padding-left: 10px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+     margin-bottom: 0!important;
+    margin-bottom: -3px;
+	}
+
+#picwiz img {
+	line-height: 0;
+    padding: 0;
+    margin: 0px;
+	border: 1px solid #ccc;
+	}
+
+#filler1
+	{
+	margin-left: 320px;
+	}	
+
+#blurb
+	{
+	border: 1px solid #ccc;
+	background: #fff;
+	height: 193px;
+	text-align:right;
+	vertical-align:text-top;
+	padding: 7px;
+	margin-right: 7px;
+	}
+
+.b {
+	width: 33%;
+	vertical-align:top;
+	}
+	
+#search
+	{
+	color: #666;
+   	font-size: 1em;
+	width: 195px;
+   	font-weight: bold;
+    border: 1px solid #ccc;
+	padding: 7px;
+	margin-bottom: 10px;
+	}
+
+.pathway {
+	font-weight: bold;
+	}
+
+		
+.sidebar
+	{
+	text-align: left;
+	width: 195px;
+	padding: 7px;
+	border: 1px solid #ccc;
+	background: #fff;
+	}
+
+#menu
+	{
+	position: relative;
+	background: #fff;
+	max-width:auto;	
+	border: 1px solid #ccc;
+	padding: 0em;
+	margin: 0px;
+	height: 25px;
+	background: #f1f3f5;
+	}
+
+
+#navi {
+font: 10px/12px verdana, arial, georgia, sans-serif;
+margin: 3px;
+padding: 0px 0px 0px 0px;
+width: auto;
+}
+
+/* CSS Horizontal Menu */
+
+#navi #navlist ul
+{
+margin: 0;
+white-space: nowrap;
+padding: 0;
+}
+
+#navi #navlist li
+{
+display: inline;
+list-style-type: none;
+}
+
+#navi #navlist a
+{
+padding: 2px 8px 5px 5px;
+border: 1px solid #f1f3f5;
+background-color: #ccc;
+}
+
+#navi #navlist a:link, #navi #navlist a:visited
+{
+color: #666;
+text-decoration: none;
+}
+
+#navi #navlist a:hover
+{
+border: 1px solid #f1f3f5;
+background-color: #fff;
+color: #666;
+}
+
+#navi #active a:link, #navi #active a:visited, #navi #active a:hover
+{
+border: 1px solid #f1f3f5;
+background-color: #fff;
+color: #666;
+}
+
+	
+#trimod
+	{
+	height: 140px;
+	padding-left: 10px;
+	text-align: left;
+	}
+
+.bars
+	{
+	border: 1px solid #ccc;
+	padding: 7px;
+	height: 140px;
+	vertical-align:top;
+	}
+
+#footer{
+	width:100%;
+	top: 30px;
+	text-align: left;
+	background-color:#fff;
+	color: #666;
+	border-top: 0px solid #999;
+	border-right: 0px solid #000000;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #999;
+}
+
+a:link {
+	color:#999;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #666;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 2.0em;
+	font-weight: normal;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	/*both set to zero and padding in header div is used intead to deal with compound ie pc problems that are beyound summary in a simple comment.*/
+}
+
+h2 {
+	font-size: 1.7em;
+	margin: 1.2em 0em 1.2em 0em;
+	font-weight: normal;
+}
+
+h3 {
+	font-size: 1.4em;
+	margin: 1.2em 0em 1.2em 0em;
+	font-weight: normal;
+}
+
+h4 {
+	font-size: 1.2em;
+	margin: 1.2em 0em 1.2em 0em;
+	font-weight: bold;
+}
+
+h5 {
+	font-size: 1.0em;
+	margin: 1.2em 0em 1.2em 0em;
+	font-weight: bold;
+}
+
+h6 {
+	font-size: 0.8em;
+	margin: 1.2em 0em 1.2em 0em;
+	font-weight: bold;
+}
+
+img {
+	border: 0;
+}
+
+ul,ol {
+	width: 100%;
+	font-size: 1.0em;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	list-style-type:circle;
+}
+
+li {
+	width: auto;
+	font-size: 1.0em;
+	line-height: 1.8em;
+	margin: 0 0 0 .5em;
+	border: 0;
+	padding: 0 0 0 0;
+	list-style-type:circle;
+}
+
+table,td {
+	font-size: 1.0em;
+	color: #000;
+}
+
+form {
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	font-size: 1.0em;
+	line-height: 1.8em;
+	margin: 1.2em 0em 1.2em 0em;
+}
+
+pre {
+	/*moz 1.0/1.1/1.2.1, net 7.0/7.01 make this way too small, but i'm not going to go larger because monospace tends to run you into overflow pretty quick. prior moz and net are okay.*/
+	font-family: monospace;
+	font-size: 1.0em;
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+.inputbox {
+	font-family: arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: .8em;
+	background: #eee;
+	border: 1px solid #999;
+	margin-left: 10px;
+}
+
+.contact
+	{
+	text-align: left;
+	margin-left: 20px;
+	}
+
+.button {
+	font-size: 1.0em;
+	background: #eee;
+	border: 1px solid #999;
+}
+
+.strong {
+	font-weight: bold;
+}
+
+.moduletable {
+	width:100%;
+	}
+
+.moduletable th {
+	color: #666;
+	text-align: left;
+	/*background: #f1f3f5 url(../images/bits.gif) top right no-repeat;*/
+	background: #f1f3f5;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 0 0 0 .2em;
+	border: 1px solid #ccc;
+	line-height: 1.8em;
+}
+
+.moduletable td {
+	color: #006443;
+	padding: 0 0 0 5px;
+	font-weight: normal;
+	padding: 0 0 .4em 0;
+	border: 0px solid #ccc;
+	text-align: left;
+	line-height: 1.3em;
+}
+
+.moduletable li {
+	list-style-type:circle;
+	padding-left: 1em;
+}
+
+.moduletable a {
+	color: #999;
+	padding: 0 0 0 5px;
+	font-weight: bold;
+	border-bottom: 0px dashed #FFF;
+}
+
+.moduletable a:hover {
+	color: #666;
+}
+
+.contentpane, .contentpaneopen {
+	width: 97%;
+	background: none;
+	color: #006443;
+	text-align: left;
+	margin-top: 1em;
+	margin-left: 1em;
+}
+
+table.contact {
+	width: 95%!important;
+	width: 94%;
+	background: none;
+	color: #006443;
+	text-align: left;
+	margin-left: 1em;
+}
+
+.contentheading {
+	width: 94%;
+	font-size: 1em;
+	font-weight: bold;
+	font-family: arial,sans-serif;
+	color: #666;
+	background: url(../images/gradient.jpg);
+	text-align:left;
+	margin: 1.5em 1em 1em 0;
+	border: 1px solid #e4e4e4;
+	padding: .2em;
+}
+
+
+.contentdescription {
+	font-size: 1em;
+	color: #808080;
+	text-align: left;
+}
+
+
+.componentheading {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #666666;
+	text-align:left;
+	margin: 1.5em 0em 0em 0;
+}
+
+.frontpageheader {
+	font-weight: bold;
+	color: #666666;
+	text-align:left;
+	margin-left: 10px;
+	line-height: 1.3em;
+}
+/** category text format and links **/
+.category {
+	color: #999999;
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.category:link, a.category:visited {
+	color: #999999;
+	font-weight: bold;
+}
+
+a.category:hover {
+	color: #FF9900;
+}
+
+.poll {
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666666;
+	line-height: 14px
+}
+
+.sectiontableentry1 {
+}
+
+.sectiontableentry2 {
+}
+
+.sectiontableheader {
+	color : #006443;
+	font-weight : bold;
+	border-collapse: collapse;
+}
+
+/* Date Stamps */
+.newsfeeddate {
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FF6600;
+	font-weight: normal;
+}
+
+.createdate {
+	color: #666;
+	font-weight: normal;
+	line-height: 1;
+}
+
+.modifydate {
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.small {
+	color: #666;
+	line-height: 1;
+}
+
+/* RDF Styles */
+.fase4rdf {
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	font-weight: normal;
+}
+
+a.fase4rdf:link {
+	font-size: 11px;
+	font-weight: normal;
+	color: #FF9900;
+}
+
+a.fase4rdf:hover {
+	font-weight: bold;
+	color: #808080;
+}
+
+.newsfeedheading {
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	color: #006443333;
+	text-align:left;
+}
+
+
+
+
+/* for modifying {
+	moscode
+}
+ output.  Don't set the colour! */
+.moscode {
+	background-color: #f0f0f0;
+}
+
+.code {
+	font-family: courier, serif;
+	font-size: 1.2em;
+	padding: 2px;
+	line-height: 1.3em;
+	background-color: #f0f0f0;
+	color: blue;
+	border: 1px solid #d5d5d5;
+	margin: 0px;
+	width: 90%;
+}
+
+/* Text passed with mosmsg url parameter */
+.message {
+	font-family : arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size : 1em;
+	color : #666;
+	text-align: center;
+}
+
+/* Styles for dhtml tabbed-pages */
+.ontab {
+	background-color: #666666;
+	border-left: outset 1px #666;
+	border-right: outset 1px #006443;
+	border-top: outset 1px #666;
+	border-bottom: solid 1px #006443;
+	text-align: center;
+	cursor: default;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding: .2em;
+}
+
+.offtab {
+	background-color : #cccccc;
+	border-left: outset 1px #666;
+	border-right: outset 1px #006443;
+	border-top: outset 1px #666;
+	border-bottom: solid 1px #006443;
+	text-align: center;
+	cursor: default;
+	font-weight: normal;
+	padding: .2em;
+}
+
+.edit-tabs {
+	padding: 1em;
+	background: none;
+}
+
+.tabpadding {
+}
+
+.tabheading {
+	background-color: #ffae00;
+	text-align: left;
+}
+
+.pagetext {
+	visibility: hidden;
+	display: none;
+}
+
+#weblink-categories {
+	margin-top: 1em;
+}
+
+.contact-form {
+	width: 100%;
+}
+
+.author {
+	font-size: .8em;
+}
+
+.createdate {
+	font-size:.8em;
+}
+
+.content-entry h3 {
+	color: #CCC;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 1em 0 0 0;
+}
+
+a.pagenav {
+	color: #CCC;
+	border-bottom: 0;
+}
+
+a.pagenav:hover {
+	color: #666;
+	border-bottom: 0;
+}

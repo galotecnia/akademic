@@ -1,0 +1,22 @@
+{% extends "recursos/richWebBrowser/menu/recursos.html" %}
+
+{% block breadcrumb %}Recursos >> Nuevo recurso{% endblock %}
+
+{% block submenu %}
+	{{ block.super }}
+{% endblock %}
+
+{% block body %}
+    {% if msg %}
+        <p><b>{{ msg }}</b></p>
+    {% endif %}
+    <h1>Crear un nuevo recurso</h1>
+    <form action="." method="POST">
+        <fieldset>
+            {{ form.as_p }}
+        </fieldset>
+        <input type="submit" class="button" value="Crear"/>
+    </form>
+{% endblock %}
+
+

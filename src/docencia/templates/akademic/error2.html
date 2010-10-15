@@ -1,0 +1,16 @@
+{% extends "akademic/padres/base.html" %}
+{% load i18n %}
+
+{% block breadcrumb %}Error Fatal{% endblock %}
+{% block submenu %}{% endblock %}
+{% block mainmenu %}{% endblock %}
+
+{% block body %}
+
+	<h1>Error Fatal</h1>
+
+	{% if msg %}
+		<p class="error">{{msg}}</p>
+	{% endif %}
+
+{% endblock %}

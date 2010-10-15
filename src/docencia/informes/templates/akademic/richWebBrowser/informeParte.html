@@ -1,0 +1,41 @@
+{% load i18n %}
+
+{% if not error %}
+	{% include "akademic/richWebBrowser/formularioFechas.html" %}
+	{% if informe %}
+	<b>Inicio:</b> {{ fechaInicio|date:"d-m-Y" }} </br>
+	<b>Fin:</b> {{ fechaFin|date:"d-m-Y" }}
+	<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<th>
+					Nombre y apellidos
+				</th>
+				<th>
+					Horas de clase
+				</th>
+				<th>
+					Partes enviados
+				</th>
+				<th>
+					% envios
+				</th>
+			</tr>
+		{% for p in informe %}
+			<tr class="{% cycle impar,par %}" >
+				<td>
+					{{ p.profesor }}
+				</td>
+				<td>
+					{{ p.horas }}
+				</td>
+				<td>
+					{{ p.partes }}
+				</td>
+				<td>
+					{{ p.porcentaje }}%
+				</td>
+			</tr>
+		{% endfor %}
+	</table>
+	{% endif %}
+{% endif %}

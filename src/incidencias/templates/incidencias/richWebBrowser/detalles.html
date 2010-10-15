@@ -1,0 +1,27 @@
+{% extends "incidencias/richWebBrowser/menu/incidencias.html" %}
+{% load comments %}
+
+{% block breadcrumb %}Incidencias >> Detalles {% endblock %}
+
+{% block body %}
+	<table id="detallesIncidencia" cellpadding="0" cellspacing="0">
+		<tr><td colspan="2"><h1>Incidencia: {{ object.id }}</h1></td></tr>
+		<tr><td colspan="2"><b>{{ object.informador }}</b> el día <b>{{ object.fecha }}</b>
+			introdujo esta incidencia en el sistema.</td></tr>
+		<tr><td colspan="2"><b>Descripcion:</b> {{ object.descripcionCorta }} </td></tr>
+		<tr><td colspan="2"><b>Texto:</b> {{ object.texto|linebreaks }}</td></tr>
+	</table>
+
+    <form action="." method="post">
+        <fieldset>
+            <legend>Estado de la incidencia:</legend>
+            {{ form.as_p }}
+        </fieldset>
+        {% include "incidencias/show.html" %}
+        <fieldset>
+            <legend>Nuevo comentario:</legend>
+                {{ commentform.as_p }}
+        </fieldset>
+        <label for=submit"></label><input type="submit" value="Actualizar información"/><br/>
+	</form>
+{% endblock %}

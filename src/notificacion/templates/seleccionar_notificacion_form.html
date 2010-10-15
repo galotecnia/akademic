@@ -1,0 +1,11 @@
+<input type="hidden" value="{{ alumnos_id }}" name="alumnos"/>
+<input type="hidden" value="envio_mensajes" name="tipo"/>
+<fieldset>
+	<legend>Notificación:</legend>
+	{% include "notificaciones_predefinidas.html" %}
+       {{ texto_form }}
+    {% include "body_charcounter.html" %}
+    <p><span></span></p>
+	<label for="submit"></label>
+	<input type="submit" value="Enviar"/>
+</fieldset>

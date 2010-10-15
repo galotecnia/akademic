@@ -1,0 +1,50 @@
+[
+    {
+        "pk": 1, 
+        "model": "addressbook.persona", 
+        "fields": {
+            "fecha_nacimiento": null, 
+            "tipo_documento_identificacion": 10, 
+            "observaciones": "", 
+            "sexo": true, 
+            "apellidos": "padrebase", 
+            "documento_identificacion": "", 
+            "lugar_nacimiento": "", 
+            "nombre": "padrebase", 
+            "nacionalidad": "", 
+            "tratamiento": null
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "addressbook.persona", 
+        "fields": {
+            "fecha_nacimiento": null, 
+            "tipo_documento_identificacion": 10, 
+            "observaciones": "", 
+            "sexo": true, 
+            "apellidos": "alumnobase", 
+            "documento_identificacion": "", 
+            "lugar_nacimiento": "", 
+            "nombre": "alumnobase", 
+            "nacionalidad": "", 
+            "tratamiento": null
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "addressbook.personaperfil", 
+        "fields": {
+            "user": 2
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "addressbook.contacto", 
+        "fields": {
+            "dato": "123456789", 
+            "persona": 1, 
+            "tipo": 106
+        }
+    }
+]

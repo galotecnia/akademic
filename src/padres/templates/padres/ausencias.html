@@ -1,0 +1,69 @@
+{% extends "padres/base.html" %}
+{% load i18n %}
+{% load emoticon %}
+
+{% comment %}
+{% block advertencia %}{% endblock %}
+{% endcomment %}
+
+{% block breadcrumb %}
+	{{ nombre }}
+{% endblock %}
+
+
+{% block body %}
+
+<h1>{{ nombre }}</h1>
+
+{% if hijos  %}
+	{% ifnotequal numHijos 1 %}
+	Ver ausencias de:
+	<form method="post">
+		<select name="alumno_id">
+				<option value="0">Todos</option>
+			{% for h in hijos %}
+				<option value="{{ h.hijo.id }}">{{ h.hijo }}</option>
+			{% endfor %}
+		</select>
+		<input type="submit" value="Aceptar"/>
+	</form>
+	{% endifnotequal %}
+	{% if filtrado %}
+		<a href="./">Mostrar todos</a>
+	{% endif %}
+
+{% for h in hijos %}
+	<table width="100%" id="faltas">
+		<tr class="encabezado">
+			<th class="encabezado" align="left" colspan="4">
+				{{ h.hijo }}
+			</th>
+		</tr>
+		{% if h.faltas %}
+		<tr>
+			<th>Número</th>
+			<th>Inicio</th>
+			<th>Fin</th>
+		</tr>
+		{% else %}
+		<tr>
+			<td colspan="4">No hay ausencias</td>
+		</tr>
+		{% endif %}
+	{% for f in h.faltas %}
+		<tr class="{% cycle odd,even %}">
+			<td>{{ forloop.counter}}</td>
+			<td>{{ f.inicio }}</td>
+			<td>{{ f.fin }} </td>
+		</tr>
+	{% endfor %}
+	</table>
+	<br/>
+{% endfor %}
+
+{% else %}
+	No se le ha asignado ninguna falta
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,52 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ MEDIA_URL }}/css/akademic-ppc.css"
+	type="text/css" media="screen, tv, projection"/>
+<link rel="alternative stylesheet" type="text/css"
+	href="{{ MEDIA_URL }}/css/listados-print.css" media="print" title="Print Preview" />
+</head>
+<body>
+
+{% for asigna in listados %}
+<div class="pagina">
+<div class="listados">
+	Listado de <b>{{ asigna.tipoListado }}</b> de la asignatura: <b>{{ asigna.asignatura.nombreLargo }}</b>
+	<br/>
+	Grupo: <b>{{ asigna.grupo.curso }}{{ asigna.grupo.seccion }}</b>
+	<br/>
+	<b>Incidencias entre las fechas:</b> {{ asigna.fechaInicio }} y {{ asigna.fechaFin }}
+	<br/>
+	<b>Fecha de impresión:</b> {{ fechaImpresion }}
+</div>
+<table class="listados">
+	<thead>
+		<tr>
+			<th>Alumno:</th>
+			{% for dia in asigna.dias %}
+				<th>{{ dia }}</th>
+			{% endfor %}
+			<th>Total</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for alu in asigna.alumnos %}
+	<tr class="{% cycle par,impar %}">
+		<td class="alumno"><span class="nombre">{{ alu.alumno.persona.nombre }}</span><span class="apellido">{{ alu.alumno.persona.apellidos }}</span></td>
+		{% for dia in alu.faltas %}
+			<td class="dia">
+				{% if dia %}
+					{{ dia }}
+				{% else %}
+					&nbsp;
+				{% endif %}
+			</td>
+		{% endfor %}
+		<td>{{ alu.total }}</td>
+	</tr>
+	{% endfor %}
+	</tbody>
+</table>
+</div>
+{% endfor %}
+</body>
+</html>

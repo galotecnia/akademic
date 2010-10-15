@@ -1,0 +1,68 @@
+{% extends "padres/base.html" %}
+{% load i18n %}
+{% block breadcrumb %}Login{% endblock %}
+{% block submenu %}{% endblock %}
+{% block mainmenu %}{% endblock %}
+
+{% block body %}
+
+	<h1>Inicio de sesión:</h1>
+
+	{% if form.has_errors %}
+		<p class="error">Por favor, corrija los siguientes errores:</p>
+	{% endif %}
+
+	{% comment %}
+	{% if error %}
+		<h2>{{ error }}</h2>
+	{% endif %}
+	{% endcomment %}
+
+	<p class="block">
+		Para acceder a la zona privada de este sitio web, por favor, inicie sesión.
+	</p>
+		<form method="post" action="." class="login">
+		<table id="tablaLogin">
+		<tr>
+		<td>
+			<table>
+				<tr>
+					<td>
+						<label for="id_usuario">Usuario:</label>
+						
+					</td><td>{{ form.usuario }}</td>
+				</tr>
+				{% if form.usuario.errors %}
+				<tr>
+					<td colspan="2">
+						*** {{ form.usuario.errors|join:", " }}
+					</td>
+				</tr>
+				{% endif %}
+				<tr>
+					<td>
+						<label for="id_usuario">Contraseña:</label>
+					</td><td>{{ form.password }}</td>
+				</tr>
+				{% if form.password.errors %}
+				<tr>
+					<td colspan="2">
+						*** {{ form.password.errors|join:", " }}
+					</td>
+				</tr>
+				{% endif %}
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" value="Iniciar sesión"/>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td>
+				<img src="{{ MEDIA_URL }}/imgs/key.jpg" alt="Login"/>
+		</td>
+		</tr>
+		</table>
+		</form>
+        <script type="text/javascript">document.getElementById('id_usuario').focus();</script>
+{% endblock %}

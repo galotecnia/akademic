@@ -1,0 +1,47 @@
+{% extends "akademic/profesor-index.html" %}
+
+{% block body %}
+
+{% if not error %}
+	<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<th colspan=3 align="center">Validación de partes</th>
+	</tr>
+	<tr>
+		<th align="center">Fecha</th>
+		<th align="center">Asignatura</th>
+		<th align="center">Profesor</th>
+	</tr>
+	{% for i in object_list %}
+	<tr class="{% cycle par,impar %}">
+		<td align="center"><a href="{% url parte_object i.id %}">{{ i.fecha }}</a></td>
+		<td align="center"><a href="{% url parte_object i.id %}">{{ i.asignatura }}</a></td>
+		<td align="center"><a href="{% url parte_object i.id %}">{{ i.profesor }}</a></td>
+	</tr>
+	{% endfor %}
+	</table>
+
+	<br/>
+
+	<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="center" width="33%">
+			{% if has_previous %}
+				<a href="{% url partes_page previous %}">Página anterior</a>
+			{% else %}
+				&nbsp;
+			{% endif %}
+		</td>
+		<td align="center">Página {{ page }} de {{ pages }} ({{ hits }} partes)</td>
+		<td align="center" width="33%">
+			{% if has_next %}
+				<a href="{% url partes_page next %}">Página siguiente</a>
+			{% else %}
+				&nbsp;
+			{% endif %}
+		</td>
+	</tr>
+	</table>
+{% endif %}
+
+{% endblock %}

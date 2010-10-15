@@ -1,0 +1,68 @@
+{% extends "akademic/richWebBrowser/profes-base.html" %}
+{% load i18n %}
+
+{% block submenu %}
+<table>
+	<tr>
+		<td>
+			<a href="{% url notificacion_sms_masivo %}">
+				<img src="{{ MEDIA_URL }}/imgs/phone.gif"/>
+				Notificaciones masivas
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url notificacion_sms_curso %}">
+				<img src="{{ MEDIA_URL }}/imgs/phone.gif"/>
+				Notificaciones por cursos
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url estado_notificacion %}">
+				<img src="{{ MEDIA_URL }}/imgs/phone.gif"/>
+				Estado notificaciones
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url profesor_posesion %}">
+				<img src="{{ MEDIA_URL }}/imgs/kontact_contacts.gif"/>
+				Poseer
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url informe_partes %}">
+				<img src="{{ MEDIA_URL }}/imgs/date.gif"/>
+				Informe de partes
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url dias_especiales %}">
+				<img src="{{ MEDIA_URL }}/imgs/clock.gif"/>
+				Dias especiales
+			</a>
+		</td>
+	</tr>
+    <tr>
+        <td>
+            <a href="{% url lista_dias_especiales %}">
+                <img src="{{ MEDIA_URL }}/imgs/kmultiple.gif"/>
+                Lista días especiales
+            </a>
+        </td>
+    </tr>
+    <tr><td><a href="{% url generar_boletin %}"><img src="{{ MEDIA_URL }}/imgs/date.gif"/> Boletines</a></td></tr>
+    <tr><td><a href="{% url selecciona_grupo_je %}"><img src="{{ MEDIA_URL }}/imgs/tutor.gif"/> Informe de grupo</a></td></tr>
+    <tr><td><a href="{% url informe_absentismo %}"><img src="{{ MEDIA_URL }}/imgs/tutor.gif"/> Informe de absentismo</a></td></tr>
+</table>
+{% endblock %}
+
+

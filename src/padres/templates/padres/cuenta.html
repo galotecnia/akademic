@@ -1,0 +1,32 @@
+{% extends "padres/base.html" %}
+{% load i18n %}
+
+{% block breadcrumb %}
+	Mi cuenta
+{% endblock %}
+
+{% block submenu %}
+	Si decide cambiar su contraseña recuerde que es muy importante que la nueva contraseña
+	sea robusta, es decir, que no sea ni su nombre, ni su apellido, ni ningún dato que pueda
+	relacionarle con usted. También es bueno que la contraseña tenga tanto caracteres numéricos
+	como alfabéticos.
+{% endblock %}
+
+{% block body %}
+	{% if form %}
+        <form action="" method="post" align="left">
+            <fieldset>
+                {{ form.as_p }}
+            </fieldset>
+            <p>
+                <td align="left"><input type="submit" value="Enviar" /></td>
+            </p>
+        </form>
+	{% else %}
+	<div align="center" style="margin-top: 50px;padding: 20px;">
+		<p class="block" align="center" color="red">
+			<b> {{ msg }}</b>
+		</p>
+	</div>
+	{% endif %}
+{% endblock %}

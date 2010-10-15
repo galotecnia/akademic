@@ -1,0 +1,40 @@
+{% extends "padres/base.html" %}
+{% load i18n %}
+{% load emoticon %}
+
+{% comment %}
+{% block advertencia %}{% endblock %}
+{% endcomment %}
+
+{% block breadcrumb %}
+	{{ nombre }}
+{% endblock %}
+
+{% block body %}
+
+<h1>{{ nombre }}</h1>
+
+{% if hijos  %}
+    {% ifnotequal numHijos 1 %}
+	Ver faltas de:
+	<form method="post">
+		<select name="alumno_id">
+				<option value="0">Todos</option>
+			{% for h in hijos %}
+				<option value="{{ h.hijo.id }}">{{ h.hijo }}</option>
+			{% endfor %}
+		</select>
+		<input type="submit" value="Aceptar"/>
+	</form>
+    {% endifnotequal %}
+	{% if filtrado %}
+		<a href="./">Mostrar todos</a>
+	{% endif %}
+
+	{% include "padres/bloque-faltas.html" %}
+{% else %}
+	No se le ha asignado ninguna falta
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% if msg %}
+    <p><h3>{{ msg }}</h3></p>
+{% else %}
+<form method="POST">
+    {% if niveles %}
+    <fieldset>
+        <legend>Elija el nivel para el que desea generar los boletines.</legend>
+        <table class="curso">
+        <tr>
+            <th>Nivel</th>
+            <th>Selección</th>
+        </tr>
+        {% for nivel in niveles %}
+        <tr class="{% cycle impar,par %}">
+            <td>{{ nivel }}</td>
+            <td><input name="nivel" type="checkbox" value="{{ nivel.id }}"/></td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Seleccione nivel"/>
+            </td>
+        </tr>
+        </table>
+    </fieldset>
+    {% endif %}
+    {% if grupos %}
+    <fieldset>
+        <legend>Elija el curso para el que desea generar los boletines.</legend>
+        <table class="curso">
+        <tr>
+            <th>Grupo</th>
+            <th>Selección</th>
+        </tr>
+        {% for grupo in grupos %}
+        <tr class="{% cycle impar,par %}">
+            <td>{{ grupo.curso }} {{ grupo.nivel.idPincel}} {{ grupo.seccion }}</td>
+            <td><input name="grupo" type="checkbox" value="{{ grupo.id }}"/></td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Seleccione curso"/>
+            </td>
+        </tr>
+        </table>
+    </fieldset>
+    {% endif %}
+</form>
+{% endif %}
+

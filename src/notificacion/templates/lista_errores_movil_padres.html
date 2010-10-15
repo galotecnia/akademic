@@ -1,0 +1,15 @@
+{% for tipo in lista_errores_movil_padres.values %}
+	{% if tipo.datos %}
+		<table class="curso">
+			<th><b>{{ tipo.nombre_completo }}:</b></th>
+			<th></th>			
+			{% for padre in tipo.datos %}
+				<tr class="{% cycle par,impar %}">
+						<td>{{ padre }}</td>
+				</tr>
+				<tr></tr>
+			{% endfor %}
+		</table>
+	{% endif %}		
+{% endfor %}
+<form><input type=button value="Volver" onClick="location.href=document.URL"></form> 

@@ -1,0 +1,14 @@
+{% if predef %}
+	<p>Elija uno de los textos predefinidos:</p></br>
+	<input type="radio" value="" CHECKED name="textoPredef">
+		-Ninguno-
+	</input>
+	<br/>
+	{% for p in predef %}
+		<input type="radio" value="{{ p.id }}" name="textoPredef">
+			{{ p.texto }}
+		</input>
+		<br/>
+	{% endfor %}
+{% endif %}
+

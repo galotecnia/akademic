@@ -1,0 +1,16 @@
+{% extends "padres/base.html" %}
+{% load i18n %}
+
+{% block body %}
+
+<h1>{{ nombreFalta }}</h1>
+
+{% if object_list %}
+	{% for f in object_list %}
+		{{ f.asignatura }}
+	{% endfor %}
+{% else %}
+	No se le ha asignado ninguna falta
+{% endif %}
+
+{% endblock %}

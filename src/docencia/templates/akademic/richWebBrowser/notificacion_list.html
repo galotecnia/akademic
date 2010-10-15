@@ -1,0 +1,90 @@
+{% extends "akademic/richWebBrowser/menu/director.html" %}
+
+{% block breadcrumb %}Notificaciones >> Estado {% endblock %}
+
+{% block body %}
+	<form method="POST" action="{{ action }}">
+		{% include "show_form.html" %}
+		<fieldset>
+			<table>		
+				{{ filtro_form.as_table }}
+			</table>
+		</fieldset>
+		<input type="submit" value="Enviar"/>
+	</form>
+	{% if object_list %}
+		<table class="curso">
+			<tr>
+				<td colspan="2" align="left">
+					{% if page_obj.has_previous %}
+						<a href=".?page={{ page_obj.previous_page_number }}{{ filter }}">
+						<img src="{{ MEDIA_URL }}/imgs/anterior.gif"/>Página anterior</a>
+					{% endif %}
+				</td>
+				<td colspan="2" align="middle">
+					Mostrando página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}
+				</td>
+				<td colspan="2" align="right">
+					{% if page_obj.has_next %}
+						<a href=".?page={{ page_obj.next_page_number }}{{ filter }}">
+						<img src="{{ MEDIA_URL }}/imgs/siguiente.gif"/>Página siguiente</a>
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<th>Teléfono</th>
+				<th>Fecha Creación</th>
+				<th>Fecha Envío</th>
+				<th>Texto</th>
+				<th>Profesor</th>
+				<th>Estado</th>
+			</tr>
+		{% for notificacion in object_list %}
+			<tr class="{% cycle par,impar %}">
+				<td>
+					{{ notificacion.padre.persona.tlf_movil }}
+				</td>
+
+				<td>{{ notificacion.fechaCreacion|date:"d-m-Y" }}</td>
+				<td>{{ notificacion.fechaEnvio|date:"d-m-Y" }}</td>
+				<td>{{ notificacion.texto|truncatewords:"5" }}</td>
+				<td>{{ notificacion.profesor }}</td>
+				<td>
+					{% ifequal notificacion.estado 0 %}
+						Pendiente		
+					{% endifequal %}
+					{% ifequal notificacion.estado 1 %}
+						Notificado
+					{% endifequal %}
+					{% ifequal notificacion.estado 2 %}
+						Error
+					{% endifequal %}
+					{% ifequal notificacion.estado 3 %}
+						No enviar
+					{% endifequal %}
+				</td>
+			</tr>
+		{% endfor %}
+			<tr>
+				<th colspan="6">Total de notificaciones: {{ object_list.paginator.count }}</th>
+			</tr>
+			<tr>
+				<td colspan="2" align="left">
+					{% if object_list.has_previous %}
+						<a href="{% url estado_notificacion object_list.previous_page_number %}">
+						<img src="{{ MEDIA_URL }}/imgs/anterior.gif"/>Página anterior</a>
+					{% endif %}
+				</td>
+				<td colspan="2" align="middle">
+					Mostrando página {{ object_list.number }} de {{ object_list.paginator.num_pages }}
+				</td>
+				<td colspan="2" align="right">
+					{% if object_list.has_next %}
+						<a href="{% url estado_notificacion object_list.next_page_number %}">
+						<img src="{{ MEDIA_URL }}/imgs/siguiente.gif"/>Página siguiente</a>
+					{% endif %}
+				</td>
+			</tr>
+		</table>
+	{% endif %}
+{% endblock %}

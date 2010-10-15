@@ -1,0 +1,26 @@
+{% load i18n %}
+
+{% if cambios %}
+    <p><h3><b>Se han realizado un total de {{ cambios }} cambios.</b></h3></p>
+{% endif %}
+    <p><h2>Seleccione el dia y curso para el que desea realizar la gestión</h2></p>
+    <form action="." method="POST">
+        <fieldset>
+            <legend>Días especiales</legend>
+            {{ form.as_p }}
+        </fieldset>
+        <p align="center">Mantenga pulsado la tecla CTRL para seleccionar más de un curso (en UNIX o Windows) o la tecla COMMAND (en Mac)</p>
+        {% for f in form_list %}
+            <p></p>
+            <fieldset>  
+                <legend>Seleccione responsables</legend>
+                {{ f.as_p }}
+            </fieldset>
+            <p align="center">Mantenga pulsado la tecla CTRL para seleccionar más de un responsable (en UNIX o Windows) o la tecla COMMAND (en Mac)</p>
+        {% endfor %}
+        {% if form_list %}
+            <input type="hidden" name="create" value="1"/>
+        {% endif %}
+        <p></p>
+        <input type="submit" value="Continuar"/>
+    </form>

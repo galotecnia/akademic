@@ -1,0 +1,42 @@
+{% extends "akademic/simplex4/index.html" %}
+{% load i18n permissions %}
+
+{% block username %}
+	{{ profesor }} 
+{% endblock %}
+
+{% block mainmenu %}
+	{% for n in nivel %}
+		{% ifequal n "profesor" %}
+			<a href="{% url profesor_faltas_actual %}">Profesor</a>
+		{% endifequal %}
+		{% ifequal n "tutor" %}
+			<a href="{% url comentario %}">Tutor</a>
+		{% endifequal %}
+		{% ifequal n "coordinador ciclo" %}
+			<a href="{% url profesor_posesion %}">Coordinador de ciclo</a>
+		{% endifequal %}
+		{% ifequal n "jefe estudios" %}
+			<a href="{% url informe_partes %}">Jefe de estudios</a>
+		{% endifequal %}
+		{% ifequal n "director" %}
+			<a href="{% url informe_partes %}">Director</a>
+		{% endifequal %}
+		{% ifequal n "verificador" %}
+			<a href="{% url verificacion_selecciona_curso %}">Verificador</a>
+			<a href="{% url reenvio_password %}">Reenvío de password</a>
+		{% endifequal %}
+        {% ifequal n "orientador" %}
+            <a href="{% url selecciona_grupo %}">Orientador</a>
+        {% endifequal %}
+        {% ifequal n "pas" %}
+            <a href="{% url pas_reenvio_pass %}">Reenvío de password</a>
+            <a href="{% url pas_lista_citas %}">Citas</a>
+        {% endifequal %}
+	{% endfor %}
+    {% ifhasperm "recursopermission.acceso_recurso" user %}
+        <a href="{% url lista_recursos %}">Recursos</a>
+    {% endifhasperm %}
+	<a href="{% url listar_incidencias %}">Incidencias</a>
+	<a href="{% url logout %}">Salir</a>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% load emoticon %}
+
+{% for h in hijos %}
+	<table width="100%" id="faltas">
+		<tr class="encabezado">
+			<th class="encabezado" align="left" colspan="{{ h|columna }}">
+				{{ h.hijo }}
+			</th>
+		</tr>
+		{% if h.faltas %}
+		<tr>
+			<th>Número</th>
+			<th>Fecha</th>
+			<th>Hora</th>
+			<th>Asignatura</th>
+			{{ h|header:"header" }}
+		</tr>
+		{% else %}
+		<tr>
+			<td colspan="{{ h|columna }}">No hay faltas</td>
+		</tr>
+		{% endif %}
+	{% for f in h.faltas %}
+		<tr class="{% cycle odd,even %}">
+			<td>{{ forloop.counter}}</td>
+			<td>{{ f.fecha|date:"d-M-Y" }}</td>
+			<td>{{ f.hora.intervalo }} </td>
+			<td>{{ f.asignatura }}</td>
+			{{ f|iconoFalta }}
+		</tr>
+	{% endfor %}
+	</table>
+	<br/>
+{% endfor %}
+

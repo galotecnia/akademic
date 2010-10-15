@@ -1,0 +1,36 @@
+{% extends "akademic/richWebBrowser/menu/tutor.html" %}
+
+{% block breadcrumb %}Tutor >> Lista de citas{% endblock %}
+
+{% block body %}
+
+{% if not error %}
+
+<h2>Lista de citas</h2>
+
+<a href="{% url get_citas_calendar %}">Descargar</a>
+
+<div id="menuTiposIncidencia">
+	<a href="?semana={{ semanaAnterior }}">Semana anterior</a> |
+	<a href="?semana={{ semanaSiguiente }}">Semana siguiente</a>
+</div>
+<table id="horarioRecursos" cellpadding="0" cellspacing="0">
+	{% for fila in calendario %}
+	<tr>
+		{% for columna in fila %}
+			<td class="{{ columna.class }}">
+				{% if columna.a %}
+					<a href="{{columna.a}}">{{ columna.texto }}<img src="{{ MEDIA_URL }}/imgs/bookmark.gif"></a>
+				{% else %}
+					{{ columna.texto }}
+				{% endif %}
+			</td>
+		{% endfor %}
+	</tr>
+	{% endfor %}
+</table>
+
+{% endif %}
+
+{% endblock %}
+

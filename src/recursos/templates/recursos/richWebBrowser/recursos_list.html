@@ -1,0 +1,34 @@
+{% extends "recursos/richWebBrowser/menu/recursos.html" %}
+
+{% block breadcrumb %}Recursos >> Lista de recursos{% endblock %}
+
+{% block submenu %}
+	{% for tipo in TIPOS_DE_RECURSO %}
+		<li>- <a href="{% url lista_recursos tipo.0 %}">{{ tipo.1 }}</a></li>
+	{% endfor %}
+	{{ block.super }}
+{% endblock %}
+
+{% block body %}
+    {% if object_list %}
+        <h1>Lista de recursos disponibles actualmente</h1>
+        <table align="center" class="curso" cellpadding="0" cellspacing="0">
+            <tr>
+                <th>Recurso</th>
+                <th>Tipo</th>
+                <th>Acción</th>
+            </tr>
+            {% for recurso in object_list %}
+            <tr class="{% cycle impar,par %}">
+                <td>{{ recurso }}</td>
+                <td>{{ recurso.get_tipo_display }}</td>
+                <td><a href="{% url nueva_reserva recurso.id %}">Reservar</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h1>No existen recursos disponibles actualmente</h1>
+    {% endif %}
+{% endblock %}
+
+

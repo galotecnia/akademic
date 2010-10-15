@@ -1,0 +1,18 @@
+{% extends "akademic/richWebBrowser/profes-base.html" %}
+
+{% block breadcrumb %} Verificador >> Datos verificados correctamente{% endblock breadcrumb %}
+
+{% block body %}
+	<p>Sus datos se han almacenado correctamente</p>
+
+{% endblock %}
+
+{% block submenu %}
+<table>
+	<tr>
+		<td>
+			<a href="{% url verificacion_selecciona_curso %}">Selecciona Curso</a>
+		</td>
+	</tr>
+</table>
+{% endblock %}

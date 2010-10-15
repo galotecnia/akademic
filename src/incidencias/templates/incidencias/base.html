@@ -1,0 +1,14 @@
+{% extends "akademic/profesor-index.html" %}
+
+{% load i18n %}
+
+
+{% block mainmenu %}
+    {% include "akademic/main-menu.html" %}
+{% endblock %}
+
+{% block body %}
+    {% if error %}
+        <div class="aviso">{{ error }}</div>
+    {% endif %}
+{% endblock %}

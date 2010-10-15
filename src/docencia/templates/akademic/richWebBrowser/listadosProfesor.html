@@ -1,0 +1,68 @@
+{% extends "akademic/richWebBrowser/menu/profesor.html" %}
+
+{% block breadcrumb %}Profesor >> Listados profesor{% endblock %}
+
+{% block body %}
+
+{% if not error %}
+	<form action="{{ action }}" method="POST">
+	{% include "akademic/richWebBrowser/formularioMesAnyo.html" %}
+	{% include "akademic/richWebBrowser/formularioTipoListado.html" %}
+	<fieldset>
+		<legend>Seleccione uno o varios cursos:</legend>
+	{% if listaAsignaturas %}
+		<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+		{% for entrada in listaAsignaturas %}
+			<tr class="{% cycle par,impar %}">
+				<td colspan="5">
+					{{ entrada.asignatura.nombreLargo }} - {{ entrada.grupo.curso }}{{ entrada.grupo.seccion }}
+				</td>
+				<td>
+					<input type="checkbox" name="asignaturas" value="{{ entrada.asignatura.id }}@{{ entrada.grupo.id }}"/>
+				</td>
+			</tr>
+		{% endfor %}
+			</td>
+		</table>
+	{% endif %}
+	</fieldset>
+		<input type="submit" value="Obtener listados"/>
+	</form>
+	{% if listados %}
+		<a target="Impresion" href="{% url profesor_mostrar_listados %}?csv=0&{{ urlimprimir }}"><img src="{{ MEDIA_URL }}/imgs/fileprint.png" alt="Imprimir"/>Imprimir</a>
+		<a href="{% url profesor_mostrar_listados %}?csv=1&{{ urlimprimir }}"><img src="{{ MEDIA_URL }}/imgs/spreadsheet.png" alt="CSV"/>CSV</a>
+		{% for asigna in listados %}
+		<div class="listados">
+			Listado de <b>{{ asigna.tipoListado }}</b><br/>
+			Asignatura: <b>{{ asigna.asignatura.nombreLargo }}</b><br/>
+			Grupo: <b>{{ asigna.grupo.curso }}{{ asigna.grupo.seccion }}</b><br/>
+			<b>Incidencias entre las fechas:</b> {{ asigna.fechaInicio }} y {{ asigna.fechaFin }}
+		</div>
+		<table class="listados">
+			<tr>
+				<th>Alumno:</th>
+				{% for dia in asigna.dias %}
+					<th>{{ dia }}</th>
+				{% endfor %}
+				<th>Total</th>
+			</tr>
+			{% for alu in asigna.alumnos %}
+			<tr class="{% cycle par,impar %}">
+				<td class="alumno"><span class="nombre">{{ alu.alumno.persona.nombre }}</span><span class="apellido">{{ alu.alumno.persona.apellidos }}</span></td>
+				{% for dia in alu.faltas %}
+					<td class="dia">
+						{% if dia %}
+							{{ dia }}
+						{% else %}
+							&nbsp;
+						{% endif %}
+					</td>
+				{% endfor %}
+				<td>{{ alu.totalFaltas }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+		{% endfor %}
+	{% endif %}
+{% endif %}
+{% endblock %}

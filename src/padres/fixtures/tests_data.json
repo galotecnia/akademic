@@ -1,0 +1,13 @@
+[
+    {
+        "pk": 1, 
+        "model": "padres.padre", 
+        "fields": {
+            "difunto": false, 
+            "notificarSms": false, 
+            "persona": 1, 
+            "verificado": "2009-08-18", 
+            "notificarEmail": false
+        }
+    }
+]

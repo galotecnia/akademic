@@ -1,0 +1,82 @@
+{% extends "akademic/richWebBrowser/profes-base.html" %}
+{% load i18n %}
+
+{% block submenu %}
+<table class="menuSecundario">
+	<tr>
+		<td>
+			<a href="{% url comentario %}">
+				<img src="{{ MEDIA_URL }}/imgs/comentarios-tutor.gif"/>
+				Comentarios de tutor
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url resumen_tutor %}">
+				<img src="{{ MEDIA_URL }}/imgs/tutor.gif"/>
+				Resumen total de totales
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url notificacion_sms_grupo %}">
+				<img src="{{ MEDIA_URL }}/imgs/phone.gif"/>
+				Notificaciones grupo de alumnos
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url informe_personalizado %}">
+				<img src="{{ MEDIA_URL }}/imgs/informe-personalizado.gif"/>
+				Informe personalizado
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url tutor_lista_asignaturas %}">
+				<img src="{{ MEDIA_URL }}/imgs/listados.gif"/>
+				Informe por áreas
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url tutor_lista_totales %}">
+				<img src="{{ MEDIA_URL }}/imgs/listados.gif"/>
+				Informe mensual por incidencias
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url informe_tutor %}">
+				<img src="{{ MEDIA_URL }}/imgs/tutor.gif"/>
+				Informe de grupo
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url resumen_evaluacion_tutor %}">
+				<img src="{{ MEDIA_URL }}/imgs/resumen-evaluacion.gif"/>
+				Informe de grupo por áreas
+			</a>
+		</td>
+	</tr>
+    {% comment %}
+    <!-- Lista las citas de un profesor -->
+	<tr>
+		<td>
+			<a href="{% url profesor_lista_citas %}">
+				<img src="{{ MEDIA_URL }}/imgs/clock.gif"/>
+				Citas con padres
+			</a>
+		</td>
+	</tr>
+    {% endcomment %}
+</table>
+{% endblock %}

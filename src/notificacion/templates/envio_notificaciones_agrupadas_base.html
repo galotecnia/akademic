@@ -1,0 +1,12 @@
+{% if lista_errores_movil_padres %}		
+	{% include "lista_errores_movil_padres.html" %} 	
+{% endif %}
+{% if not lista_errores_movil_padres and not error %}
+	<form method="POST">			
+		{% include "show_form.html" %}	
+		{% include "seleccionar_notificacion_form.html" %}			
+	</form>
+{% endif %}
+{% if error %}
+	<FORM><INPUT TYPE="button" VALUE="Volver" onClick="history.go(-1);return true;"> </FORM> 
+{% endif %}

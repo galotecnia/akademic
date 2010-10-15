@@ -1,0 +1,22 @@
+<form action="" method="post">
+<fieldset>
+    <legend>Nueva incidencia:</legend>
+    <label for="id_descripcionCorta">Descripción:</label>
+        {{ form.descripcionCorta }}
+        <br/>
+    <label for="id_texto">Texto:</label>
+        {{ form.texto}}
+        <br/>
+</fieldset>
+<fieldset>
+    <legend>Estado de la incidencia:</legend>
+    <label for="id_tipoIncidencia">Tipo:</label>{{ form.tipoIncidencia }}
+        <br/>
+    <label for="id_estado">Estado:</label>{{ form.estado }}
+        <br/>
+    <label for="id_prioridad">Prioridad:</label>{{ form.prioridad }}
+        <br>
+    <label for="submit"></label><input type="submit" value="Aceptar"/><br/>
+</fieldset>
+</form>
+

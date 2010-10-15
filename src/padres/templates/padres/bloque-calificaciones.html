@@ -1,0 +1,71 @@
+{% load emoticon %}
+
+{% for h in hijos %}
+	<table width="100%" id="faltas">
+		<tr class="encabezado">
+			<th class="encabezado" align="left" colspan="{{ h|columna }}">
+				{{ h.hijo }}
+			</th>
+		</tr>
+		{% if not h.evaluaciones %}
+			<tr>
+				<td colspan="{{ h|columna }}">No hay calificaciones</td>
+			</tr>
+		{% endif %}
+	    {% for eval in h.evaluaciones %}
+		    {% if eval.calificaciones %}
+		    <tr>
+			    <th>Evaluación: {{ eval.evaluacion.nombre }}-{{ eval.evaluacion.cursoEscolar }}</th>
+		    </tr>
+		    <tr>
+			    <th>Materia</th>
+			    <th>Nota</th>
+			    <th>Observaciones</th>
+                <!--
+                <th>Conceptos</th>
+                <th>Procedimientos</th>
+                <th>Actitud</th>
+                -->
+			    {{ h|header:"header" }}
+		    </tr>
+		    {% for cal in eval.calificaciones %}
+		    <tr class="{% cycle odd,even %}">
+			    <td>{{ cal.matricula.asignatura }}</td>
+			    <td>{{ cal.nota|notaTextual }}</td>
+			    <td>
+				    {% if not cal.comentario %}
+					    --
+				    {% else %}
+					    {{ cal.comentario }} 
+				    {% endif %}
+			    </td>
+                <!--
+                <td>{{ cal.conceptos }} </td>
+                <td>{{ cal.procedimientos }} </td>
+                <td>{{ cal.actitud }} </td>
+                -->
+            </tr>
+		    {% endfor %}
+		    {% if eval.informe %}
+		    <tr>
+			    <td colspan="3">
+			        <p>
+				        Informe personalizado:
+			        </p>
+			        {{ eval.informe.informeCompetencias|linebreaks }}
+			    </td>
+		    </tr>
+		    {% endif %}
+            <tr>
+                <td colspan="3">
+                    <a href="{% url padres_boletin %}?alumno={{h.hijo.id}}&evaluacion={{eval.evaluacion.id}}">Ver boletín</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr><th>No hay calificaciones para la evaluación {{ eval.evaluacion }}. <th></tr>
+		{% endif %}
+	    {% endfor %}
+	</table>
+	<br/>
+{% endfor %}
+

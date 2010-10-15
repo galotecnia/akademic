@@ -1,0 +1,19 @@
+{% extends "akademic/richWebBrowser/menu/profesor.html" %}
+{% load i18n %}
+
+{% block breadcrumb %}Profesor >> Enviar ficheros {% endblock %}
+
+{% block body %}
+    {% if msg %}
+        <p>{{ msg }}</p>
+    {% endif %}
+    {% if form %}
+    <form action='.' method='POST' enctype="multipart/form-data">
+        <fieldset>
+        <legend>Agregar fichero a un alumno</legend>
+            {{ form.as_p }}
+        </fieldset>
+        <input type="submit" class="button" value="Enviar"/> 
+    </form>
+    {% endif %}
+{% endblock %}

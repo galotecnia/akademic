@@ -1,0 +1,45 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ SITE_MEDIA }}/css/akademic-ppc.css"
+	type="text/css" media="screen, tv, projection"/>
+<link rel="alternative stylesheet" type="text/css"
+	href="{{ SITE_MEDIA }}/css/listados-print.css" media="print" title="Print Preview" />
+</head>
+<body>
+{% for asigna in listados %}
+<div class="pagina">
+<div class="listados">
+		<b>Resumen evaluación</b><br/>
+		Asignatura: <b>{{ asigna.asignatura.nombreLargo }}</b><br/>
+		Grupo: <b>{{ asigna.grupo.curso }}{{ asigna.grupo.seccion }}</b><br/>
+		<b>Incidencias entre las fechas:</b> {{ fechaInicio|date:"d-m-Y" }} y {{ fechaFin|date:"d-m-Y" }}
+		<b>Fecha de impresión:</b> {{ fechaImpresion }}
+</div>
+		<table class="listados">
+			<thead>
+			<tr>
+				<th>Alumno:</th>
+				<th>Asistencia</th>
+				<th>Retrasos</th>
+				<th>Comportamiento</th>
+				<th>Tareas</th>
+				<th>Material</th>
+				
+			</tr>
+			</thead>
+			<tbody>
+			{% for alu in asigna.faltas %}
+			<tr class="{% cycle par,impar %}">
+				<td class="alumno"><span class="nombre">{{ alu.alumno.persona.nombre }}</span><span class="apellido">{{ alu.alumno.persona.apellidos }}</span></td>
+				<td class="dia"> {{ alu.totalAsistencia }} </td>
+				<td class="dia"> {{ alu.totalRetrasos }} </td>
+				<td class="dia"> {{ alu.totalComportamiento }} </td>
+				<td class="dia"> {{ alu.totalTarea }} </td>
+				<td class="dia"> {{ alu.totalMaterial }} </td>
+			</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		{% endfor %}
+</body>
+</html>

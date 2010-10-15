@@ -1,0 +1,60 @@
+{% if error %}
+	<div class="aviso">{{ error }}</div>
+{% else %}
+	<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+	<tr><td colspan="4" align="center"><b>Faltas de asistencia</b></td></tr>
+	<tr>
+	<td colspan="5" align="center">
+		<b>Calendario semanal</b>
+		Profesor: {{ profesor.nombre }} {{ profesor.apellidos }} <br/>
+		Semana: -----/-----
+		
+	</td>
+	</tr>
+	<tr>
+		<td>Hora</td>
+		<td>Lunes</td>
+		<td>Martes</td>
+		<td>Miércoles</td>
+		<td>Jueves</td>
+		<td>Viernes</td>
+	</tr>
+	{% for h in horario %}
+		<tr class="{% cycle par,impar %}">
+		<td>
+			{{ h.hora.horaInicio }} - {{ h.hora.horaFin }}
+		</td>
+		<td>
+			{% ifequal h.diaSemana 1 %}
+				{{ h.asignatura.nombreCorto }} {{ h.grupo.curso }}{{ h.grupo.seccion }}
+				{{ h.nivel.nombreCorto }}
+			{% endifequal %}
+		</td>
+		<td>
+			{% ifequal h.diaSemana 2 %}
+				{{ h.asignatura.nombreCorto }} {{ h.grupo.curso }}{{ h.grupo.seccion }}
+				{{ h.nivel.nombreCorto }}
+			{% endifequal %}
+		</td>
+		<td>
+			{% ifequal h.diaSemana 3 %}
+				{{ h.asignatura.nombreCorto }} {{ h.grupo.curso }}{{ h.grupo.seccion }}
+				{{ h.nivel.nombreCorto }}
+			{% endifequal %}
+		</td>
+		<td>
+			{% ifequal h.diaSemana 4 %}
+				{{ h.asignatura.nombreCorto }} {{ h.grupo.curso }}{{ h.grupo.seccion }}
+				{{ h.nivel.nombreCorto }}
+			{% endifequal %}
+		</td>
+		<td>
+			{% ifequal h.diaSemana 5 %}
+				{{ h.asignatura.nombreCorto }} {{ h.grupo.curso }}{{ h.grupo.seccion }}
+				{{ h.nivel.nombreCorto }}
+			{% endifequal %}
+		</td>
+		</tr>
+	{% endfor %}
+	</table>
+{% endif %}

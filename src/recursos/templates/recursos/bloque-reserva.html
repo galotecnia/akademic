@@ -1,0 +1,10 @@
+	<table class="reserva" cellpadding="0" cellspacing="0">
+		<tr><th>Recurso: {{ reserva.recurso }} -- {{ reserva.recurso.get_tipo_display }}</th></tr>
+		<tr><th>Fecha: {{ reserva.inicio|date:"d-m-Y"}} - {{ reserva.fin|date:"d-m-Y" }}</th></tr>
+        <tr><th>Responsable: {{ user }}</th></tr>
+		<tr><td><b>Motivo de la reserva:</b> {{ reserva.motivo }}</td></tr>
+        {% ifequal reserva.responsable.id user.id %}
+            <tr><td><a href="{% url eliminar_reserva reserva.id %}/">Eliminar reserva</a></td></tr>
+        {% endifequal %}
+	</table>
+	</br>

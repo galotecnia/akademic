@@ -1,0 +1,13 @@
+{% load i18n %}
+
+{% if not error %}
+    <form action="." method="POST">
+        <legend><b>{{ legend }}</b></legend>
+        <fieldset>
+            {{ form.as_p }}
+        </fieldset>
+        <input type="submit" value="Continuar"/><br/>
+    </form>
+{% else %}
+    <p>{{ error }}</p>
+{% endif %}

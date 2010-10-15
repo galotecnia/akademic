@@ -1,0 +1,77 @@
+{% extends "akademic/richWebBrowser/menu/profesor.html" %}
+
+{% block breadcrumb %}
+    {% ifequal tipo 'faltas' %}
+        Profesor >> Horario faltas de asistencia
+    {% else %}
+        Profesor >> Horario comportamiento
+    {% endifequal %}
+{% endblock %}
+
+{% block body %}
+
+{% if not error %}
+    {% if horarioweb %}
+        <h1>Calendario semanal</h1>
+        <table class="calendario" width="100%">
+        <tr>
+            <td align="center" colspan="6">
+                <b>Semana: {{ horarioweb.0.0.dias.0.fecha }}/{{ horarioweb.0.0.dias.4.fecha }}</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" colspan="3"><a href="{{ SITE_LOCATION }}/akademic/horario{{ tipo.capitalize }}/{{ semanaAnterior }}/"><img align="middle" src="{{ MEDIA_URL }}/imgs/anterior.gif"/> Semana anterior</a></td>
+            <td align="right" colspan="3"><a href="{{ SITE_LOCATION }}/akademic/horario{{ tipo.capitalize }}/{{ semanaSiguiente }}/">Semana siguiente<img align="middle" src="{{ MEDIA_URL }}/imgs/siguiente.gif"/></a></td>
+        </tr>
+    {% for horario in horarioweb %}
+        <tr>
+            <td colspan="6">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="horas">Semana: {{ semana }}</td>
+            <td class="horas">Lunes</td>
+            <td class="horas">Martes</td>
+            <td class="horas">Miércoles</td>
+            <td class="horas">Jueves</td>
+            <td class="horas">Viernes</td>
+        </tr>
+        {% for hora in horario %}
+            <tr>
+            <td class="horas">
+                {{ hora.hora.horaInicio|time:"G:i" }} - {{ hora.hora.horaFin|time:"G:i" }}
+            </td>
+            {% for d in hora.dias %}
+                {% if d.clases %}
+                    <td class="ocupado">
+                        {% ifequal d.clases.0 'especial' %}
+                            <a href="{{ SITE_LOCATION }}/akademic/{{ tipo }}/{{ d.fecha }}/">{{ d.clases.1 }}</a>
+                        {% else %}
+                            {% if d.nombre %}
+                        <a href="{{ SITE_LOCATION }}/akademic/{{ tipo }}/{{ d.fecha }}/{{ hora.hora.id }}/">
+                                {{ d.nombre }}
+                        {% ifequal tipo 'faltas' %}
+                            {% if d.parte %}
+                                <img src="{{ MEDIA_URL }}/imgs/ok.gif"/>
+                            {% endif %}
+                        {% endifequal %}
+                        </a>
+                            {% else %}
+                            <a href="#">{{ d.clases.1 }}</a>
+                            {% endif %}
+                        {% endifequal %}
+                {% else %}
+                    <td class="{{ d.dia }}">
+                {% endif %}
+                </td>
+            {% endfor %} 
+            </tr>
+        {% endfor %}
+    {% endfor %}
+        </table>
+    {% endif %}
+    {% if grupos %}
+        {% include "akademic/formularioFaltas.html" %}
+    {% endif %}
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,4034 @@
+[
+  {
+    "pk": 22, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_logentry", 
+      "name": "Can add log entry", 
+      "content_type": 8
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_logentry", 
+      "name": "Can change log entry", 
+      "content_type": 8
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_logentry", 
+      "name": "Can delete log entry", 
+      "content_type": 8
+    }
+  }, 
+  {
+    "pk": 100, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_alumno", 
+      "name": "Can add alumno", 
+      "content_type": 34
+    }
+  }, 
+  {
+    "pk": 73, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_asignatura", 
+      "name": "Can add asignatura", 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 82, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_aula", 
+      "name": "Can add aula", 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 109, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_ausencia", 
+      "name": "Can add ausencia", 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 46, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_autorizacion", 
+      "name": "Can add autorizacion", 
+      "content_type": 16
+    }
+  }, 
+  {
+    "pk": 157, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_calificacion", 
+      "name": "Can add calificacion", 
+      "content_type": 53
+    }
+  }, 
+  {
+    "pk": 163, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_calificacioncompetencia", 
+      "name": "Can add calificacion competencia", 
+      "content_type": 55
+    }
+  }, 
+  {
+    "pk": 79, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_centro", 
+      "name": "Can add centro", 
+      "content_type": 27
+    }
+  }, 
+  {
+    "pk": 133, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_cita", 
+      "name": "Can add cita", 
+      "content_type": 45
+    }
+  }, 
+  {
+    "pk": 49, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_clasificacion", 
+      "name": "Can add clasificacion", 
+      "content_type": 17
+    }
+  }, 
+  {
+    "pk": 151, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_comentario", 
+      "name": "Can add comentario", 
+      "content_type": 51
+    }
+  }, 
+  {
+    "pk": 91, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_competencia", 
+      "name": "Can add competencia", 
+      "content_type": 31
+    }
+  }, 
+  {
+    "pk": 64, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_concierto", 
+      "name": "Can add concierto", 
+      "content_type": 22
+    }
+  }, 
+  {
+    "pk": 172, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_coordinadorciclo", 
+      "name": "Can add coordinador ciclo", 
+      "content_type": 58
+    }
+  }, 
+  {
+    "pk": 178, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_director", 
+      "name": "Can add director", 
+      "content_type": 60
+    }
+  }, 
+  {
+    "pk": 148, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_enviosfaltas", 
+      "name": "Can add envios faltas", 
+      "content_type": 50
+    }
+  }, 
+  {
+    "pk": 70, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_estadocivil", 
+      "name": "Can add estado civil", 
+      "content_type": 24
+    }
+  }, 
+  {
+    "pk": 40, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_estudiospadre", 
+      "name": "Can add estudios padre", 
+      "content_type": 14
+    }
+  }, 
+  {
+    "pk": 94, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_evaluacion", 
+      "name": "Can add evaluacion", 
+      "content_type": 32
+    }
+  }, 
+  {
+    "pk": 103, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_falta", 
+      "name": "Can add falta", 
+      "content_type": 35
+    }
+  }, 
+  {
+    "pk": 112, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_faltacomportamiento", 
+      "name": "Can add falta comportamiento", 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 118, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_faltamaterial", 
+      "name": "Can add falta material", 
+      "content_type": 40
+    }
+  }, 
+  {
+    "pk": 115, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_faltatarea", 
+      "name": "Can add falta tarea", 
+      "content_type": 39
+    }
+  }, 
+  {
+    "pk": 121, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_grupoaula", 
+      "name": "Can add grupo aula", 
+      "content_type": 41
+    }
+  }, 
+  {
+    "pk": 88, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_hora", 
+      "name": "Can add hora", 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 136, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_horario", 
+      "name": "Can add horario", 
+      "content_type": 46
+    }
+  }, 
+  {
+    "pk": 160, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_informeevaluacion", 
+      "name": "Can add informe evaluacion", 
+      "content_type": 54
+    }
+  }, 
+  {
+    "pk": 31, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_isla", 
+      "name": "Can add isla", 
+      "content_type": 11
+    }
+  }, 
+  {
+    "pk": 175, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_jefeestudios", 
+      "name": "Can add jefe estudios", 
+      "content_type": 59
+    }
+  }, 
+  {
+    "pk": 139, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_matricula", 
+      "name": "Can add matricula", 
+      "content_type": 47
+    }
+  }, 
+  {
+    "pk": 67, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_minusvalia", 
+      "name": "Can add minusvalia", 
+      "content_type": 23
+    }
+  }, 
+  {
+    "pk": 28, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_municipio", 
+      "name": "Can add municipio", 
+      "content_type": 10
+    }
+  }, 
+  {
+    "pk": 85, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_nivel", 
+      "name": "Can add nivel", 
+      "content_type": 29
+    }
+  }, 
+  {
+    "pk": 169, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_notificacion", 
+      "name": "Can add notificacion", 
+      "content_type": 57
+    }
+  }, 
+  {
+    "pk": 97, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_padre", 
+      "name": "Can add padre", 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 43, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_pais", 
+      "name": "Can add pais", 
+      "content_type": 15
+    }
+  }, 
+  {
+    "pk": 145, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_parte", 
+      "name": "Can add parte", 
+      "content_type": 49
+    }
+  }, 
+  {
+    "pk": 142, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_pas", 
+      "name": "Can add pas", 
+      "content_type": 48
+    }
+  }, 
+  {
+    "pk": 37, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_profesion", 
+      "name": "Can add profesion", 
+      "content_type": 13
+    }
+  }, 
+  {
+    "pk": 124, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_profesor", 
+      "name": "Can add profesor", 
+      "content_type": 42
+    }
+  }, 
+  {
+    "pk": 34, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_provincia", 
+      "name": "Can add provincia", 
+      "content_type": 12
+    }
+  }, 
+  {
+    "pk": 154, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_respuesta", 
+      "name": "Can add respuesta", 
+      "content_type": 52
+    }
+  }, 
+  {
+    "pk": 106, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_retraso", 
+      "name": "Can add retraso", 
+      "content_type": 36
+    }
+  }, 
+  {
+    "pk": 166, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_textonotificacion", 
+      "name": "Can add texto notificacion", 
+      "content_type": 56
+    }
+  }, 
+  {
+    "pk": 55, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_tipoconstruccion", 
+      "name": "Can add tipo construccion", 
+      "content_type": 19
+    }
+  }, 
+  {
+    "pk": 52, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_tipoespacio", 
+      "name": "Can add tipo espacio", 
+      "content_type": 18
+    }
+  }, 
+  {
+    "pk": 58, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_tipouso", 
+      "name": "Can add tipo uso", 
+      "content_type": 20
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_tipovia", 
+      "name": "Can add tipo via", 
+      "content_type": 9
+    }
+  }, 
+  {
+    "pk": 76, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_turno", 
+      "name": "Can add turno", 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 127, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_tutor", 
+      "name": "Can add tutor", 
+      "content_type": 43
+    }
+  }, 
+  {
+    "pk": 130, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_tutoria", 
+      "name": "Can add tutoria", 
+      "content_type": 44
+    }
+  }, 
+  {
+    "pk": 61, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_ubicacion", 
+      "name": "Can add ubicacion", 
+      "content_type": 21
+    }
+  }, 
+  {
+    "pk": 184, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_usuariopadre", 
+      "name": "Can add usuario padre", 
+      "content_type": 62
+    }
+  }, 
+  {
+    "pk": 187, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_usuariopas", 
+      "name": "Can add usuario pas", 
+      "content_type": 63
+    }
+  }, 
+  {
+    "pk": 181, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_usuarioprofesor", 
+      "name": "Can add usuario profesor", 
+      "content_type": 61
+    }
+  }, 
+  {
+    "pk": 101, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_alumno", 
+      "name": "Can change alumno", 
+      "content_type": 34
+    }
+  }, 
+  {
+    "pk": 74, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_asignatura", 
+      "name": "Can change asignatura", 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 83, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_aula", 
+      "name": "Can change aula", 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 110, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_ausencia", 
+      "name": "Can change ausencia", 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 47, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_autorizacion", 
+      "name": "Can change autorizacion", 
+      "content_type": 16
+    }
+  }, 
+  {
+    "pk": 158, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_calificacion", 
+      "name": "Can change calificacion", 
+      "content_type": 53
+    }
+  }, 
+  {
+    "pk": 164, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_calificacioncompetencia", 
+      "name": "Can change calificacion competencia", 
+      "content_type": 55
+    }
+  }, 
+  {
+    "pk": 80, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_centro", 
+      "name": "Can change centro", 
+      "content_type": 27
+    }
+  }, 
+  {
+    "pk": 134, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_cita", 
+      "name": "Can change cita", 
+      "content_type": 45
+    }
+  }, 
+  {
+    "pk": 50, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_clasificacion", 
+      "name": "Can change clasificacion", 
+      "content_type": 17
+    }
+  }, 
+  {
+    "pk": 152, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_comentario", 
+      "name": "Can change comentario", 
+      "content_type": 51
+    }
+  }, 
+  {
+    "pk": 92, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_competencia", 
+      "name": "Can change competencia", 
+      "content_type": 31
+    }
+  }, 
+  {
+    "pk": 65, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_concierto", 
+      "name": "Can change concierto", 
+      "content_type": 22
+    }
+  }, 
+  {
+    "pk": 173, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_coordinadorciclo", 
+      "name": "Can change coordinador ciclo", 
+      "content_type": 58
+    }
+  }, 
+  {
+    "pk": 179, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_director", 
+      "name": "Can change director", 
+      "content_type": 60
+    }
+  }, 
+  {
+    "pk": 149, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_enviosfaltas", 
+      "name": "Can change envios faltas", 
+      "content_type": 50
+    }
+  }, 
+  {
+    "pk": 71, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_estadocivil", 
+      "name": "Can change estado civil", 
+      "content_type": 24
+    }
+  }, 
+  {
+    "pk": 41, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_estudiospadre", 
+      "name": "Can change estudios padre", 
+      "content_type": 14
+    }
+  }, 
+  {
+    "pk": 95, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_evaluacion", 
+      "name": "Can change evaluacion", 
+      "content_type": 32
+    }
+  }, 
+  {
+    "pk": 104, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_falta", 
+      "name": "Can change falta", 
+      "content_type": 35
+    }
+  }, 
+  {
+    "pk": 113, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_faltacomportamiento", 
+      "name": "Can change falta comportamiento", 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 119, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_faltamaterial", 
+      "name": "Can change falta material", 
+      "content_type": 40
+    }
+  }, 
+  {
+    "pk": 116, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_faltatarea", 
+      "name": "Can change falta tarea", 
+      "content_type": 39
+    }
+  }, 
+  {
+    "pk": 122, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_grupoaula", 
+      "name": "Can change grupo aula", 
+      "content_type": 41
+    }
+  }, 
+  {
+    "pk": 89, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_hora", 
+      "name": "Can change hora", 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 137, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_horario", 
+      "name": "Can change horario", 
+      "content_type": 46
+    }
+  }, 
+  {
+    "pk": 161, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_informeevaluacion", 
+      "name": "Can change informe evaluacion", 
+      "content_type": 54
+    }
+  }, 
+  {
+    "pk": 32, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_isla", 
+      "name": "Can change isla", 
+      "content_type": 11
+    }
+  }, 
+  {
+    "pk": 176, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_jefeestudios", 
+      "name": "Can change jefe estudios", 
+      "content_type": 59
+    }
+  }, 
+  {
+    "pk": 140, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_matricula", 
+      "name": "Can change matricula", 
+      "content_type": 47
+    }
+  }, 
+  {
+    "pk": 68, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_minusvalia", 
+      "name": "Can change minusvalia", 
+      "content_type": 23
+    }
+  }, 
+  {
+    "pk": 29, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_municipio", 
+      "name": "Can change municipio", 
+      "content_type": 10
+    }
+  }, 
+  {
+    "pk": 86, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_nivel", 
+      "name": "Can change nivel", 
+      "content_type": 29
+    }
+  }, 
+  {
+    "pk": 170, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_notificacion", 
+      "name": "Can change notificacion", 
+      "content_type": 57
+    }
+  }, 
+  {
+    "pk": 98, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_padre", 
+      "name": "Can change padre", 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 44, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_pais", 
+      "name": "Can change pais", 
+      "content_type": 15
+    }
+  }, 
+  {
+    "pk": 146, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_parte", 
+      "name": "Can change parte", 
+      "content_type": 49
+    }
+  }, 
+  {
+    "pk": 143, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_pas", 
+      "name": "Can change pas", 
+      "content_type": 48
+    }
+  }, 
+  {
+    "pk": 38, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_profesion", 
+      "name": "Can change profesion", 
+      "content_type": 13
+    }
+  }, 
+  {
+    "pk": 125, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_profesor", 
+      "name": "Can change profesor", 
+      "content_type": 42
+    }
+  }, 
+  {
+    "pk": 35, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_provincia", 
+      "name": "Can change provincia", 
+      "content_type": 12
+    }
+  }, 
+  {
+    "pk": 155, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_respuesta", 
+      "name": "Can change respuesta", 
+      "content_type": 52
+    }
+  }, 
+  {
+    "pk": 107, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_retraso", 
+      "name": "Can change retraso", 
+      "content_type": 36
+    }
+  }, 
+  {
+    "pk": 167, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_textonotificacion", 
+      "name": "Can change texto notificacion", 
+      "content_type": 56
+    }
+  }, 
+  {
+    "pk": 56, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_tipoconstruccion", 
+      "name": "Can change tipo construccion", 
+      "content_type": 19
+    }
+  }, 
+  {
+    "pk": 53, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_tipoespacio", 
+      "name": "Can change tipo espacio", 
+      "content_type": 18
+    }
+  }, 
+  {
+    "pk": 59, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_tipouso", 
+      "name": "Can change tipo uso", 
+      "content_type": 20
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_tipovia", 
+      "name": "Can change tipo via", 
+      "content_type": 9
+    }
+  }, 
+  {
+    "pk": 77, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_turno", 
+      "name": "Can change turno", 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 128, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_tutor", 
+      "name": "Can change tutor", 
+      "content_type": 43
+    }
+  }, 
+  {
+    "pk": 131, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_tutoria", 
+      "name": "Can change tutoria", 
+      "content_type": 44
+    }
+  }, 
+  {
+    "pk": 62, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_ubicacion", 
+      "name": "Can change ubicacion", 
+      "content_type": 21
+    }
+  }, 
+  {
+    "pk": 185, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_usuariopadre", 
+      "name": "Can change usuario padre", 
+      "content_type": 62
+    }
+  }, 
+  {
+    "pk": 188, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_usuariopas", 
+      "name": "Can change usuario pas", 
+      "content_type": 63
+    }
+  }, 
+  {
+    "pk": 182, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_usuarioprofesor", 
+      "name": "Can change usuario profesor", 
+      "content_type": 61
+    }
+  }, 
+  {
+    "pk": 102, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_alumno", 
+      "name": "Can delete alumno", 
+      "content_type": 34
+    }
+  }, 
+  {
+    "pk": 75, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_asignatura", 
+      "name": "Can delete asignatura", 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 84, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_aula", 
+      "name": "Can delete aula", 
+      "content_type": 28
+    }
+  }, 
+  {
+    "pk": 111, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_ausencia", 
+      "name": "Can delete ausencia", 
+      "content_type": 37
+    }
+  }, 
+  {
+    "pk": 48, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_autorizacion", 
+      "name": "Can delete autorizacion", 
+      "content_type": 16
+    }
+  }, 
+  {
+    "pk": 159, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_calificacion", 
+      "name": "Can delete calificacion", 
+      "content_type": 53
+    }
+  }, 
+  {
+    "pk": 165, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_calificacioncompetencia", 
+      "name": "Can delete calificacion competencia", 
+      "content_type": 55
+    }
+  }, 
+  {
+    "pk": 81, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_centro", 
+      "name": "Can delete centro", 
+      "content_type": 27
+    }
+  }, 
+  {
+    "pk": 135, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_cita", 
+      "name": "Can delete cita", 
+      "content_type": 45
+    }
+  }, 
+  {
+    "pk": 51, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_clasificacion", 
+      "name": "Can delete clasificacion", 
+      "content_type": 17
+    }
+  }, 
+  {
+    "pk": 153, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_comentario", 
+      "name": "Can delete comentario", 
+      "content_type": 51
+    }
+  }, 
+  {
+    "pk": 93, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_competencia", 
+      "name": "Can delete competencia", 
+      "content_type": 31
+    }
+  }, 
+  {
+    "pk": 66, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_concierto", 
+      "name": "Can delete concierto", 
+      "content_type": 22
+    }
+  }, 
+  {
+    "pk": 174, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_coordinadorciclo", 
+      "name": "Can delete coordinador ciclo", 
+      "content_type": 58
+    }
+  }, 
+  {
+    "pk": 180, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_director", 
+      "name": "Can delete director", 
+      "content_type": 60
+    }
+  }, 
+  {
+    "pk": 150, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_enviosfaltas", 
+      "name": "Can delete envios faltas", 
+      "content_type": 50
+    }
+  }, 
+  {
+    "pk": 72, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_estadocivil", 
+      "name": "Can delete estado civil", 
+      "content_type": 24
+    }
+  }, 
+  {
+    "pk": 42, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_estudiospadre", 
+      "name": "Can delete estudios padre", 
+      "content_type": 14
+    }
+  }, 
+  {
+    "pk": 96, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_evaluacion", 
+      "name": "Can delete evaluacion", 
+      "content_type": 32
+    }
+  }, 
+  {
+    "pk": 105, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_falta", 
+      "name": "Can delete falta", 
+      "content_type": 35
+    }
+  }, 
+  {
+    "pk": 114, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_faltacomportamiento", 
+      "name": "Can delete falta comportamiento", 
+      "content_type": 38
+    }
+  }, 
+  {
+    "pk": 120, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_faltamaterial", 
+      "name": "Can delete falta material", 
+      "content_type": 40
+    }
+  }, 
+  {
+    "pk": 117, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_faltatarea", 
+      "name": "Can delete falta tarea", 
+      "content_type": 39
+    }
+  }, 
+  {
+    "pk": 123, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_grupoaula", 
+      "name": "Can delete grupo aula", 
+      "content_type": 41
+    }
+  }, 
+  {
+    "pk": 90, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_hora", 
+      "name": "Can delete hora", 
+      "content_type": 30
+    }
+  }, 
+  {
+    "pk": 138, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_horario", 
+      "name": "Can delete horario", 
+      "content_type": 46
+    }
+  }, 
+  {
+    "pk": 162, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_informeevaluacion", 
+      "name": "Can delete informe evaluacion", 
+      "content_type": 54
+    }
+  }, 
+  {
+    "pk": 33, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_isla", 
+      "name": "Can delete isla", 
+      "content_type": 11
+    }
+  }, 
+  {
+    "pk": 177, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_jefeestudios", 
+      "name": "Can delete jefe estudios", 
+      "content_type": 59
+    }
+  }, 
+  {
+    "pk": 141, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_matricula", 
+      "name": "Can delete matricula", 
+      "content_type": 47
+    }
+  }, 
+  {
+    "pk": 69, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_minusvalia", 
+      "name": "Can delete minusvalia", 
+      "content_type": 23
+    }
+  }, 
+  {
+    "pk": 30, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_municipio", 
+      "name": "Can delete municipio", 
+      "content_type": 10
+    }
+  }, 
+  {
+    "pk": 87, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_nivel", 
+      "name": "Can delete nivel", 
+      "content_type": 29
+    }
+  }, 
+  {
+    "pk": 171, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_notificacion", 
+      "name": "Can delete notificacion", 
+      "content_type": 57
+    }
+  }, 
+  {
+    "pk": 99, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_padre", 
+      "name": "Can delete padre", 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 45, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_pais", 
+      "name": "Can delete pais", 
+      "content_type": 15
+    }
+  }, 
+  {
+    "pk": 147, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_parte", 
+      "name": "Can delete parte", 
+      "content_type": 49
+    }
+  }, 
+  {
+    "pk": 144, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_pas", 
+      "name": "Can delete pas", 
+      "content_type": 48
+    }
+  }, 
+  {
+    "pk": 39, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_profesion", 
+      "name": "Can delete profesion", 
+      "content_type": 13
+    }
+  }, 
+  {
+    "pk": 126, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_profesor", 
+      "name": "Can delete profesor", 
+      "content_type": 42
+    }
+  }, 
+  {
+    "pk": 36, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_provincia", 
+      "name": "Can delete provincia", 
+      "content_type": 12
+    }
+  }, 
+  {
+    "pk": 156, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_respuesta", 
+      "name": "Can delete respuesta", 
+      "content_type": 52
+    }
+  }, 
+  {
+    "pk": 108, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_retraso", 
+      "name": "Can delete retraso", 
+      "content_type": 36
+    }
+  }, 
+  {
+    "pk": 168, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_textonotificacion", 
+      "name": "Can delete texto notificacion", 
+      "content_type": 56
+    }
+  }, 
+  {
+    "pk": 57, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_tipoconstruccion", 
+      "name": "Can delete tipo construccion", 
+      "content_type": 19
+    }
+  }, 
+  {
+    "pk": 54, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_tipoespacio", 
+      "name": "Can delete tipo espacio", 
+      "content_type": 18
+    }
+  }, 
+  {
+    "pk": 60, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_tipouso", 
+      "name": "Can delete tipo uso", 
+      "content_type": 20
+    }
+  }, 
+  {
+    "pk": 27, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_tipovia", 
+      "name": "Can delete tipo via", 
+      "content_type": 9
+    }
+  }, 
+  {
+    "pk": 78, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_turno", 
+      "name": "Can delete turno", 
+      "content_type": 26
+    }
+  }, 
+  {
+    "pk": 129, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_tutor", 
+      "name": "Can delete tutor", 
+      "content_type": 43
+    }
+  }, 
+  {
+    "pk": 132, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_tutoria", 
+      "name": "Can delete tutoria", 
+      "content_type": 44
+    }
+  }, 
+  {
+    "pk": 63, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_ubicacion", 
+      "name": "Can delete ubicacion", 
+      "content_type": 21
+    }
+  }, 
+  {
+    "pk": 186, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_usuariopadre", 
+      "name": "Can delete usuario padre", 
+      "content_type": 62
+    }
+  }, 
+  {
+    "pk": 189, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_usuariopas", 
+      "name": "Can delete usuario pas", 
+      "content_type": 63
+    }
+  }, 
+  {
+    "pk": 183, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_usuarioprofesor", 
+      "name": "Can delete usuario profesor", 
+      "content_type": 61
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_group", 
+      "name": "Can add group", 
+      "content_type": 2
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_message", 
+      "name": "Can add message", 
+      "content_type": 4
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_permission", 
+      "name": "Can add permission", 
+      "content_type": 1
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_user", 
+      "name": "Can add user", 
+      "content_type": 3
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_group", 
+      "name": "Can change group", 
+      "content_type": 2
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_message", 
+      "name": "Can change message", 
+      "content_type": 4
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_permission", 
+      "name": "Can change permission", 
+      "content_type": 1
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_user", 
+      "name": "Can change user", 
+      "content_type": 3
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_group", 
+      "name": "Can delete group", 
+      "content_type": 2
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_message", 
+      "name": "Can delete message", 
+      "content_type": 4
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_permission", 
+      "name": "Can delete permission", 
+      "content_type": 1
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_user", 
+      "name": "Can delete user", 
+      "content_type": 3
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_contenttype", 
+      "name": "Can add content type", 
+      "content_type": 5
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_contenttype", 
+      "name": "Can change content type", 
+      "content_type": 5
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_contenttype", 
+      "name": "Can delete content type", 
+      "content_type": 5
+    }
+  }, 
+  {
+    "pk": 193, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_comentario", 
+      "name": "Can add comentario", 
+      "content_type": 65
+    }
+  }, 
+  {
+    "pk": 190, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_incidencia", 
+      "name": "Can add incidencia", 
+      "content_type": 64
+    }
+  }, 
+  {
+    "pk": 194, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_comentario", 
+      "name": "Can change comentario", 
+      "content_type": 65
+    }
+  }, 
+  {
+    "pk": 191, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_incidencia", 
+      "name": "Can change incidencia", 
+      "content_type": 64
+    }
+  }, 
+  {
+    "pk": 195, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_comentario", 
+      "name": "Can delete comentario", 
+      "content_type": 65
+    }
+  }, 
+  {
+    "pk": 192, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_incidencia", 
+      "name": "Can delete incidencia", 
+      "content_type": 64
+    }
+  }, 
+  {
+    "pk": 196, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_recurso", 
+      "name": "Can add recurso", 
+      "content_type": 66
+    }
+  }, 
+  {
+    "pk": 199, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_reserva", 
+      "name": "Can add reserva", 
+      "content_type": 67
+    }
+  }, 
+  {
+    "pk": 197, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_recurso", 
+      "name": "Can change recurso", 
+      "content_type": 66
+    }
+  }, 
+  {
+    "pk": 200, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_reserva", 
+      "name": "Can change reserva", 
+      "content_type": 67
+    }
+  }, 
+  {
+    "pk": 198, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_recurso", 
+      "name": "Can delete recurso", 
+      "content_type": 66
+    }
+  }, 
+  {
+    "pk": 201, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_reserva", 
+      "name": "Can delete reserva", 
+      "content_type": 67
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_session", 
+      "name": "Can add session", 
+      "content_type": 6
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_session", 
+      "name": "Can change session", 
+      "content_type": 6
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_session", 
+      "name": "Can delete session", 
+      "content_type": 6
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "add_site", 
+      "name": "Can add site", 
+      "content_type": 7
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "change_site", 
+      "name": "Can change site", 
+      "content_type": 7
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "auth.permission", 
+    "fields": {
+      "codename": "delete_site", 
+      "name": "Can delete site", 
+      "content_type": 7
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "auth.user", 
+    "fields": {
+      "username": "admin", 
+      "first_name": "", 
+      "last_name": "", 
+      "is_active": true, 
+      "is_superuser": true, 
+      "is_staff": true, 
+      "last_login": "2009-02-25 17:31:39", 
+      "groups": [], 
+      "user_permissions": [], 
+      "password": "sha1$263bd$04d356b1f6f5843148bf584ec6a4f3e2d00ac95a", 
+      "email": "", 
+      "date_joined": "2008-10-23 00:00:00"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "auth.user", 
+    "fields": {
+      "username": "profe1", 
+      "first_name": "", 
+      "last_name": "", 
+      "is_active": true, 
+      "is_superuser": true, 
+      "is_staff": true, 
+      "last_login": "2009-02-25 17:44:26", 
+      "groups": [], 
+      "user_permissions": [], 
+      "password": "sha1$90f65$3e64cbfb56502d68cd6866ff388ea101c28a0b15", 
+      "email": "", 
+      "date_joined": "2008-10-23 20:11:47"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "auth.user", 
+    "fields": {
+      "username": "padre1", 
+      "first_name": "", 
+      "last_name": "", 
+      "is_active": true, 
+      "is_superuser": false, 
+      "is_staff": false, 
+      "last_login": "2008-10-23 20:26:59", 
+      "groups": [], 
+      "user_permissions": [], 
+      "password": "sha1$f38be$66e81887556aecc1be3b1ecb7e267b4408c871ae", 
+      "email": "", 
+      "date_joined": "2008-10-23 20:11:55"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "auth.user", 
+    "fields": {
+      "username": "madre1", 
+      "first_name": "", 
+      "last_name": "", 
+      "is_active": true, 
+      "is_superuser": false, 
+      "is_staff": false, 
+      "last_login": "2008-10-23 20:16:21", 
+      "groups": [], 
+      "user_permissions": [], 
+      "password": "sha1$bf9e8$5be7d02f398162c7258b39cf51e891f7fcc8d5f0", 
+      "email": "", 
+      "date_joined": "2008-10-23 20:16:21"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "auth.user", 
+    "fields": {
+      "username": "profe2", 
+      "first_name": "", 
+      "last_name": "", 
+      "is_active": true, 
+      "is_superuser": false, 
+      "is_staff": false, 
+      "last_login": "2009-02-18 18:15:16", 
+      "groups": [], 
+      "user_permissions": [], 
+      "password": "sha1$0a2b5$1f018d2e103aa64e079378ce9c6fc8d63075a673", 
+      "email": "", 
+      "date_joined": "2009-02-15 18:18:42"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "auth.user", 
+    "fields": {
+      "username": "director", 
+      "first_name": "", 
+      "last_name": "", 
+      "is_active": true, 
+      "is_superuser": false, 
+      "is_staff": false, 
+      "last_login": "2009-02-18 18:10:46", 
+      "groups": [], 
+      "user_permissions": [], 
+      "password": "sha1$1554a$5098ee96bf262bf11f539585e8c9351412650508", 
+      "email": "", 
+      "date_joined": "2009-02-18 18:10:03"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "auth.user", 
+    "fields": {
+      "username": "jefeestudios", 
+      "first_name": "", 
+      "last_name": "", 
+      "is_active": true, 
+      "is_superuser": false, 
+      "is_staff": false, 
+      "last_login": "2009-02-18 18:11:04", 
+      "groups": [], 
+      "user_permissions": [], 
+      "password": "sha1$1e5c5$6a7a3e5d377a3ac43ebb68f42cf5f3b2cf40dc6b", 
+      "email": "", 
+      "date_joined": "2009-02-18 18:10:26"
+    }
+  }, 
+  {
+    "pk": 34, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "alumno", 
+      "name": "alumno", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "asignatura", 
+      "name": "asignatura", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 28, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "aula", 
+      "name": "aula", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 37, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "ausencia", 
+      "name": "ausencia", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "autorizacion", 
+      "name": "autorizacion", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 53, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "calificacion", 
+      "name": "calificacion", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 55, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "calificacioncompetencia", 
+      "name": "calificacion competencia", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 27, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "centro", 
+      "name": "centro", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 45, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "cita", 
+      "name": "cita", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "clasificacion", 
+      "name": "clasificacion", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 51, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "comentario", 
+      "name": "comentario", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 65, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "comentario", 
+      "name": "comentario", 
+      "app_label": "incidencias"
+    }
+  }, 
+  {
+    "pk": 31, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "competencia", 
+      "name": "competencia", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "concierto", 
+      "name": "concierto", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "contenttype", 
+      "name": "content type", 
+      "app_label": "contenttypes"
+    }
+  }, 
+  {
+    "pk": 58, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "coordinadorciclo", 
+      "name": "coordinador ciclo", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 60, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "director", 
+      "name": "director", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 50, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "enviosfaltas", 
+      "name": "envios faltas", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "estadocivil", 
+      "name": "estado civil", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "estudiospadre", 
+      "name": "estudios padre", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 32, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "evaluacion", 
+      "name": "evaluacion", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 35, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "falta", 
+      "name": "falta", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 38, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "faltacomportamiento", 
+      "name": "falta comportamiento", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 40, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "faltamaterial", 
+      "name": "falta material", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 39, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "faltatarea", 
+      "name": "falta tarea", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "group", 
+      "name": "group", 
+      "app_label": "auth"
+    }
+  }, 
+  {
+    "pk": 41, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "grupoaula", 
+      "name": "grupo aula", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 30, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "hora", 
+      "name": "hora", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 46, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "horario", 
+      "name": "horario", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 64, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "incidencia", 
+      "name": "incidencia", 
+      "app_label": "incidencias"
+    }
+  }, 
+  {
+    "pk": 54, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "informeevaluacion", 
+      "name": "informe evaluacion", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "isla", 
+      "name": "isla", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 59, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "jefeestudios", 
+      "name": "jefe estudios", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "logentry", 
+      "name": "log entry", 
+      "app_label": "admin"
+    }
+  }, 
+  {
+    "pk": 47, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "matricula", 
+      "name": "matricula", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "message", 
+      "name": "message", 
+      "app_label": "auth"
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "minusvalia", 
+      "name": "minusvalia", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "municipio", 
+      "name": "municipio", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 29, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "nivel", 
+      "name": "nivel", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 57, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "notificacion", 
+      "name": "notificacion", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 33, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "padre", 
+      "name": "padre", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "pais", 
+      "name": "pais", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 49, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "parte", 
+      "name": "parte", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 48, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "pas", 
+      "name": "pas", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "permission", 
+      "name": "permission", 
+      "app_label": "auth"
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "profesion", 
+      "name": "profesion", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 42, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "profesor", 
+      "name": "profesor", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "provincia", 
+      "name": "provincia", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 66, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "recurso", 
+      "name": "recurso", 
+      "app_label": "recursos"
+    }
+  }, 
+  {
+    "pk": 67, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "reserva", 
+      "name": "reserva", 
+      "app_label": "recursos"
+    }
+  }, 
+  {
+    "pk": 52, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "respuesta", 
+      "name": "respuesta", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 36, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "retraso", 
+      "name": "retraso", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "session", 
+      "name": "session", 
+      "app_label": "sessions"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "site", 
+      "name": "site", 
+      "app_label": "sites"
+    }
+  }, 
+  {
+    "pk": 56, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "textonotificacion", 
+      "name": "texto notificacion", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "tipoconstruccion", 
+      "name": "tipo construccion", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "tipoespacio", 
+      "name": "tipo espacio", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "tipouso", 
+      "name": "tipo uso", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "tipovia", 
+      "name": "tipo via", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "turno", 
+      "name": "turno", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 43, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "tutor", 
+      "name": "tutor", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 44, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "tutoria", 
+      "name": "tutoria", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "ubicacion", 
+      "name": "ubicacion", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "user", 
+      "name": "user", 
+      "app_label": "auth"
+    }
+  }, 
+  {
+    "pk": 62, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "usuariopadre", 
+      "name": "usuario padre", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 63, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "usuariopas", 
+      "name": "usuario pas", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": 61, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+      "model": "usuarioprofesor", 
+      "name": "usuario profesor", 
+      "app_label": "akademic"
+    }
+  }, 
+  {
+    "pk": "5019daf29fdaeb240ca64273895a89b4", 
+    "model": "sessions.session", 
+    "fields": {
+      "expire_date": "2009-03-01 18:31:46", 
+      "session_data": "gAJ9cQEoVQ5tZW51QnJlYWRDcnVtYnECXXEDVQ1fYXV0aF91c2VyX2lkcQRLAVUSX2F1dGhfdXNl\ncl9iYWNrZW5kcQVVKWRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kcQZ1\nLjhiMDY5NjdkYzlhYzU4YjFiOTYxMjViMzQxZjExYzk4\n"
+    }
+  }, 
+  {
+    "pk": "33bc4e29ca4501d85f340aab51c71f03", 
+    "model": "sessions.session", 
+    "fields": {
+      "expire_date": "2009-03-04 18:16:11", 
+      "session_data": "gAJ9cQEuNmJkZjhmNGQ3YjZiNGRjYjBhY2U1OWFmNzJkMTIzNzg=\n"
+    }
+  }, 
+  {
+    "pk": "91d994c66a32a7831c20bf8c90b88358", 
+    "model": "sessions.session", 
+    "fields": {
+      "expire_date": "2009-03-11 17:44:26", 
+      "session_data": "gAJ9cQEoVQ5tZW51QnJlYWRDcnVtYnECXXEDVQ1fYXV0aF91c2VyX2lkcQRLAlUSX2F1dGhfdXNl\ncl9iYWNrZW5kcQVVKWRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kcQZ1\nLmE5MmJiMWUzMDgyOGEzMmJiNGI4ZmU3YmI5OTk0OTQz\n"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "sites.site", 
+    "fields": {
+      "domain": "example.com", 
+      "name": "example.com"
+    }
+  }, 
+  {
+    "pk": 37, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-25 17:46:23", 
+      "object_repr": "2 2008", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 2, 
+      "content_type": 32
+    }
+  }, 
+  {
+    "pk": 36, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-25 17:45:09", 
+      "object_repr": "1 2008", 
+      "object_id": "1", 
+      "change_message": "", 
+      "user": 2, 
+      "content_type": 32
+    }
+  }, 
+  {
+    "pk": 35, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-25 17:43:56", 
+      "object_repr": "Alumno6 --Asignat2--2008--11 1 2008", 
+      "object_id": "6", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 47
+    }
+  }, 
+  {
+    "pk": 34, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-25 17:43:39", 
+      "object_repr": "Alumno6 ", 
+      "object_id": "6", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 34
+    }
+  }, 
+  {
+    "pk": 33, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-25 17:42:10", 
+      "object_repr": "Profe2 ", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 43
+    }
+  }, 
+  {
+    "pk": 32, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-25 17:40:52", 
+      "object_repr": "Alumno5 --Asignat2--2008--12B 1 2008", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 47
+    }
+  }, 
+  {
+    "pk": 31, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-25 17:40:35", 
+      "object_repr": "Alumno5 ", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 34
+    }
+  }, 
+  {
+    "pk": 30, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-25 17:40:01", 
+      "object_repr": "Alumno4 --Asignat2--2008--12B 1 2008", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 47
+    }
+  }, 
+  {
+    "pk": 29, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-25 17:39:50", 
+      "object_repr": "Alumno4 ", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 34
+    }
+  }, 
+  {
+    "pk": 28, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-25 17:39:09", 
+      "object_repr": "Alumno3 --Asignat1--2008--12B 1 2008", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 47
+    }
+  }, 
+  {
+    "pk": 27, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-25 17:38:58", 
+      "object_repr": "Alumno3 ", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 34
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-25 17:38:14", 
+      "object_repr": "Alumno2 --Asignat1--2008--11 1 2008", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 47
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-25 17:37:47", 
+      "object_repr": "Alumno2 ", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 34
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2009-02-25 17:35:57", 
+      "object_repr": "Dia: 2 Hora: primera ho Profesor: Profe1", 
+      "object_id": "4", 
+      "change_message": "Modificado/a cursoEscolar.", 
+      "user": 1, 
+      "content_type": 46
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-25 17:33:48", 
+      "object_repr": "Dia: 2 Hora: primera ho Profesor: Profe1", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 46
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2009-02-25 17:33:28", 
+      "object_repr": "Asignat2", 
+      "object_id": "2", 
+      "change_message": "Modificado/a nombreCorto y idPincel.", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-25 17:33:09", 
+      "object_repr": "Asignat1", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 25
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-18 18:10:29", 
+      "object_repr": "jefeestudios--jefeestudios ", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 2, 
+      "content_type": 61
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-18 18:10:26", 
+      "object_repr": "jefeestudios", 
+      "object_id": "7", 
+      "change_message": "", 
+      "user": 2, 
+      "content_type": 3
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-18 18:10:10", 
+      "object_repr": "director--director ", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 2, 
+      "content_type": 61
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-18 18:10:03", 
+      "object_repr": "director", 
+      "object_id": "6", 
+      "change_message": "", 
+      "user": 2, 
+      "content_type": 3
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-18 18:09:34", 
+      "object_repr": "jefeestudios ", 
+      "object_id": "1", 
+      "change_message": "", 
+      "user": 2, 
+      "content_type": 59
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-18 18:09:14", 
+      "object_repr": "director ", 
+      "object_id": "1", 
+      "change_message": "", 
+      "user": 2, 
+      "content_type": 60
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-18 18:09:00", 
+      "object_repr": "jefeestudios ", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 2, 
+      "content_type": 42
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-18 18:08:45", 
+      "object_repr": "director ", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 2, 
+      "content_type": 42
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2009-02-18 18:06:56", 
+      "object_repr": "Dia: 1 Hora: primera ho Profesor: Profe2", 
+      "object_id": "3", 
+      "change_message": "Modificado/a grupo.", 
+      "user": 2, 
+      "content_type": 46
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-18 18:06:54", 
+      "object_repr": "21Z 2 2008", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 2, 
+      "content_type": 41
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-18 18:05:50", 
+      "object_repr": "2 2008", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 2, 
+      "content_type": 29
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-18 18:00:33", 
+      "object_repr": "Dia: 1 Hora: primera ho Profesor: Profe2", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 46
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-18 18:00:27", 
+      "object_repr": "12B 1 2008", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 41
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-18 17:59:41", 
+      "object_repr": "Dia: 3 Hora: primera ho Profesor: Profe3", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 46
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-18 17:58:43", 
+      "object_repr": "Profe3 ", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 42
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 2, 
+      "action_time": "2009-02-15 18:32:13", 
+      "object_repr": "Madre1 Rene", 
+      "object_id": "2", 
+      "change_message": "Modificado/a telefonoMovil.", 
+      "user": 1, 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-15 18:30:09", 
+      "object_repr": "Padre3 Goyo", 
+      "object_id": "3", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 33
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-15 18:18:47", 
+      "object_repr": "profe2--Profe2 ", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 61
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-15 18:18:42", 
+      "object_repr": "profe2", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 3
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "admin.logentry", 
+    "fields": {
+      "action_flag": 1, 
+      "action_time": "2009-02-15 18:18:12", 
+      "object_repr": "Profe2 ", 
+      "object_id": "2", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 42
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.tipovia", 
+    "fields": {
+      "idPincel": "1", 
+      "nombreCorto": "Via1", 
+      "nombreLargo": "Via1"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.municipio", 
+    "fields": {
+      "idPincel": "1", 
+      "nombreCorto": "Municipio1", 
+      "nombreLargo": "Municipio1"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.isla", 
+    "fields": {
+      "idPincel": "1", 
+      "nombreCorto": "Isla1", 
+      "nombreLargo": "Isla1"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.provincia", 
+    "fields": {
+      "idPincel": "1", 
+      "nombreCorto": "Provincia1", 
+      "nombreLargo": "Provincia1"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.profesion", 
+    "fields": {
+      "idPincel": "1", 
+      "nombreCorto": "Profesion1", 
+      "nombreLargo": "Profesion1"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.autorizacion", 
+    "fields": {
+      "idPincel": "1", 
+      "nombreCorto": "Autorizacion1", 
+      "nombreLargo": "Autorizacion1"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.tipoespacio", 
+    "fields": {
+      "idPincel": "1", 
+      "nombreCorto": "Espacio1", 
+      "nombreLargo": "Espacio1"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.tipoconstruccion", 
+    "fields": {
+      "idPincel": "1", 
+      "nombreCorto": "Construcc1", 
+      "nombreLargo": "Construcc1"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.tipouso", 
+    "fields": {
+      "idPincel": "1", 
+      "nombreCorto": "Uso1", 
+      "nombreLargo": "Uso1"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.ubicacion", 
+    "fields": {
+      "idPincel": "1", 
+      "nombreCorto": "Ubicacion1", 
+      "nombreLargo": "Ubicacion1"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.concierto", 
+    "fields": {
+      "idPincel": "1", 
+      "nombreCorto": "Concierto1", 
+      "nombreLargo": "Concierto1"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.estadocivil", 
+    "fields": {
+      "idPincel": "1", 
+      "nombreCorto": "EstadoCivil1", 
+      "nombreLargo": "EstadoCivil1"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.asignatura", 
+    "fields": {
+      "metaAsignatura": false, 
+      "idPincel": "1", 
+      "nombreCorto": "Asignat1", 
+      "nombreLargo": "Asignatura1"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "akademic.asignatura", 
+    "fields": {
+      "metaAsignatura": false, 
+      "idPincel": "Asignat2", 
+      "nombreCorto": "Asignat2", 
+      "nombreLargo": ""
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.turno", 
+    "fields": {
+      "idPincel": "1", 
+      "nombreCorto": "Turno1", 
+      "nombreLargo": "Turno1"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.centro", 
+    "fields": {
+      "fax": "", 
+      "telefono": "", 
+      "iesdestino": null, 
+      "domicilio": "", 
+      "isla": 1, 
+      "localidad": "Localidad", 
+      "nombre": "Centro1", 
+      "codPostal": "", 
+      "idPincel": "1", 
+      "email": "", 
+      "municipio": 1
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.aula", 
+    "fields": {
+      "numPlazas": 1, 
+      "nombreLargo": "Aula1", 
+      "idPincel": "1", 
+      "habilitada": true, 
+      "centro": 1, 
+      "ubicacion": 1, 
+      "tipoUso": 1, 
+      "tipoConstruccion": 1, 
+      "tipoEspacio": 1, 
+      "metros": "1", 
+      "nombreCorto": "Aula1"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.nivel", 
+    "fields": {
+      "autorizacion": 1, 
+      "seguro": null, 
+      "tasas": null, 
+      "concierto": 1, 
+      "habilitacion": true, 
+      "puestos": 1, 
+      "idPincel": "1", 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "akademic.nivel", 
+    "fields": {
+      "autorizacion": 1, 
+      "seguro": null, 
+      "tasas": null, 
+      "concierto": 1, 
+      "habilitacion": false, 
+      "puestos": null, 
+      "idPincel": "2", 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.hora", 
+    "fields": {
+      "nivel": 1, 
+      "denominacion": "primera ho", 
+      "horaFin": "10:00:00", 
+      "horaInicio": "09:00:00"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.evaluacion", 
+    "fields": {
+      "nombre": "1", 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "akademic.evaluacion", 
+    "fields": {
+      "nombre": "2", 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.padre", 
+    "fields": {
+      "escaleraPisoPuerta": "", 
+      "estadoCivil": 1, 
+      "telefonoTrabajo": "", 
+      "codPostal": "", 
+      "domicilio": "", 
+      "provincia": 1, 
+      "dni": "", 
+      "profesion": 1, 
+      "isla": 1, 
+      "email": "", 
+      "difunto": false, 
+      "fax": "", 
+      "telefonoMovil": "", 
+      "tipoVia": 1, 
+      "sexo": true, 
+      "localidad": "", 
+      "nombre": "Padre1", 
+      "notificarSms": false, 
+      "notificarEmail": false, 
+      "nacimiento": null, 
+      "municipio": 1, 
+      "verificado": null, 
+      "apellidos": "Alberto", 
+      "numeroCalle": "657617107", 
+      "telefonoCasa": ""
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "akademic.padre", 
+    "fields": {
+      "escaleraPisoPuerta": "", 
+      "estadoCivil": null, 
+      "telefonoTrabajo": "", 
+      "codPostal": "", 
+      "domicilio": "", 
+      "provincia": null, 
+      "dni": "00000004W", 
+      "profesion": null, 
+      "isla": null, 
+      "email": "", 
+      "difunto": false, 
+      "fax": "", 
+      "telefonoMovil": "", 
+      "tipoVia": null, 
+      "sexo": true, 
+      "localidad": "", 
+      "nombre": "Padre3", 
+      "notificarSms": false, 
+      "notificarEmail": false, 
+      "nacimiento": null, 
+      "municipio": null, 
+      "verificado": null, 
+      "apellidos": "Goyo", 
+      "numeroCalle": "", 
+      "telefonoCasa": ""
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "akademic.padre", 
+    "fields": {
+      "escaleraPisoPuerta": "", 
+      "estadoCivil": null, 
+      "telefonoTrabajo": "", 
+      "codPostal": "", 
+      "domicilio": "", 
+      "provincia": null, 
+      "dni": "00000001", 
+      "profesion": null, 
+      "isla": null, 
+      "email": "", 
+      "difunto": false, 
+      "fax": "", 
+      "telefonoMovil": "666666666", 
+      "tipoVia": null, 
+      "sexo": false, 
+      "localidad": "", 
+      "nombre": "Madre1", 
+      "notificarSms": false, 
+      "notificarEmail": false, 
+      "nacimiento": null, 
+      "municipio": null, 
+      "verificado": null, 
+      "apellidos": "Rene", 
+      "numeroCalle": "666545824", 
+      "telefonoCasa": ""
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.alumno", 
+    "fields": {
+      "escaleraPisoPuerta": "", 
+      "cial": "", 
+      "apellidos": "", 
+      "minusvalia": null, 
+      "porcentajeMinusvalia": null, 
+      "paisNacimiento": null, 
+      "lugarNacimientoExtranjero": "", 
+      "codPostal": "", 
+      "domicilio": "", 
+      "provincia": null, 
+      "matriculado": false, 
+      "municipioNacimiento": null, 
+      "dni": "", 
+      "potestadPadre": false, 
+      "madre": 2, 
+      "islaNacimiento": null, 
+      "isla": null, 
+      "nacionalidad": null, 
+      "primerCurso": null, 
+      "email": "", 
+      "fax": "", 
+      "registro": null, 
+      "telefonoMovil": "", 
+      "tipoVia": null, 
+      "sexo": true, 
+      "potestadMadre": false, 
+      "provinciaNacimiento": null, 
+      "nombre": "Alumno1", 
+      "ultimoCurso": null, 
+      "nacimiento": "2000-10-23", 
+      "municipio": null, 
+      "padre": 1, 
+      "numeroCalle": "", 
+      "cip": "", 
+      "localidad": ""
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "akademic.alumno", 
+    "fields": {
+      "escaleraPisoPuerta": "", 
+      "cial": "", 
+      "apellidos": "", 
+      "minusvalia": null, 
+      "porcentajeMinusvalia": null, 
+      "paisNacimiento": null, 
+      "lugarNacimientoExtranjero": "", 
+      "codPostal": "", 
+      "domicilio": "", 
+      "provincia": null, 
+      "matriculado": false, 
+      "municipioNacimiento": null, 
+      "dni": "", 
+      "potestadPadre": false, 
+      "madre": null, 
+      "islaNacimiento": null, 
+      "isla": null, 
+      "nacionalidad": null, 
+      "primerCurso": null, 
+      "email": "", 
+      "fax": "", 
+      "registro": null, 
+      "telefonoMovil": "", 
+      "tipoVia": null, 
+      "sexo": false, 
+      "potestadMadre": false, 
+      "provinciaNacimiento": null, 
+      "nombre": "Alumno2", 
+      "ultimoCurso": null, 
+      "nacimiento": null, 
+      "municipio": null, 
+      "padre": null, 
+      "numeroCalle": "", 
+      "cip": "", 
+      "localidad": ""
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "akademic.alumno", 
+    "fields": {
+      "escaleraPisoPuerta": "", 
+      "cial": "", 
+      "apellidos": "", 
+      "minusvalia": null, 
+      "porcentajeMinusvalia": null, 
+      "paisNacimiento": null, 
+      "lugarNacimientoExtranjero": "", 
+      "codPostal": "", 
+      "domicilio": "", 
+      "provincia": null, 
+      "matriculado": false, 
+      "municipioNacimiento": null, 
+      "dni": "", 
+      "potestadPadre": false, 
+      "madre": null, 
+      "islaNacimiento": null, 
+      "isla": null, 
+      "nacionalidad": null, 
+      "primerCurso": null, 
+      "email": "", 
+      "fax": "", 
+      "registro": null, 
+      "telefonoMovil": "", 
+      "tipoVia": null, 
+      "sexo": false, 
+      "potestadMadre": false, 
+      "provinciaNacimiento": null, 
+      "nombre": "Alumno3", 
+      "ultimoCurso": null, 
+      "nacimiento": null, 
+      "municipio": null, 
+      "padre": null, 
+      "numeroCalle": "", 
+      "cip": "", 
+      "localidad": ""
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "akademic.alumno", 
+    "fields": {
+      "escaleraPisoPuerta": "", 
+      "cial": "", 
+      "apellidos": "", 
+      "minusvalia": null, 
+      "porcentajeMinusvalia": null, 
+      "paisNacimiento": null, 
+      "lugarNacimientoExtranjero": "", 
+      "codPostal": "", 
+      "domicilio": "", 
+      "provincia": null, 
+      "matriculado": false, 
+      "municipioNacimiento": null, 
+      "dni": "", 
+      "potestadPadre": false, 
+      "madre": null, 
+      "islaNacimiento": null, 
+      "isla": null, 
+      "nacionalidad": null, 
+      "primerCurso": null, 
+      "email": "", 
+      "fax": "", 
+      "registro": null, 
+      "telefonoMovil": "", 
+      "tipoVia": null, 
+      "sexo": false, 
+      "potestadMadre": false, 
+      "provinciaNacimiento": null, 
+      "nombre": "Alumno4", 
+      "ultimoCurso": null, 
+      "nacimiento": null, 
+      "municipio": null, 
+      "padre": null, 
+      "numeroCalle": "", 
+      "cip": "", 
+      "localidad": ""
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "akademic.alumno", 
+    "fields": {
+      "escaleraPisoPuerta": "", 
+      "cial": "", 
+      "apellidos": "", 
+      "minusvalia": null, 
+      "porcentajeMinusvalia": null, 
+      "paisNacimiento": null, 
+      "lugarNacimientoExtranjero": "", 
+      "codPostal": "", 
+      "domicilio": "", 
+      "provincia": null, 
+      "matriculado": false, 
+      "municipioNacimiento": null, 
+      "dni": "", 
+      "potestadPadre": false, 
+      "madre": null, 
+      "islaNacimiento": null, 
+      "isla": null, 
+      "nacionalidad": null, 
+      "primerCurso": null, 
+      "email": "", 
+      "fax": "", 
+      "registro": null, 
+      "telefonoMovil": "", 
+      "tipoVia": null, 
+      "sexo": false, 
+      "potestadMadre": false, 
+      "provinciaNacimiento": null, 
+      "nombre": "Alumno5", 
+      "ultimoCurso": null, 
+      "nacimiento": null, 
+      "municipio": null, 
+      "padre": null, 
+      "numeroCalle": "", 
+      "cip": "", 
+      "localidad": ""
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "akademic.alumno", 
+    "fields": {
+      "escaleraPisoPuerta": "", 
+      "cial": "", 
+      "apellidos": "", 
+      "minusvalia": null, 
+      "porcentajeMinusvalia": null, 
+      "paisNacimiento": null, 
+      "lugarNacimientoExtranjero": "", 
+      "codPostal": "", 
+      "domicilio": "", 
+      "provincia": null, 
+      "matriculado": false, 
+      "municipioNacimiento": null, 
+      "dni": "", 
+      "potestadPadre": false, 
+      "madre": null, 
+      "islaNacimiento": null, 
+      "isla": null, 
+      "nacionalidad": null, 
+      "primerCurso": null, 
+      "email": "", 
+      "fax": "", 
+      "registro": null, 
+      "telefonoMovil": "", 
+      "tipoVia": null, 
+      "sexo": false, 
+      "potestadMadre": false, 
+      "provinciaNacimiento": null, 
+      "nombre": "Alumno6", 
+      "ultimoCurso": null, 
+      "nacimiento": null, 
+      "municipio": null, 
+      "padre": null, 
+      "numeroCalle": "", 
+      "cip": "", 
+      "localidad": ""
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.grupoaula", 
+    "fields": {
+      "nivel": 1, 
+      "ciclo": "1", 
+      "metaGrupo": false, 
+      "curso": 1, 
+      "aula": 1, 
+      "seccion": "1", 
+      "turno": 1, 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "akademic.grupoaula", 
+    "fields": {
+      "nivel": 1, 
+      "ciclo": "3", 
+      "metaGrupo": false, 
+      "curso": 12, 
+      "aula": 1, 
+      "seccion": "B", 
+      "turno": 1, 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "akademic.grupoaula", 
+    "fields": {
+      "nivel": 2, 
+      "ciclo": "UNI", 
+      "metaGrupo": false, 
+      "curso": 21, 
+      "aula": 1, 
+      "seccion": "Z", 
+      "turno": 1, 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.profesor", 
+    "fields": {
+      "fax": "", 
+      "escaleraPisoPuerta": "", 
+      "provincia": null, 
+      "numeroCalle": "", 
+      "telefonoMovil": "", 
+      "dni": "10000000", 
+      "tipoVia": null, 
+      "sexo": true, 
+      "apellidos": "", 
+      "telefonoCasa": "", 
+      "email": "", 
+      "municipio": null, 
+      "isla": null, 
+      "localidad": "", 
+      "nombre": "Profe1", 
+      "codPostal": "", 
+      "nacimiento": null, 
+      "domicilio": ""
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "akademic.profesor", 
+    "fields": {
+      "fax": "", 
+      "escaleraPisoPuerta": "", 
+      "provincia": null, 
+      "numeroCalle": "", 
+      "telefonoMovil": "", 
+      "dni": "00000003C", 
+      "tipoVia": null, 
+      "sexo": false, 
+      "apellidos": "", 
+      "telefonoCasa": "", 
+      "email": "", 
+      "municipio": null, 
+      "isla": null, 
+      "localidad": "", 
+      "nombre": "Profe2", 
+      "codPostal": "", 
+      "nacimiento": null, 
+      "domicilio": ""
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "akademic.profesor", 
+    "fields": {
+      "fax": "", 
+      "escaleraPisoPuerta": "", 
+      "provincia": null, 
+      "numeroCalle": "", 
+      "telefonoMovil": "", 
+      "dni": "111111111111111", 
+      "tipoVia": null, 
+      "sexo": false, 
+      "apellidos": "", 
+      "telefonoCasa": "", 
+      "email": "", 
+      "municipio": null, 
+      "isla": null, 
+      "localidad": "", 
+      "nombre": "Profe3", 
+      "codPostal": "", 
+      "nacimiento": null, 
+      "domicilio": ""
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "akademic.profesor", 
+    "fields": {
+      "fax": "", 
+      "escaleraPisoPuerta": "", 
+      "provincia": null, 
+      "numeroCalle": "", 
+      "telefonoMovil": "", 
+      "dni": "222222222222222", 
+      "tipoVia": null, 
+      "sexo": false, 
+      "apellidos": "", 
+      "telefonoCasa": "", 
+      "email": "", 
+      "municipio": null, 
+      "isla": null, 
+      "localidad": "", 
+      "nombre": "director", 
+      "codPostal": "", 
+      "nacimiento": null, 
+      "domicilio": ""
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "akademic.profesor", 
+    "fields": {
+      "fax": "", 
+      "escaleraPisoPuerta": "", 
+      "provincia": null, 
+      "numeroCalle": "", 
+      "telefonoMovil": "", 
+      "dni": "333333333333333", 
+      "tipoVia": null, 
+      "sexo": false, 
+      "apellidos": "", 
+      "telefonoCasa": "", 
+      "email": "", 
+      "municipio": null, 
+      "isla": null, 
+      "localidad": "", 
+      "nombre": "jefeestudios", 
+      "codPostal": "", 
+      "nacimiento": null, 
+      "domicilio": ""
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.tutor", 
+    "fields": {
+      "profesor": 1, 
+      "grupo": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "akademic.tutor", 
+    "fields": {
+      "profesor": 2, 
+      "grupo": 2
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.horario", 
+    "fields": {
+      "hora": 1, 
+      "asignatura": 1, 
+      "profesor": 1, 
+      "grupo": 1, 
+      "diaSemana": 1, 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "akademic.horario", 
+    "fields": {
+      "hora": 1, 
+      "asignatura": 1, 
+      "profesor": 3, 
+      "grupo": 1, 
+      "diaSemana": 3, 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "akademic.horario", 
+    "fields": {
+      "hora": 1, 
+      "asignatura": 1, 
+      "profesor": 2, 
+      "grupo": 3, 
+      "diaSemana": 1, 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "akademic.horario", 
+    "fields": {
+      "hora": 1, 
+      "asignatura": 2, 
+      "profesor": 1, 
+      "grupo": 2, 
+      "diaSemana": 2, 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.matricula", 
+    "fields": {
+      "alumno": 1, 
+      "asignatura": 1, 
+      "grupo": 1, 
+      "tipo": "N", 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "akademic.matricula", 
+    "fields": {
+      "alumno": 2, 
+      "asignatura": 1, 
+      "grupo": 1, 
+      "tipo": "P", 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "akademic.matricula", 
+    "fields": {
+      "alumno": 3, 
+      "asignatura": 1, 
+      "grupo": 2, 
+      "tipo": "N", 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "akademic.matricula", 
+    "fields": {
+      "alumno": 4, 
+      "asignatura": 2, 
+      "grupo": 2, 
+      "tipo": "N", 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "akademic.matricula", 
+    "fields": {
+      "alumno": 5, 
+      "asignatura": 2, 
+      "grupo": 2, 
+      "tipo": "P", 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "akademic.matricula", 
+    "fields": {
+      "alumno": 6, 
+      "asignatura": 2, 
+      "grupo": 1, 
+      "tipo": "N", 
+      "cursoEscolar": 2008
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.calificacion", 
+    "fields": {
+      "asignatura": 1, 
+      "alumno": 1, 
+      "evaluacion": 1, 
+      "conceptos": "", 
+      "nota": "10", 
+      "procedimientos": "", 
+      "comentario": null, 
+      "actitud": ""
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.textonotificacion", 
+    "fields": {
+      "generico": false, 
+      "texto": "Tal"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.notificacion", 
+    "fields": {
+      "fechaCreacion": "2008-10-23 21:06:03", 
+      "padre": 1, 
+      "confidencial": false, 
+      "plataformaId": null, 
+      "alumno": 1, 
+      "texto": 1, 
+      "profesor": 1, 
+      "estado": 0, 
+      "fechaEnvio": null
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "akademic.notificacion", 
+    "fields": {
+      "fechaCreacion": "2008-10-23 21:06:03", 
+      "padre": 2, 
+      "confidencial": false, 
+      "plataformaId": null, 
+      "alumno": 1, 
+      "texto": 1, 
+      "profesor": 1, 
+      "estado": 0, 
+      "fechaEnvio": null
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.coordinadorciclo", 
+    "fields": {
+      "nivel": 1, 
+      "profesor": 1, 
+      "ciclo": "1"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.jefeestudios", 
+    "fields": {
+      "nivel": 1, 
+      "profesor": 5
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.director", 
+    "fields": {
+      "profesor": 4, 
+      "centro": 1
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.usuarioprofesor", 
+    "fields": {
+      "profesor": 1, 
+      "usuario": 2
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "akademic.usuarioprofesor", 
+    "fields": {
+      "profesor": 2, 
+      "usuario": 5
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "akademic.usuarioprofesor", 
+    "fields": {
+      "profesor": 4, 
+      "usuario": 6
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "akademic.usuarioprofesor", 
+    "fields": {
+      "profesor": 5, 
+      "usuario": 7
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "akademic.usuariopadre", 
+    "fields": {
+      "padre": 1, 
+      "usuario": 3
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "akademic.usuariopadre", 
+    "fields": {
+      "padre": 2, 
+      "usuario": 4
+    }
+  }
+]

@@ -1,0 +1,59 @@
+{% load i18n %}
+
+{% if not error %}
+	<form action="{{ action }}" method="POST">
+	{% include "akademic/richWebBrowser/formularioFechas.html" %}
+	{% if listaAsignaturas %}
+		<fieldset>
+			<legend>Seleccione una o varias asignaturas:</legend>
+		<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+		{% for entrada in listaAsignaturas %}
+			<tr class="{% cycle par,impar %}">
+				<td colspan="5">
+					{{ entrada.asignatura.nombreLargo }} - {{ entrada.grupo.curso }}{{ entrada.grupo.seccion }}
+				</td>
+				<td>
+					<input type="checkbox" name="asignaturas" value="{{ entrada.asignatura.id }}@{{ entrada.grupo.id }}"/>
+				</td>
+			</tr>
+		{% endfor %}
+		</table>
+		</fieldset>
+		<input type="submit" value="Obtener informe"/>
+	{% endif %}
+	</form>
+	{% if listados %}
+		<a target="Impresion" href="{% url resumen_evaluacion_profesor %}?{{ urlimprimir }}"><img src="{{ MEDIA_URL }}/imgs/fileprint.png" alt="Imprimir"/>Imprimir</a>
+		<a href="{% url resumen_evaluacion_profesor %}?csv=1&{{ urlimprimir }}"><img src="{{ MEDIA_URL }}/imgs/spreadsheet.png" alt="CSV"/>CSV</a>
+
+		{% for asigna in listados %}
+		<div class="listados">
+			<b>Resumen evaluación</b><br/>
+			Asignatura: <b>{{ asigna.asignatura.nombreLargo }}</b><br/>
+			Grupo: <b>{{ asigna.grupo.curso }}{{ asigna.grupo.seccion }}</b><br/>
+			<b>Incidencias entre las fechas:</b> {{ fechaInicio|date:"d-m-Y" }} y {{ fechaFin|date:"d-m-Y" }}
+		</div>
+		<table class="listados">
+			<tr>
+				<th>Alumno:</th>
+				<th>F</th>
+				<th>R</th>
+				<th>C</th>
+				<th>T</th>
+				<th>M</th>
+				
+			</tr>
+			{% for alu in asigna.faltas %}
+			<tr class="{% cycle par,impar %}">
+				<td class="alumno"><span class="nombre">{{ alu.alumno.persona.nombre }}</span><span class="apellido">{{ alu.alumno.persona.apellidos }}</span></td>
+				<td class="dia"> {{ alu.totalAsistencia }} </td>
+				<td class="dia"> {{ alu.totalRetrasos }} </td>
+				<td class="dia"> {{ alu.totalComportamiento }} </td>
+				<td class="dia"> {{ alu.totalTarea }} </td>
+				<td class="dia"> {{ alu.totalMaterial }} </td>
+			</tr>
+			{% endfor %}
+		</table>
+		{% endfor %}
+	{% endif %}
+{% endif %}

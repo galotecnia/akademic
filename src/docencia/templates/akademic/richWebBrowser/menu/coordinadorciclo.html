@@ -1,0 +1,33 @@
+{% extends "akademic/richWebBrowser/profes-base.html" %}
+{% load i18n %}
+
+{% block submenu %}
+<table>
+	<tr>
+		<td>
+			<a href="{% url profesor_posesion %}">
+				<img src="{{ MEDIA_URL }}/imgs/kontact_contacts.gif"/>
+				Poseer
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url dias_especiales %}">
+				<img src="{{ MEDIA_URL }}/imgs/clock.gif"/>
+				Gestión dias especiales
+			</a>
+		</td>
+	</tr>
+    <tr>
+        <td>
+            <a href="{% url lista_dias_especiales %}">
+                <img src="{{ MEDIA_URL }}/imgs/kmultiple.gif"/>
+                Lista días especiales
+            </a>
+        </td>
+    </tr>
+</table>
+{% endblock %}
+
+

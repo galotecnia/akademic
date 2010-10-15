@@ -1,0 +1,65 @@
+{% extends "padres/base.html" %}
+{% load i18n %}
+
+{% block breadcrumb %}
+	Citas
+{% endblock %}
+
+
+{% block body %}
+
+{% if not error %}
+
+{% if hijos %}
+
+	{% if citas %}
+        <h1>Citas pendientes:</h1>
+        {% for c in citas %}
+            <div class="cita">
+                <strong>Tutor: </strong>{{ c.tutoria.tutor }}
+                {{ c.fecha }} {{ c.tutoria.hora|time:"H:i" }} (<a href="?borrar=1&amp;cita_id={{ c.id }}">Borrar</a>)
+            </div>
+        {% endfor %}
+		Exportar a: <a href="{% url padres_icalendar %}">iCalendar</a>
+	{% endif %}
+
+	<h1>Elija tutor:</h1>
+	{% for i in hijos %}
+		<b>{{ i.hijo }} </b> <br>
+		Tutor:
+		{% if i.tutor %}
+			{{ i.tutor.profesor }} <br>
+			Horas disponibles en el presente mes: 
+			{% if i.fechas %}
+				<ul>
+				{% for t in i.fechas %}
+					<li>
+						{% if t.full %}
+							{{ t.fecha }} (Esta hora está completa)
+						{% else %} {{ t.fecha }}
+							<a href="?tutoria_id={{ t.tutoria.id }}&amp;fecha={{ t.fecha.isoformat }}&amp;hijo={{ i.hijo.id }}">
+								(Solicitar cita)
+							</a>
+						{% endif %}
+					</li>
+				{% endfor %}
+				</ul>
+			{% else %}
+				No se han encontrado tutorías <br/>
+			{% endif %}
+		{% else %}
+			No se ha encontrado tutor <br/>
+		{% endif %}
+	{% endfor %}
+{% else %}
+	No consta ningún hijo en la base de datos. Por favor, consulte con la
+	secretaría para subsanar este error.
+{% endif %}
+
+{% endif %}
+
+{% endblock %}
+
+{% block submenu %}
+En esta sección puede consultar las citas que tiene concertadas con los tutores de sus hijos, así como cancelar o solicitar una cita con los mismos.
+{% endblock %}

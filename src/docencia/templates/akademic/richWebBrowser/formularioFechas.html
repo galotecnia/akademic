@@ -1,0 +1,17 @@
+{% if noform %}
+    <!-- noform -->
+{% else %}
+    <form action="{{ action }}" method="POST">
+{% endif %}
+<fieldset>	
+	<legend>Seleccione la fecha inicial y final del informe</legend>
+    {{ form.as_p }}
+    {% if noform %}
+        <!-- noform -->
+    {% else %}
+		<label for="submit"></label>
+		<input type="submit" value="Enviar"/>
+	    <br/>
+	</form>
+{% endif %}
+</fieldset>

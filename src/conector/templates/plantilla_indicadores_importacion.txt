@@ -1,0 +1,42 @@
+#####################################################################
+N. de alumnos: {{ num_alumnos }}
+N. de profesores: {{ num_profesores }}
+
+Resumenes de faltas
+    Faltas asistencia: {{ num_faltas_asistencia }} 
+    Retraso: {{ num_retrasos }}
+    Faltas comportamiento: {{ num_faltas_comportamiento }}
+    Faltas tarea: {{ num_faltas_tarea }}
+    Faltas material: {{ num_faltas_material }} 
+    Ausencias: {{ num_ausencias }}
+
+Evaluaciones definidas: {{ num_evaluaciones }} 
+
+#####################################################################
+Resumen de grupos:
+{% for g in grupo_aulas %}
+    Grupo {{g}} => N. Alumnos: {{g.getAlumnos.count}}
+    Grupo {{g}} => Tutor: {{g.getTutor.profesor.nombre}} {{g.getTutor.profesor.apellidos}}
+{% endfor %}
+#####################################################################
+Resumen de profesores:
+{% for p in profesores %}
+    Profesor: {{ p.persona.nombre }} {{ p.persona.apellidos }}, numero horas en horario: {{ p.getHorario.count }}
+{% endfor %}
+#####################################################################
+Resumen de evaluaciones:
+{% for e in evaluaciones %}
+    Evaluacion: {{ e.nombre}} , {{ e.cursoEscolar }}
+    Calificaciones en evaluacion: {{ e.calificacion_set.all.count }}
+{% endfor %}
+#####################################################################
+
+{% comment %}
+for p in Profesor.objects.all().order_by("apellidos", "nombre"):
+    print u"Profesor: %s %s, numero horas en horario: %d" % (p.nombre, p.apellidos, Horario.objects.filter(profesor = p).count())
+
+
+for e in Evaluacion.objects.filter(cursoEscolar = CURSO_ESCOLAR_ACTUAL):
+    print u"Evaluacion: %s %d" % (e.nombre, e.cursoEscolar)
+    print u"Calificaciones en evaluacion: %d" % (e.calificacion_set.all().count())
+{% endcomment %}

@@ -1,0 +1,34 @@
+{% extends "akademic/simplex4/index.html" %}
+{% load i18n %}
+{% load emoticon %}
+
+{% block submenu %}
+<ul>
+	<li>- <a href="{% url padres_faltas 'faltas' %}">Asistencia</a></li>
+	<li>- <a href="{% url padres_faltas 'retrasos' %}">Retrasos</a></li>
+
+	<li>- <a href="{% url padres_faltas 'faltasComportamientos' %}">{{ hijos|animo }}</a></li>
+	<li>- <a href="{% url padres_faltas 'faltasTarea' %}">{{ hijos|comio }}</a></li>
+	<li>- <a href="{% url padres_faltas 'faltasMaterial' %}">{{ hijos|trabajo }}</a></li>
+	<li>- <a href="{% url padres_ausencias %}">Ausencias</a></li>
+	<li>- <a href="{% url padres_calificaciones %}">Calificaciones</a></li>
+</ul>
+{% endblock %}
+
+{% block mainmenu %}
+	<a href="{% url padres_root %}">Inicio</a>
+	<a href="{% url padres_faltas 'faltas' %}">Mis hijos</a>
+    {% comment %}
+        <!-- Descomentar para facilitar la vista de citas con los profesores --> 
+	    <a href="{% url padres_cita %}">Citas</a>
+    {% endcomment %}
+	<a href="{% url padres_comentarios %}">Comentarios</a>
+	<a href="{% url padres_actualiza_info %}">Datos personales</a>
+	<a href="{% url padres_cuenta %}">Mi cuenta</a>
+    {% comment %}
+        <!-- DESCOMENTAR PARA FACILITAR LA VISTA DE ARCHIVOS ENVIADOS POR LOS PROFESORES -->
+        <a href="{% url padres_files %}">Archivos{% if user.get_profile.padre.has_files_left %} <img src="{{ MEDIA_URL }}/imgs/bookmark.gif"/>{% endif %}</a>
+    {% endcomment %}
+	<a href="{% url logout %}">Salir</a>
+{% endblock %}
+

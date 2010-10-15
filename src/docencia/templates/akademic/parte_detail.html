@@ -1,0 +1,38 @@
+{% extends "akademic/profesor-index.html" %}
+
+{% block body %}
+
+{% if not error %}
+	<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<th align="center">Detalle del parte</th>
+	</tr>
+	<tr>
+		<td>
+			Fecha y hora de la clase: {{ object.fecha }}<br/>
+			Profesor: {{ object.profesor }}<br/>
+			Asignatura: {{ object.asignatura }}<br/>
+		</td>
+	</tr>
+	</table>
+	<br/>
+	<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<th colspan=3 align="center">Detalle de los envíos</th>
+	</tr>
+	<tr>
+		<th align="center">Fecha</th>
+		<th align="center">IP origen</th>
+		<th align="center">Navegador</th>
+	</tr>
+	{% for i in object.enviosfaltas_set.all %}
+	<tr class="{% cycle par,impar %}">
+		<td align="center">{{ i.fecha }}</td>
+		<td align="center">{{ i.ip }}</td>
+		<td align="center">{{ i.ua }}</td>
+	</tr>
+	{% endfor %}
+	</table>
+{% endif %}
+
+{% endblock %}

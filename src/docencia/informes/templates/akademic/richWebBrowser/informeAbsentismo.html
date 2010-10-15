@@ -1,0 +1,15 @@
+{% extends "akademic/richWebBrowser/menu/jefedeestudios.html" %}
+
+{% block breadcrumb %}Jefe de estudios >> Informe de absentismo{% endblock %}
+
+{% block body %}
+    <div>
+    <form action="." method="POST">
+        <fieldset>
+            <legend>Seleccione una evaluación</legend>
+            {{ form.as_p }}
+            <p><input type="submit" class="button" value="Enviar" /></p>
+        </fieldset>
+    </form>
+    </div>
+{% endblock %}

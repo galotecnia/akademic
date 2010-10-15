@@ -1,0 +1,249 @@
+/* page overall: */
+
+html * { 
+    margin: 0; 
+    padding: 0; 
+    border: 0;
+}
+ 
+body {
+    margin: 0;
+
+    font-size: 100%;
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.1em;
+    text-align: center;
+    
+    background-color: #A5DDF8;
+    background-image: url(../images/background.png);
+    background-repeat: repeat-x;
+}
+ 
+#page { 
+    width: 70%; 
+    text-align: left;  
+    margin-left: auto; 
+    margin-right: auto;  
+} 
+
+
+/* header: */
+
+#header {
+    width: 100%;
+    height: 2.3em;
+    color: #fff;
+    padding-top: 15px;
+    background: #206293;
+}
+
+#header_bar {
+    width: 70%;
+    padding-left: 10px;
+    text-align: left;  
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.title {
+    font-family: verdana,"Trebuchet MS", Arial, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.title a:link, .title a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* content column: */
+
+#content {
+    float: left; 
+    display: inline; 
+    position: relative; 
+    width: 100%; 
+    font-size: 0.75em;
+    background-color: #fff;
+    border: 0.1em solid #4284B5;
+
+}
+
+#content h1 {
+    clear: both;
+    margin: 0em 0em 0em 0em;
+    padding: 0.5em 0em 0em 0.2em;
+    font-size: 1.1em;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #FF6300;
+}
+
+#content p {
+    margin: 0em 0em 0.5em 0em;
+    padding: 0.35em;
+}
+
+#path {
+    font-family: Verdana, Arial, sans-serif;
+    margin: 0em 0em 0em 0em;
+    padding: 0.4em 0.6em 0.4em 0.6em;
+    font-size: 0.9em;
+    color: #2F5E80;
+    background-color: #D0E7F4;
+}
+
+#right {
+    float: left;
+    width: 15%;
+    display: block;
+}
+
+#left {
+    float: left;
+    width: 82%;
+    display: block;
+    border-right: 1px solid #def;
+    padding-bottom: 10px;
+    padding-right: 10px;
+	text-align: justify;
+}
+
+#right_menu {
+    width: 100%;
+    padding-left: 10px;
+    text-align: left;
+}
+
+#right_menu li{
+    display: block;
+    line-height: 2em;
+}
+
+.block {
+    background: #FFFFC1;
+    display: block;
+    border: 1px solid #FFFFa7;
+    text-indent: 10px;
+    text-align: justify;
+}
+
+.top_menu {
+    font-family: Verdana, Arial, sans-serif;
+    margin: 0em;
+    padding: 0em 0.3em 0em 0em;
+    font-size: 0.8em;
+    text-transform: lowercase;
+    color: #fff;
+    text-align: right;
+    display: block;
+}
+
+.top_menu a:link,.top_menu a:visited  {
+    color: #fff;
+    text-decoration: none;
+    padding-left: 10px;  
+    padding-right: 10px;  
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background: #1B4F76;
+}
+    
+.top_menu a:hover, top_menu a:active {
+    color: #eef;
+    background: #18486B;
+}
+
+#content a:link, #content a:visited {
+    color: #224966;
+    text-decoration: none;
+    border-bottom: 1px dotted #B1CDE2;
+}
+ 
+#content a:hover, #content a:active {
+    color: #2E668B;
+}
+
+#right_menu a:link, #right_menu a:visited {
+    color: #224966;
+    text-decoration: none;
+    border-bottom: 1px dotted #B1CDE2;
+}
+
+#right_menu a:hover, #content a:active {
+    color: #2E668B;
+}
+
+#content acronym {
+    border-bottom: 1px dotted #4284B5;
+    cursor: help;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    padding: 0.5em 1.5em 1.5em 0.7em;
+}
+
+
+input {
+    border: 1px solid #B0D7EC;
+}
+
+div.img_left {
+    float: left; 
+    margin: 0.5em 0.8em 0em 0em;
+}
+
+div.img_right {
+    float: right; 
+    margin: 0.5em 0em 0em 0.8em;
+}
+
+div.img_left img, div.img_right img {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* this clears floating (e.g images) */
+br.clear {
+    clear: both;
+    display: none;
+}
+
+
+/* footer: */
+
+#footer { 
+    margin: 0em;
+    padding: 0em;
+    font-size: 0.65em;
+    clear: both;
+    color: #FFFFFF;
+    background: #206293;
+    text-align: center;
+} 
+
+#footer a:link, #footer a:visited { 
+    color: #fff;
+    text-decoration: none;
+} 
+
+#footer a:hover, #footer a:active { 
+    color: #fff;
+} 
+
+.center {
+    text-align: center;
+    display: block;
+	padding: 5px;
+}
+
+.center_italic {
+    text-align: center;
+    display: block;
+    font-style: italic;
+    padding: 5px;
+}

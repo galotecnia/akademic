@@ -1,0 +1,32 @@
+{% extends "akademic/richWebBrowser/menu/tutor.html" %}
+
+{% block breadcrumb %}Tutor >> Comentarios de tutor{% endblock %}
+
+{% block body %}
+
+{% if not error %}
+	{% if not enviado %}
+	<form action="{% url comentario %}" method="POST">
+		<fieldset>
+			<legend>Seleccione el alumno</legend>
+			<label for="alu">Alumno:</label>
+				<select name="alu">
+					<option value="">-- Elija un alumno</option>
+				{% for alu in alumnos %}
+					<option value="{{ alu.id }}">{{ alu }}</option>
+				{% endfor %}
+				</select><br/>
+		</fieldset>
+		<fieldset>
+			<legend>Añada su comentario</legend>
+			<label for="text">Asunto:</label><input type="text" size=43 name="subject"/><br/>
+			<label for="texto">Comentario:</label>
+				<textarea name="texto" cols=50 rows=10></textarea><br/>
+			<label for="submit"></label><input type=submit value="Enviar comentario"/>
+		</fieldset>
+	</form>
+	{% endif %}
+{% endif %}
+
+
+{% endblock %}

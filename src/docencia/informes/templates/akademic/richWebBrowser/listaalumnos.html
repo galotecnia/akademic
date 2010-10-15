@@ -1,0 +1,139 @@
+{% load i18n %}
+
+{% if not error %}
+	{% if not informe %}
+		<form action="./" method="POST">
+		<input type="hidden" name="next" value="{{ next }}"/>
+		{% include "akademic/richWebBrowser/formularioFechas.html" %}
+		<fieldset>
+			<legend>Escoja uno o varios alumnos:</legend>
+		<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>Nº</td>
+			<td colspan="4">Alumno</td>
+			<td>Seleccionar</td>
+		</tr>
+		{% for alu in alumnos %}
+			<tr class="{% cycle par,impar %}">
+                <td>{{ forloop.counter }}</td>
+                <td colspan="4"><span class="nombre">{{ alu.persona.nombre }}</span><span class="apellido">{{ alu.persona.apellidos }}</span></td> 
+                <td><input type="checkbox" name="seleccion" value="{{ alu.id }}"/></td>
+			</tr>
+		{% endfor %}
+		</table>
+		</fieldset>
+		<input type=submit name="htmlSubmit" value="Obtener informe"/>
+		<input type=submit name="pdfSubmit" value="Informe PDF"/>
+		</form>
+	{% else %}
+		{% for inf in informe %}
+			<div>
+				<p>
+					<h2>
+					Informe personalizado del alumno: {{ inf.alumno }} <br/>
+					Incidencias desde {{ fechaInicio|date:"d-m-Y" }} hasta {{ fechaFin|date:"d-m-Y" }}
+					</h2>
+				</p>
+				
+				{% for asig in inf.informePersonal.asignaturas %}
+					<p>
+						Incidencias en la asignatura: <b>{{ asig.asignatura.nombreLargo }}</b>
+					</p>
+					<table class="informe_tutor">
+						<tr class="header">
+							<td colspan="4">Asignatura</td>
+							<td>Fecha</td>
+							<td>Tipo</td>
+						</tr>
+						{% if asig.faltas %}
+							{% for j in asig.faltas %}
+							<tr class="asistencia">
+								<td colspan="4">{{ asig.asignatura.nombreCorto }}</td>
+								<td>{{ j.fecha|date:"d-m-Y" }}</td>
+								<td>Asistencia</td>
+								
+							</tr>
+							{% endfor %}
+						{% else %}
+							<tr class="asistencia">
+								<td align="center" colspan="6"> No tiene faltas de asistencia</td>
+							</tr>
+						{% endif %}	
+
+						{% if asig.retrasos %}
+							{% for j in asig.retrasos %}
+							<tr class="retrasos">
+								<td colspan="4">{{ asig.asignatura.nombreCorto }}</td>
+								<td>{{ j.fecha|date:"d-m-Y" }}</td>
+								<td>Retraso</td>
+								
+							</tr>
+							{% endfor %}
+						{% else %}
+							<tr class="retrasos">
+								<td align="center" colspan="6"> No tiene retrasos</td>
+							</tr>
+						{% endif %}	
+
+						{% if asig.comportamiento %}
+							{% for j in asig.comportamiento %}
+							<tr class="comportamiento">
+								<td colspan="4">{{ asig.asignatura.nombreCorto }}</td>
+								<td>{{ j.fecha|date:"d-m-Y" }}</td>
+								<td>Comportamiento</td>
+								
+							</tr>
+							{% endfor %}
+						{% else %}
+							<tr class="comportamiento">
+								<td align="center" colspan="6"> No tiene faltas de comportamiento</td>
+							</tr>
+
+						{% endif %}	
+
+						{% if asig.tarea %}
+							{% for j in asig.tarea %}
+							<tr class="tareas">
+								<td colspan="4">{{ asig.asignatura.nombreCorto }}</td>
+								<td>{{ j.fecha|date:"d-m-Y" }}</td>
+								<td>Tarea</td>
+								
+							</tr>
+							{% endfor %}
+						{% else %}
+							<tr class="tareas">
+								<td align="center" colspan="6"> No tiene faltas de tarea</td>
+							</tr>
+
+						{% endif %}	
+
+						{% if asig.material %}
+							{% for j in asig.material %}
+							<tr class="material">
+								<td colspan="4">{{ asig.asignatura.nombreCorto }}</td>
+								<td>{{ j.fecha|date:"d-m-Y" }}</td>
+								<td>Material</td>
+								
+							</tr>
+							{% endfor %}
+						{% else %}
+							<tr class="material">
+								<td align="center" colspan="6"> No tiene faltas de material</td>
+							</tr>
+
+						{% endif %}	
+					</table>
+				{% endfor %}
+				<p>
+					<b>Totales acumulados:</b><br/>
+					Total acumulado de faltas de asistencia: {{ inf.informePersonal.totalFaltas }}<br/>
+					Total acumulado de retrasos: {{ inf.informePersonal.totalRetrasos }}<br/>
+					Total acumulado faltas de comportamiento: {{ inf.informePersonal.totalComportamiento }}<br/>
+					Total acumulado faltas de tarea: {{ inf.informePersonal.totalTarea }}<br/>
+					Total acumulado faltas de material: {{ inf.informePersonal.totalMaterial }}<br/>
+				</p>
+
+			</div>
+		{% endfor %}
+	{% endif %}
+{% endif %}

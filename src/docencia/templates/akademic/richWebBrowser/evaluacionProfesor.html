@@ -1,0 +1,94 @@
+{% extends "akademic/richWebBrowser/menu/profesor.html" %}
+
+{% block breadcrumb %}Profesor >> Evaluación {% endblock %}
+{% block body %}
+
+{% if not error %}
+	<form action="{{ action }}" method="POST">
+	<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+	<td colspan="3" align="center">
+		<b>Evaluación de grupos</b><br/>
+		Profesor {{ profesor }} <br/>
+	</td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<b>Seleccione la evaluación correspondiente:</b>
+		</td>
+		<td colspan="3">
+			<select name="evaluacion">
+				{% for i in listaEvaluaciones %}
+					<option label="{{ i.id }}" value="{{ i.id }}">{{ i.nombre }} {{ i.fecha|date:"d-m-Y" }}</option>
+				{% endfor %}
+			</select>
+		</td>
+
+	</tr>
+	</table>
+	{% if listaAsignaturas %}
+		<table class="curso" width="100%" cellpadding="0" cellspacing="0">
+		{% for entrada in listaAsignaturas %}
+			<tr class="{% cycle par,impar %}">
+				<td colspan="3">
+					{{ entrada.asignatura.nombreLargo }} - {{ entrada.grupo.curso }}{{ entrada.grupo.seccion }}
+				</td>
+				<td>
+					<input type="checkbox" name="asignaturas" value="{{ entrada.asignatura.id }}@{{ entrada.grupo.id }}"/>
+				</td>
+			</tr>
+		{% endfor %}
+		<tr>
+			<td colspan="3" align="right">
+				<input type="submit" value="Enviar"/>
+			</td>
+		<tr>
+		</table>
+	{% endif %}
+	</form>
+
+{% endif %}
+{% if listados %}
+		<form action="{{ action }}" method="POST">
+		<input type="hidden" name="evaluacion" value="{{ evaluacion.id }}"/>
+		{% for listado in listados %}
+			<p><b>Grupo:</b> {{ listado.grupo }}</p>
+			<p><b>Asignatura:</b> {{ listado.asignatura.nombreLargo }}</p>
+			<p><b>Evaluación:</b> {{ evaluacion.nombre }} {{ evaluacion.fecha|date:"d-m-Y" }} </p>
+			<table class="curso">
+				<tr>
+					<th>Nº</th>
+					<th>Alumno:</th>
+					<th>Nota</th>
+				</tr>
+				{% for alu in listado.alumnos %}
+				<tr class="{% cycle par,impar %}">
+					<td>
+						{{ forloop.counter }}
+					</td>
+					<td class="alumno"><span class="nombre">{{ alu.alumno.persona.nombre }}</span><span class="apellido">{{ alu.alumno.persona.apellidos }}</span></td>
+					<td class="dia">
+						{% if alu.calificacion %}
+							<input type="text" name="{{ alu.alumno.id }}@{{ listado.asignatura.id }}" 
+							value="{{ alu.calificacion.nota }}" maxlength="2" size="2"/>
+
+						{% else %}
+							<input type="text" name="{{ alu.alumno.id }}@{{ listado.asignatura.id }}" 
+							value="" maxlength="2" size="2"/>
+						{% endif %}
+					</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endfor %}
+		<table class="curso">
+				<tr>
+					<td colspan="3" align="right">
+						<input type="submit" value="Enviar"/>
+					</td>
+				</tr>
+		</table>
+		</form>
+{% endif %}
+
+{% endblock %}

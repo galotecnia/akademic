@@ -1,0 +1,67 @@
+# -*- coding: utf-8 -*-
+
+PROJECT_ROOT = "/var/www/akademic2"   
+
+EXCHANGE_DATA_DIR = PROJECT_ROOT + '/private_data'
+EXCHANGE_BUFFER_DIR = PROJECT_ROOT + '/buffer'
+MEDIA_ROOT = PROJECT_ROOT + '/media/'
+TEMPLATE_DIRS = (
+    PROJECT_ROOT + "/templates",
+    PROJECT_ROOT + "/docencia/templates",
+    PROJECT_ROOT + "/docencia/informes/templates/",
+    PROJECT_ROOT + "/incidencias/templates",
+    PROJECT_ROOT + "/recursos/templates",
+    PROJECT_ROOT + "/pas/templates",
+    PROJECT_ROOT + "/padres/templates",
+    PROJECT_ROOT + "/conector/templates",
+)
+
+# PATH al directorio que contiene las plantillas de los boletines.
+OOTEMPLATES = MEDIA_ROOT + '/plantillas-odt'
+
+# Configuracion de base de datos mysql
+#DATABASE_ENGINE = 'mysql'
+#DATABASE_NAME = 'akademic'
+#DATABASE_USER = 'akademic'
+#DATABASE_PASSWORD = 'akademic'
+#DATABASE_HOSTNAME = 'hostname'
+#DATABASE_OPTIONS = {'init_command': 'SET storage_engine=INNODB'}
+
+# Cambio de la ruta a /, cambian dos cosas mas
+#SITE_LOCATION = ''
+#MEDIA_URL = SITE_LOCATION + '/media'
+#LOGIN_URL = SITE_LOCATION + '/accounts/login'
+
+# Log en el directorio del sistema
+#LOG_FILENAME = '/var/log/akademic/akademic-pruebas.log'
+
+# Directorios de importacion
+#EXCHANGE_DATA_DIR = '/opt/galotecnia/akademic/importaciones/private_data'
+#EXCHANGE_BUFFER_DIR = '/opt/galotecnia/akademic/importaciones/buffer'
+
+# Enviar correos de explosiones
+#SEND_MAIL_ON_EXCEPTION=True
+
+# Lista de correos electrónicos a los que llegarán los informes de las importaciones en
+# akademic.
+#IMPORT_REPORT_NOTIFICATION=('info+preproduccion@galotecnia.com',)
+
+# Necesario para enviar los correos de las notificaciones
+#DE = "noreply@akademic.galotecnia.com"
+#PARA = ["desarrollo@galotecnia.com", ]
+#ASUNTO = "[Akademic xxx] %s"
+
+# Configuracion para los webservices
+#SINGULAR_URL='https://singularms.galotecnia.com'
+#SINGULAR_USERNAME='username'
+#SINGULAR_PASSWORD='password'
+#SINGULAR_ACCOUNT='akademic'
+
+# Notificar a los supervisores de sms si se sobrepasan los 50 mensajes enviados de una vez.
+#NOTIFICAR_SUPERVISOR_SMS=50
+#TELEFONOS_SUPERVISORES=('654321098', '654654654')
+
+#DEBUG=True
+
+#MAINTENANCE = True
+

@@ -1,0 +1,26 @@
+{% extends "akademic/richWebBrowser/profes-base.html" %}
+{% load i18n permissions %}
+
+{% block submenu %}
+<table>
+	<tr>
+		<td>
+			<a href="{% url lista_recursos %}">
+				<img src="{{ MEDIA_URL }}/imgs/tutor.gif"/>
+				Recursos disponibles
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url lista_reservas %}">
+				<img src="{{ MEDIA_URL }}/imgs/tutor.gif"/>
+				Lista de reservas
+			</a>
+		</td>
+	</tr>
+    {% ifhasperm "recursopermission.asignar_recurso" user %}
+	    <tr><td><a href="{% url nuevo_recurso %}"><img src="{{ MEDIA_URL }}/imgs/tutor.gif"/> Nuevo recurso</a></td></tr>
+    {% endifhasperm %}
+</table>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% load emoticon %}
+<html>
+<head>
+	<title>Boletín {{alumno.persona.nombre}} {{alumno.persona.apellidos}}</title>
+</head>
+<body>
+<a href="{% url padres_boletin %}?alumno={{alumno.id}}&evaluacion={{evaluacion.evaluacion.id}}&aspdf=True">Descargar en PDF <img src="{{ MEDIA_URL }}/imgs/pdf.gif"/></a>
+<h1 align="center">
+	Boletín de calificaciones<br />
+	{% ifequal evaluacion.evaluacion.nombre "1" %}
+		Primera evaluación
+	{% endifequal %}
+	{% ifequal evaluacion.evaluacion.nombre "2" %}
+		Segunda evaluación
+	{% endifequal %}
+	{% ifequal evaluacion.evaluacion.nombre "J" %}
+		Evaluación Junio
+	{% endifequal %}
+	{% ifequal evaluacion.evaluacion.nombre "O" %}
+		Evaluación Ordinaria
+	{% endifequal %}
+	{% ifequal evaluacion.evaluacion.nombre "U" %}
+		Evaluación Extraordinaria
+	{% endifequal %}
+	{% ifequal evaluacion.evaluacion.nombre "P" %}
+		Primera evaluación
+	{% endifequal %}
+	{% ifequal evaluacion.evaluacion.nombre "R" %}
+		Evaluación Final Ordinaria
+	{% endifequal %}
+	{% ifequal evaluacion.evaluacion.nombre "X" %}
+		Evaluación Final Ciclos
+	{% endifequal %}
+
+</h1>
+
+Grupo: {{ alumno.getGrupo }}<br/>
+Alumno: {{ alumno.persona.apellidos }}, {{ alumno.persona.nombre }}. CIAL: {{ alumno.cial }}<br/>
+
+<b>
+	<div style="float: left; width:40%;">Materia</div>
+	<div style="float: left; width:10%;">Nota</div>
+	<div style="float: left; width:45%;">Observaciones</div>
+	<div style="clear: left;"/>
+</b>
+<div style="border: solid black 1px;">
+{% for cal in evaluacion.calificaciones %}
+		<div style="float: left; width:40%;">{{ cal.asignatura.nombreLargo }}</div>
+		<div style="float: left; width:10%;">{{ cal.nota|notaTextual }}</div>
+		<div style="float: left; width:45%;">{{ cal.comentario }}</div>
+		<div style="clear: left;"/>
+		
+{% endfor %}
+<div style="border-top: solid black 1px;">
+	<div style="float: left; width: 45%;">
+	Días faltados en la evaluación:
+	</div>
+	<div style="float: left; width: 45%;">
+	Días faltados en el curso:
+	</div>
+	<div style="clear: left;"/>
+
+</div>
+</div>
+<div style="border: solid black 1px;">
+Leyenda:<br/>
+Notas:<br/>
+	SB: Sobresaliente NT:Notable BI: Bien SU: Suficiente IN: Insuficiente<br/>
+	N.P.: No Presentado Pte.: Pendiente<br/>
+	CIAL: Código de identificación del Alumno/a<br/>
+</div>
+<div style="border: solid black 1px;">
+INFORME PERSONALIZADO:
+{{ evaluacion.informe.informeCompetencias|linebreaks}}
+</div>
+
+<div style="border: solid black 1px;">
+<p align="left">
+	Un sitio, {% now "d \de F \de Y"%}
+</p>
+<p align="right">
+	{% ifequal tutor.profesor.persona.sexo "True" %}
+		El Tutor<br/>
+	{% else %}
+		La Tutora<br/>
+	{% endifequal %}
+	<br/>
+	Fdo.: {{ tutor.profesor.persona }}<br/>
+	<br/>
+
+	{% if tutoria %}
+	Visitas: Semanal, {{ tutoria.diaSemanaTxt }}
+	de {{ tutoria.hora|time:"H:i" }} a {{ tutoria.horaFinalTutoria|time:"H:i" }}
+	{% endif %}
+</p>
+</div>
+</body>
+</html>

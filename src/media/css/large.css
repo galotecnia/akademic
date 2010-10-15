@@ -1,0 +1,11 @@
+@import url(default.css);
+
+/* then modify it: */
+
+body {
+	font-size: 120%;
+}
+
+#footer {
+	font-size: 0.7em;
+}

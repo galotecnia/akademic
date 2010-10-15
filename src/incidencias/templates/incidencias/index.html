@@ -1,0 +1,25 @@
+{% extends "incidencias/base.html" %}
+{% load i18n %}
+
+{% block breadcrumb %}
+	Inicio
+{% endblock %}
+
+{% block advertencia %}{% endblock %}
+
+{% block submenu %}
+	<li>- <a href="{% url nueva_incidencia %}">Nueva incidencia</a></li>
+	<li>- <a href="{% url listar_incidencias %}">Todas</a></li>
+	<li>- <a href="{% url listar_incidencias "informatica" %}">Informática</a></li>
+	<li>- <a href="{% url listar_incidencias "otras" %}">Otras</a></li>
+{% endblock %}
+
+{% block body %}
+	<div class="aviso"><h1>Sistema de incidencias de Akademic2</h1></div>
+	<p>
+		Utilice los enlaces que se disponen en la parte superior de
+		este sitio web para acceder a la información de las incidencias
+	</p>
+{% endblock %}
+
+
