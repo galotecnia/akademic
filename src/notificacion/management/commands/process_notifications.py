@@ -22,7 +22,7 @@
 import sys, codecs
 sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
 
-import SOAPpy
+from suds.client import Client
 import socket
 import logging
 import re
@@ -57,7 +57,7 @@ class Command(BaseCommand):
         self.username = settings.SINGULAR_USERNAME
         self.password = settings.SINGULAR_PASSWORD
         self.account = settings.SINGULAR_ACCOUNT
-        self.server = SOAPpy.SOAPProxy(self.url)
+        self.server = Client(self.url)
 
     def process_text(self, text):
         for k,v in CHAR_CHANGES.items():
@@ -78,7 +78,7 @@ class Command(BaseCommand):
 # tocar soaplib-0.7.2dev_r27-py2.5.egg/soaplib/soap.py en la línea 89 poner esto:
 #   root, xmlids = ElementTree.XMLID(xml_string.encode('utf-8'))
             text = self.process_text(text)
-            return self.server.sendSMS(username=self.username, password=self.password, account=self.account,
+            return self.server.service.sendSMS(username=self.username, password=self.password, account=self.account,
                 phoneNumber=mobile, text=text)
         except TypeError, e:
             msg = u"You don't have access with user %(username) and password" % {'username': self.username}
@@ -92,7 +92,7 @@ class Command(BaseCommand):
 
     def _get_status(self, id):
         try:
-            return self.server.getStatus(username=self.username, password=self.password, id=id)
+            return self.server.service.getStatus(username=self.username, password=self.password, id=id)
         except TypeError, e:
             msg = u"You don't have access with user %(username) and password" % {'username': self.username}
             log.fatal(msg)
@@ -107,9 +107,9 @@ class Command(BaseCommand):
         try:
             if self.verbosity == 2:
                 print u"Cuentas disponibles:"
-                for account in self.server.getAccounts(username=self.username, password=self.password):
+                for account in self.server.service.getAccounts(username=self.username, password=self.password):
                     print u"Cuenta: %s" % account
-                    print u"\tCrédito disponible: %s" % self.server.getCredit(
+                    print u"\tCrédito disponible: %s" % self.server.service.getCredit(
                                 username=self.username, password=self.password,
                                 account=account)
 
@@ -120,7 +120,7 @@ class Command(BaseCommand):
             if not num_envios:
                 log.info(u"No hay notificaciones pendientes que realizar.")
                 return -1, -1
-            saldo = self.server.getCredit(username=self.username, password=self.password, account=self.account)
+            saldo = self.server.service.getCredit(username=self.username, password=self.password, account=self.account)
             if saldo < 0:
                 raise TypeError()
             if saldo < num_envios:
